@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一.基本操作：1.fiddler电脑端设置：首先开启远程控制选项，设置完之后要重启软件生效； 2.手机端设置wifi选项：   代理设置选手动，主机名填写电脑ip（使用ipconfig查看），端口写8888（和fiddler里一致）；  3.现在正常使用手机，就会看到各种网络请求了，如图   左边主要有以下数据：  协">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/抓包与安全/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一.基本操作：1.fiddler电脑端设置：首先开启远程控制选项，设置完之后要重启软件生效； 2.手机端设置wifi选项：   代理设置选手动，主机名填写电脑ip（使用ipconfig查看），端口写8888（和fiddler里一致）；  3.现在正常使用手机，就会看到各种网络请求了，如图   左边主要有以下数据：  协议类型：http，ftp…… 返回码：200，400，404…… 内容类型Con">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-c007ff068dd61e20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-81f3fef530f8c00c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-deb9d6dd7841f594.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-7a94bc7339cd65da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-622ab9b41eda2269.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-0da72f5b407cbee7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="一.基本操作：1.fiddler电脑端设置：首先开启远程控制选项，设置完之后要重启软件生效； 2.手机端设置wifi选项：   代理设置选手动，主机名填写电脑ip（使用ipconfig查看），端口写8888（和fiddler里一致）；  3.现在正常使用手机，就会看到各种网络请求了，如图   左边主要有以下数据：  协议类型：http，ftp…… 返回码：200，400，404…… 内容类型Con">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/202169-c007ff068dd61e20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-抓包与安全" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/抓包与安全/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="一-基本操作："><a href="#一-基本操作：" class="headerlink" title="一.基本操作："></a>一.基本操作：</h4><p>1.fiddler电脑端设置：首先开启远程控制选项，设置完之后要重启软件生效；<br><img src="http://upload-images.jianshu.io/upload_images/202169-c007ff068dd61e20.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="开启远程控制选项"></p>
+<p>2.手机端设置wifi选项：<br><img src="http://upload-images.jianshu.io/upload_images/202169-81f3fef530f8c00c.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="修改网络"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-deb9d6dd7841f594.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="高级设置"></p>
+<blockquote>
+<p>代理设置选手动，主机名填写电脑ip（使用ipconfig查看），端口写8888（和fiddler里一致）；</p>
+</blockquote>
+<p>3.现在正常使用手机，就会看到各种网络请求了，如图</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-7a94bc7339cd65da.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="fiddler"></p>
+<blockquote>
+<p>左边主要有以下数据：</p>
+<ul>
+<li>协议类型：http，ftp……</li>
+<li>返回码：200，400，404……</li>
+<li>内容类型Content-type：文本（text/html）,图片（image/html）……</li>
+</ul>
+<p>右边主要有以下数据：</p>
+<ul>
+<li>原始数据（RAW）：请求链接，post的body字段，header信息；</li>
+<li>JSON：返回的json；</li>
+<li>ImageView：返回的图片；</li>
+</ul>
+</blockquote>
+<h4 id="二-具体案例："><a href="#二-具体案例：" class="headerlink" title="二.具体案例："></a>二.具体案例：</h4><p><br></p>
+<h5 id="案例1：微信红包照片"><a href="#案例1：微信红包照片" class="headerlink" title="案例1：微信红包照片"></a>案例1：微信红包照片</h5><p><br><br>以获取微信红包照片为例，微信红包照片能破解的一个原因是他只在客户端加了一个滤镜，而不是返回了一张模糊的图。打开微信朋友圈，点击一张图片，它开始加载，fiddler里面就有这个请求了，找contentType为image/html可以快速定位到图片，将右边的面板切换为ImageView，就可以看到原图了，这样一张微信红包照片就破解了，是不是很简单呢！</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-622ab9b41eda2269.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="微信图"></p>
+<p>通过对微信图片抓包的过程，我发现这几点：</p>
+<ol>
+<li>微信朋友圈用了2套图，一张缩略图和一张大图（节省流量）</li>
+<li>图片都是webp格式的文件（节省流量）</li>
+<li>下载后的文件是jpg（用户体验）</li>
+</ol>
+<p><br></p>
+<h5 id="案例2：法内律师抓包分析"><a href="#案例2：法内律师抓包分析" class="headerlink" title="案例2：法内律师抓包分析"></a>案例2：法内律师抓包分析</h5><p><br><br>上一个案例我们只是抓取网络包并分析数据，接下来我会用fiddler模拟http请求，来调试程序或对服务器做测试。切换到composer标签，这里可以选择get/post方法，url地址，header和body（格式要写对），填好之后点击excute就可以了，返回200则说明成功；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-0da72f5b407cbee7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="模拟post请求"></p>
+<p>fiddler还有一些高级的功能，如抓取https请求，设置过滤器，设置断点等，自行探索吧；<br><br></p>
+<h5 id="案例3：时代光华抓包分析"><a href="#案例3：时代光华抓包分析" class="headerlink" title="案例3：时代光华抓包分析"></a>案例3：时代光华抓包分析</h5><p><br><br>抱着学习的心态给云端学习抓个包，尝试刚才的做法，返回500，失败了，它有自己的安全机制，那我就仔细分析了一下他的网络接口设计；<br>他的url请求都是一个html地址，post参数是string，返回值是明文，比如这样的一个典型的接口；<br><a href="http://v4.21tb.com/open/v1/els/microcourse/listMyTodayTasks.html" target="_blank" rel="noopener">http://v4.21tb.com/open/v1/els/microcourse/listMyTodayTasks.html</a></p>
+<p>appKey<em>=2EEEA75929C0400396D7E5E133D20405<br>&amp;tamp</em>=1454246053739<br>&amp;sign<em>=00A93D8EA5CB80285D78AC4E4262B09C<br>&amp;session</em>=%22CloudStudy.ccdc4458eaf44521d90f%22</p>
+<p>我对他的post字段进行了分析，得出如下结论：</p>
+<blockquote>
+<p>appkey：身份验证标识，和第三方sdk的类似；<br>tamp时间戳：可以看作是数字签名的一种应用，表明唯一性，服务器接收到之后如果时间相差太远则不执行；<br>sign签名：防止请求被篡改，我初步猜测sign应该是对key和时间戳合成后的字符串做的一个md5签名，这样当我们捕获了他的请求之后更改时间戳，会导致签名不对，而原封不动的使用则会使得时间差距太大，这样就起到了防篡改的目的；<br>session：不清楚</p>
+</blockquote>
+<p>于是我想只要能获取到签名的具体步骤，就可以伪造http请求，签名方法我该怎么得到，我试着反编译了他的apk，居然没有混淆，所以源代码就彻底暴露了，我一步步跟踪找到了他签名的方法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">this.attributes.put(&quot;appKey_&quot;, SdkContext.openServerAppKey);</span><br><span class="line">String str1 = MD5Generator.getHexMD5(SdkContext.openServerAppSecret + &quot;|&quot; + getUri() + &quot;|&quot; + SdkContext.openServerAppSecret).toUpperCase();</span><br><span class="line">this.attributes.put(&quot;sign_&quot;, str1);</span><br><span class="line">this.attributes.put(&quot;timestamp_&quot;, new Date().getTime());</span><br></pre></td></tr></table></figure></p>
+<p>就是这几行，分别对应着上文的3个字段，str1就是sign，getUri( )是url的中间那一部分字段，但是他需要密钥openServerAppSecret，密钥就存在SdkContext里面，可是SdkContext这个类没有反编译成功，打不开，应该是用C++写的，到这里基本上就破解不了了，因为这种用key和secret来验证身份的关键就是保证secret不被泄漏；</p>
+<p>总结一下他的网络通信设计，是用appkey和appsecret来验证身份，用时间戳和签名来保证唯一和不可篡改，防止拦截，签名用key，url和timetamp共同生成放到表单里面进行传输，整体安全性不错；</p>
+<h4 id="三-抓包用途总结："><a href="#三-抓包用途总结：" class="headerlink" title="三.抓包用途总结："></a>三.抓包用途总结：</h4><p>别人的api为我所用：<br>比如想写一个旅游app，自己有个好的想法和一套精美的ui，但就是没有数据，看到某个旅游的app做的不错，就给他抓个包，分析一下，看看他的界面都是访问的哪些接口，获取的返回值都是什么类型，然后建一套一模一样的网络请求，就可以获得相关的数据了，现在应用商店里面充斥着很多这样的app；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/抓包与安全/" data-id="cjajd03ps000idwll6gsm9cyc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/复用Fragment的通用Activity/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/百度地图API/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

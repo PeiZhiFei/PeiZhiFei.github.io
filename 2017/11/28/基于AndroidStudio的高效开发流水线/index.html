@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="你好，我是程序疯子！ 作为个人开发者，如何在短期内快速开发出一款APP，或者独立完成一个项目，这需要我们使用一些高效的工具，使用自动化，批处理插件，同时复用代码，甚至形成流水线作业； 从Android开发入手，通过自己的经验和他人的总结，我总结了这篇文章，同时我也要告别过去自己那种杂乱的编码方式，走向高效有速的方式； ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/基于AndroidStudio的高效开发流水线/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="你好，我是程序疯子！ 作为个人开发者，如何在短期内快速开发出一款APP，或者独立完成一个项目，这需要我们使用一些高效的工具，使用自动化，批处理插件，同时复用代码，甚至形成流水线作业； 从Android开发入手，通过自己的经验和他人的总结，我总结了这篇文章，同时我也要告别过去自己那种杂乱的编码方式，走向高效有速的方式； 以下是我自己总结的一些快速开发的基本原则：  1.积累自己的库：其实那些第三方的">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-7962fa3e88125179.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-600af0ef6a858956.gif?imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-5561143545b69341.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-45fa0037a48765c8.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-8395a7f54d0c092f.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-f45bc8e81130f468.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-7eb470832765b4f0.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-7fb977a92e94b186.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="你好，我是程序疯子！ 作为个人开发者，如何在短期内快速开发出一款APP，或者独立完成一个项目，这需要我们使用一些高效的工具，使用自动化，批处理插件，同时复用代码，甚至形成流水线作业； 从Android开发入手，通过自己的经验和他人的总结，我总结了这篇文章，同时我也要告别过去自己那种杂乱的编码方式，走向高效有速的方式； 以下是我自己总结的一些快速开发的基本原则：  1.积累自己的库：其实那些第三方的">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/202169-7962fa3e88125179.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-基于AndroidStudio的高效开发流水线" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/基于AndroidStudio的高效开发流水线/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>你好，我是程序疯子！</p>
+<p>作为个人开发者，如何在短期内快速开发出一款APP，或者独立完成一个项目，这需要我们使用一些高效的工具，使用自动化，批处理插件，同时复用代码，甚至形成流水线作业；</p>
+<p>从Android开发入手，通过自己的经验和他人的总结，我总结了这篇文章，同时我也要告别过去自己那种杂乱的编码方式，走向高效有速的方式；</p>
+<p>以下是我自己总结的一些快速开发的基本原则：</p>
+<blockquote>
+<p>1.积累自己的库：其实那些第三方的开源库也是自己不断总结优化后发布的，在库里面积累一些常用到的代码，一些工具等等，然后一句话的调用就可以实现一个小型的功能，这个需要长期不断的积累；</p>
+<p>2.使用第三方的开源库（侧重于GitHub，技术）：稳定，可扩展，可定制，还有一些细节之处的优化，如Volley，XUtils等等；</p>
+<p>3.使用第三方的SDK（侧重第三方软件商，功能）：他可以快速丰满我们的APP，增强用户体验，如自动更新，客服，地图，语音，分享等等；</p>
+<p>4.使用插件：插件可以使我们减少编写低级代码，专注于产品核心功能和用户体验，性能优化等等；</p>
+<p>5.使用快捷键：常用功能最好自定义热键，还有编辑器的相关个人习惯设置，这些都要在使用前最先设置好，因为他们在后期会发挥你都难以想像的功效；</p>
+<p>6.善用设计模式：学习一些设计模式和代码管理方面的知识会让我们如虎添翼，面向接口和善用继承多态可以让我们重用绝大多数的代码，而且代码清晰条理；</p>
+</blockquote>
+<p>具体到Android开发，我有一些自己的总结，同时还会有一些AndroidStudio具体操作；</p>
+<p>####<strong>1.界面控件的绑定</strong><br>把这个工作交给编辑器去做，在AndroidStudio里面安装【Android ButterKnife Zelezny】插件，然后在主项目里添加ButterKnife依赖；</p>
+<p>这样在布局XML文件写好之后，在Activity里面的layout上面右键Generate，找到Butterknife，选择需要生成id的控件即可，它可以把include里面的控件也绑定，很强大；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-7962fa3e88125179.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="项目依赖"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-600af0ef6a858956.gif?imageView2/2/w/1240" alt="Android ButterKnife Zelezny"></p>
+<p>####<strong>2.基于json的实体构建</strong><br>其实这一点主要源于我在学习ios过程中发现json解析赋值只需要一句话，很方便；</p>
+<p>一般网络请求返回的json数据多为code附加datas，而建实体可能需要花费一定的时间，但是实体是业务的基础，必须构建，字段应该定义为什么类型，这个需要考虑清楚，尤其是涉及到计算的应该考虑String和Number的差别；</p>
+<p>这里推荐一个【GsonFormat】插件，他会根据json数据自动生成实体类，包括复杂类型和List嵌套都可以；</p>
+<p><strong>使用注意事项</strong>：</p>
+<blockquote>
+<ul>
+<li>可以先对json数据进行选择性的修改，或者对生成后的属性进行选择性的删除；</li>
+<li>该插件把JsonArray解析为List，把JsonObject解析为类，内部类使用 static 修饰，在命名上面无法自动识别下划线并将其转为驼峰命名法，这就需要后台的命名符合JavaBean的规范；</li>
+</ul>
+</blockquote>
+<p>安装后在类里面右键Generate，找到GsonFormat，输入json字符串即可生成；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-5561143545b69341.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="GsonFormat"></p>
+<p>####<strong>3.解析json</strong><br>有了上面的实体之后，解析json就简单多了，使用fastjson这个开源库，根据类自动生成；</p>
+<p>单个对象使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">object = JSON.parseObject (result, Order.class);</span><br></pre></td></tr></table></figure></p>
+<p>列表对象使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">objectList= JSON.parseArray (result, Orders.class);</span><br></pre></td></tr></table></figure></p>
+<p><strong>使用注意事项</strong>：</p>
+<blockquote>
+<p>这个库的使用依赖于实体，一定要符合JavaBean的规范（每一个实体类属性的getter , setter必须写，方法第四个字母必须大写，必须有空的构造函数），否则无法解析，同时变量的命名要和json中的字段保持一致，但是对顺序没有要求，字段的个数可以比json中的少，服务器返回null值不会崩溃，但是用的时候要判断是否为null；</p>
+</blockquote>
+<p>同时也可以单独的去解析某一个JsonArray，如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">JSONObject jsonObject = null;</span><br><span class="line">List&lt;Ene2.HobbyEntity&gt; hobbyEntity= null;</span><br><span class="line">       try</span><br><span class="line">       &#123;    </span><br><span class="line">         jsonObject = new JSONObject(json);</span><br><span class="line">         hobbyEntity = JSON.parseObject(jsonObject.getString(&quot;hobby&quot;), </span><br><span class="line">new TypeReference&lt;List&lt;Ene2.HobbyEntity&gt;&gt;()&#123;&#125;);</span><br><span class="line">         //2种写法都可以</span><br><span class="line">         //hobbyEntity = JSON.parseArray(jsonData.getString(&quot;data&quot;),                                                                    </span><br><span class="line">Ene2.HobbyEntity.class));</span><br><span class="line">       &#125; catch (JSONException e)&#123;    </span><br><span class="line">          e.printStackTrace();</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure></p>
+<p>####<strong>4.列表显示</strong><br>安卓开发常见的大列表展示，这里涉及到网络请求和界面编写；<br>对于并发量比较大的但数据量小的网络请求建议使用Volley，他是谷歌提供的，最强的优势在于与Activity生命周期相关联；</p>
+<p>其次就是编写Adapter了，这里我自己封装一个万能Adapter，只需继承并添加构造方法同时实现一个抽象方法即可，而且Adapter应该可复用，不光是界面，还有代码，一些小细节的控制可以通过构造函数传来布尔值进行控制；</p>
+<p>既然说到Adapter，那也就顺便说一下图片吧，Volley里面提供了一个传入Url的图片组件，当然也有一个第三方的SmartImageView的组件，他们的原理都类似，先从缓存中取，没有再去做网络请求，只需传入url即可；</p>
+<blockquote>
+<p>这里也要说一下使用万能Adapter和fastjson解析组合使用会产生的一个小问题：<br>在上一节中说到使用fastjson去单独抽取某个字段的List之后，需要给类里面的List<t>赋值，这里不能直接用等于号赋值，因为Adapter传入的对象和JSON解析后的对象引用不一致，有2种解决方法：</t></p>
+<ol>
+<li>adapter.setData(JSON.parseObject(jsonData.getString(“data”),<br>new TypeReference<list<myaddress>&gt;() {}));<br> 或者adapter.addDatas(……);</list<myaddress></li>
+<li>listdatas.addAll(JSON.parseObject(jsonData.getString(“data”),<br>new TypeReference<list<myaddress>&gt;() {}));<br> adapter.notifyDataChangedSet();</list<myaddress></li>
+</ol>
+</blockquote>
+<p>####<strong>5.实体的传递</strong><br>我之前也写了一篇关于<a href="http://www.jianshu.com/p/d0431d47a31e" target="_blank" rel="noopener">Android序列化的文章</a>，Parceble的效率很高，而且我也不喜欢用Java的思想和习惯去写安卓，序列化解决了数据传递的问题，而在安卓里，列表的每一项点击基本上就是跳详情了，需要把实体数据传过来显示，一种是使用PG包，一种是使用【Android Parcelable code generator】插件自动生成序列化代码（推荐第二种）；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-45fa0037a48765c8.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Android Parcelable code generator"></p>
+<p>使用注意事项：<br>实体类所使用的类也需要实现序列化，同样null值可以传递且和定义顺序无关，但是该插件生成的List会有一个问题，需要手动改一下，以下是自动生成的代码，包含List<t><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//hobby是一个实体列表</span><br><span class="line">private List&lt;HobbyEntity&gt; hobby;</span><br></pre></td></tr></table></figure></t></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">this.hobby = new ArrayList&lt;HobbyEntity&gt;();    </span><br><span class="line">in.readList(this.hobby, List.class.getClassLoader());</span><br></pre></td></tr></table></figure>
+<p>需要手动改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">this.hobby=in.readArrayList(HobbyEntity.class.getClassLoader());</span><br></pre></td></tr></table></figure></p>
+<p>####<strong>6.其他</strong><br>当然了，远远不止这些，GitHub上面的东西太多，用到什么去学什么，其他的诸如数据库这一块有ORM，还有全能的XUtils，可以注解资源文件（如String，Color，Drawable），还有事件分发的EventBus，其他的内存分析工具，异常捕获，百分比布局等等；</p>
+<p>####<strong>7.AndroidStudio的一些小技巧</strong><br>这里写的只是一些比较实用的小技巧，更多使用可以参考我的另一篇文章<a href="http://www.jianshu.com/p/23aa20f92d8e" target="_blank" rel="noopener">AndroidStudio</a></p>
+<ul>
+<li>XML界面：经常写一些重复的属性很无奈吧，昨天无意间发现可以快速提取Style，我兴奋了好久，只需在XXXView的根标签下右击Extract-&gt;Style，选择需要的属性即可，这样一来，其他的同类也都可以复用了；</li>
+<li>方法和类的提取：其实和上面的类似，都在Extract里面；</li>
+<li>用Preview边写界面边预览；</li>
+<li>善用左边的Structure标签，类似ADT的大纲，快速定位方法；</li>
+<li>XML和类文件快速跳转：点击代码编辑窗口左上角的标志；</li>
+<li>基于模板新建类，如Activity，Fragment，Service，还可以自定义一个模板，同时layout和清单文件也会自动生成；</li>
+<li>XML文件的复用，和提取style的操作方式一样，这次是提取layout；</li>
+<li>findusage：快速定位到使用这个文件或变量的位置；</li>
+<li>analyse how to follow here：分析变量生成的记录；</li>
+</ul>
+<p>##<strong>其他补充</strong><br> AndroidStudio其他优秀的插件：</p>
+<ul>
+<li>Android Selectors Chapek：根据资源自动生成相应的selector；<br>在drawable-xdpi上面右键即可生成，但要遵循命名规范：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>File name suffix</th>
+<th style="text-align:center">Drawable state     </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>_normal</td>
+<td style="text-align:center">(default state) </td>
+</tr>
+<tr>
+<td>_pressed</td>
+<td style="text-align:center">state_pressed   </td>
+</tr>
+<tr>
+<td>_focused</td>
+<td style="text-align:center">state_focused    </td>
+</tr>
+<tr>
+<td>_disabled</td>
+<td style="text-align:center">state_enabled (false)</td>
+</tr>
+<tr>
+<td>_checked</td>
+<td style="text-align:center">state_checked </td>
+</tr>
+<tr>
+<td>_selected</td>
+<td style="text-align:center">state_selected  </td>
+</tr>
+<tr>
+<td>_hovered</td>
+<td style="text-align:center">state_hovered</td>
+</tr>
+<tr>
+<td>_checkable</td>
+<td style="text-align:center">state_checkable</td>
+</tr>
+<tr>
+<td>_activated</td>
+<td style="text-align:center">state_activated</td>
+</tr>
+<tr>
+<td>_windowfocused</td>
+<td style="text-align:center">state_window_focused</td>
+</tr>
+</tbody>
+</table>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-8395a7f54d0c092f.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Android Selector Chapek"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-f45bc8e81130f468.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Android Selector Chapek"></p>
+<ul>
+<li><p>Genymotion：这是起到一个跳转到模拟器的作用，模拟器本身还是得去官网下载安装的，他是最快的安卓模拟器，没有之一，比你的手机还快；</p>
+</li>
+<li><p>ADB Idea：不用输命令就可以执行adb的一些命令；</p>
+</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-7eb470832765b4f0.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="ADB Idea"></p>
+<ul>
+<li>Android Studio Prettify：这个和ButterKnife类似，但他不使用注解，而是自动生成findViewById方法，可以选择是生成全局变量还是局部变量，在知名度上不及ButterKnife，而且include里面的控件也无法生成；<br>同时还有一个AndroidCodeGenerator是可以生成ViewHolder的控件，但是有了万能Adapter之后，我觉得他的作用就少了许多；</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-7fb977a92e94b186.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Android Studio Prettify"></p>
+<ul>
+<li>Codota：<a href="http://www.jianshu.com/p/59b89c26f9e0" target="_blank" rel="noopener">搜索最好的Android 代码</a></li>
+</ul>
+<p>优秀的第三方SDK：</p>
+<ul>
+<li><p><a href="http://www.bmob.cn/" target="_blank" rel="noopener">Bomb</a><br>作为移动开发者，不会后台是不是很掣肘，很多功能前端都做不了，Bomb就可以解决这个问题，他相当于一个免费的云存储，在网站后台搭建了一个数据库，我们可以像之前那样去获取数据并解析；</p>
+<blockquote>
+<p>bomb字段属性要一致，如float，类名和表名要一致；<br>它的序列化是实现了Serializable；</p>
+</blockquote>
+</li>
+<li><p>百度地图<br>定位，导航，全景，地图功能这都有；</p>
+</li>
+<li><p>聚合数据<br>各种数据资源集合，提供丰富的API；</p>
+</li>
+</ul>
+<p>###<strong>写在最后</strong><br><br></p>
+<blockquote>
+<p>如果能把这些零散的工具整合起来形成一套生产流水线，那么生产力将会极大的提高，我也做过这方面的测试，测试流程是先从接口文档里面获取json数据，使用GsonFormat构建出实体，并使用Android Parcelable code generator生成序列化代码，在界面里使用Android ButterKnife Zelezny绑定控件，并用fastjson快速解析数据，然后显示到界面上，整个流程中需要人工操作的基本上就是写界面和给界面组件赋值了（其实这里界面和数据也是可以绑定的，但这个框架我还在研究中，暂先不介绍了，其实这也是下篇的内容之一）；</p>
+<p>我相信只要能合理使用这些工具和第三方的库，并形成流水线，开发效率一定可以提升至少30%，熟练了甚至可以达到50%；<br>个人开发者一定要善用工具，将自己从低级代码中脱离出来，专注于产品与核心功能，这样才能快速开发出一款APP来；</p>
+</blockquote>
+<p>###<strong>续集</strong></p>
+<p>1.安卓界面多机型适配：</p>
+<p>这里使用一个扩展谷歌推的一个<a href="https://github.com/hongyangAndroid/android-percent-support-extend" target="_blank" rel="noopener">百分库</a>做适配：<br>先把默认宽高设为0，然后使用命名空间设置宽高，h代表屏幕高度，w代表屏幕宽度，不写则是相对父容器，这里默认的宽高不写是可以通过编译的，支持图片和ScrollView；<br>在ScrollView中，编写10%h，这个百分比是依赖于屏幕高度的（不包括ActionBar的高度）；<br>支持height，width，margin，minheight，minwidth，maxheight，maxwidth<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">android:layout_width=&quot;0dp&quot; </span><br><span class="line">android:layout_height=&quot;0dp&quot;</span><br><span class="line">app:layout_heightPercent=&quot;50%w&quot; </span><br><span class="line">app:layout_widthPercent=&quot;50%w&quot;</span><br></pre></td></tr></table></figure></p>
+<p>2.databinding：这是谷歌推得一个MVVM编码方式，具体可以参考<a href="https://github.com/LyndonChin/MasteringAndroidDataBinding" target="_blank" rel="noopener">databinding库的配置</a></p>
+<blockquote>
+<p>自定义binding类名<br>include和adapter的使用<br>会根据xml命名自动生成binding文件，不固定<br>实体数据为空不崩溃<br>实体字段写错无法通过编译<br>int类型注意使用String.valueOf()<br>?来判断是否为空   android:text=”@{addr.consigner??addr.address}”<br>xml中的name起名不能用下划线<br>xml优先级比代码高</p>
+</blockquote>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/基于AndroidStudio的高效开发流水线/" data-id="cjajd03pp000fdwllprm3nxh2" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/商品分类，左边ExpandListView，右边是ListView/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/百度地图/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

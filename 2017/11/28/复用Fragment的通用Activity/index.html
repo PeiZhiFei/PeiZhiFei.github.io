@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>My New Post | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://yoursite.com/2017/11/28/My-New-Post/index.html">
+  <meta name="description" content="123456789101112public abstract class ContainerActivity extends Activity &amp;#123;    @Override    protected void onCreate(Bundle savedInstanceState) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/复用Fragment的通用Activity/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-11-28T08:20:05.379Z">
+<meta property="og:description" content="123456789101112public abstract class ContainerActivity extends Activity &amp;#123;    @Override    protected void onCreate(Bundle savedInstanceState) &amp;#123;        super.onCreate(savedInstanceState);">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="123456789101112public abstract class ContainerActivity extends Activity &amp;#123;    @Override    protected void onCreate(Bundle savedInstanceState) &amp;#123;        super.onCreate(savedInstanceState);">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,33 +63,24 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-复用Fragment的通用Activity" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/28/My-New-Post/" class="article-date">
-  <time datetime="2017-11-28T08:20:05.000Z" itemprop="datePublished">2017-11-28</time>
+    <a href="/2017/11/28/复用Fragment的通用Activity/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      My New Post
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">public abstract class ContainerActivity extends Activity &#123;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void onCreate(Bundle savedInstanceState) &#123;</span><br><span class="line">        super.onCreate(savedInstanceState);</span><br><span class="line">        FragmentManager fm = getFragmentManager();</span><br><span class="line">        fm.beginTransaction().replace(android.R.id.content, getFragment()).commit();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    protected abstract Fragment getFragment();</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/28/My-New-Post/" data-id="cjajd03pe0007dwllhfi9icrc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/28/复用Fragment的通用Activity/" data-id="cjajd03pr000hdwllugsyz981" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,7 +89,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/28/技术整理/高级知识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/28/百度地图/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -105,9 +99,9 @@
     </a>
   
   
-    <a href="/2017/11/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/11/28/抓包与安全/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>

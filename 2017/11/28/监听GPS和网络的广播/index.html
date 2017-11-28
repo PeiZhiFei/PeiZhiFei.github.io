@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/监听GPS和网络的广播/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798我自己写的广播public">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889909192939495969798我自己写的广播public">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-监听GPS和网络的广播" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/监听GPS和网络的广播/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">我自己写的广播</span><br><span class="line"></span><br><span class="line">public class GpsConnectChangedReceiver extends BroadcastReceiver &#123;</span><br><span class="line"></span><br><span class="line">    Context context;</span><br><span class="line"></span><br><span class="line">    private boolean getGPSState(Context context) &#123;</span><br><span class="line">        LocationManager locationManager = (LocationManager) context.getSystemService(Context.LOCATION_SERVICE);</span><br><span class="line">        boolean on = locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER);</span><br><span class="line">        return on;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    boolean currentGPSState = false;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">        String action = intent.getAction();this.context = context;</span><br><span class="line">        if (action.equals(LocationManager.PROVIDERS_CHANGED_ACTION)) &#123;</span><br><span class="line">            currentGPSState = getGPSState(context);</span><br><span class="line">            if (currentGPSState) &#123;</span><br><span class="line">                toast(&quot;gps已打开&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">            else &#123;</span><br><span class="line">                toast(&quot;gps已关闭&quot;);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">public class NetworkConnectChangedReceiver extends BroadcastReceiver &#123;</span><br><span class="line">    Context context;</span><br><span class="line">    @Override</span><br><span class="line"></span><br><span class="line">    public void onReceive(Context context, Intent intent) &#123;</span><br><span class="line">        this.context = context;</span><br><span class="line">        if (WifiManager.WIFI_STATE_CHANGED_ACTION.equals(intent.getAction())) &#123;</span><br><span class="line">            // 监听wifi的打开与关闭，与wifi的连接无关</span><br><span class="line">            int wifiState = intent.getIntExtra(WifiManager.EXTRA_WIFI_STATE, 0);</span><br><span class="line">            Log.e(&quot;TAG&quot;, &quot;wifiState:&quot; + wifiState);</span><br><span class="line">            switch (wifiState) &#123;</span><br><span class="line">                case WifiManager.WIFI_STATE_DISABLED:</span><br><span class="line">                    toast(&quot;网络已禁用&quot;);</span><br><span class="line">                    break;</span><br><span class="line">                case WifiManager.WIFI_STATE_DISABLING:</span><br><span class="line">                    toast(&quot;网络已禁用&quot;)</span><br><span class="line">                    ;break;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        // 监听wifi的连接状态即是否连上了一个有效无线路由        </span><br><span class="line">        if (WifiManager.NETWORK_STATE_CHANGED_ACTION.equals(intent.getAction())) &#123;</span><br><span class="line">        Parcelable parcelableExtra = intent.getParcelableExtra(WifiManager.EXTRA_NETWORK_INFO);</span><br><span class="line">        if (null != parcelableExtra) &#123;</span><br><span class="line">                //获取联网状态的NetWorkInfo对象</span><br><span class="line">                NetworkInfo networkInfo = (NetworkInfo) parcelableExtra;</span><br><span class="line">                //获取的State对象则代表着连接成功与否等状态</span><br><span class="line">                NetworkInfo.State state = networkInfo.getState();</span><br><span class="line">                //判断网络是否已经连接</span><br><span class="line">                boolean isConnected = state == NetworkInfo.State.CONNECTED;</span><br><span class="line">                Log.e(&quot;TAG&quot;, &quot;isConnected:&quot; + isConnected);</span><br><span class="line">                if (isConnected) &#123;</span><br><span class="line">                    toast(&quot;网络已打开&quot;);</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    toast(&quot;网络已禁用&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 监听网络连接，包括wifi和移动数据的打开和关闭, 以及连接上可用的连接都会接到监听</span><br><span class="line">        if (ConnectivityManager.CONNECTIVITY_ACTION.equals(intent.getAction())) &#123;</span><br><span class="line">            //获取联网状态的NetworkInfo对象            </span><br><span class="line">            NetworkInfo info = intent.getParcelableExtra(ConnectivityManager.EXTRA_NETWORK_INFO);</span><br><span class="line">            if (info != null) &#123;</span><br><span class="line">                //如果当前的网络连接成功并且网络连接可用</span><br><span class="line">                if (NetworkInfo.State.CONNECTED == info.getState() &amp;&amp; info.isAvailable()) &#123;</span><br><span class="line">                    if (info.getType() == ConnectivityManager.TYPE_WIFI ||</span><br><span class="line">                        info.getType() == ConnectivityManager .TYPE_MOBILE)&#123;</span><br><span class="line">                        Log.i(&quot;TAG&quot;, getConnectionType(info.getType()) + &quot;连上&quot;);</span><br><span class="line">                        toast(&quot;网络已打开&quot;);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125; else &#123;</span><br><span class="line">                    Log.i(&quot;TAG&quot;, getConnectionType(info.getType()) + &quot;断开&quot;);</span><br><span class="line">                    toast(&quot;网络已禁用&quot;);&#125;</span><br><span class="line">               &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    private String getConnectionType(int type) &#123;</span><br><span class="line">        String connType = &quot;&quot;;</span><br><span class="line">        if (type == ConnectivityManager.TYPE_MOBILE) &#123;</span><br><span class="line">            connType = &quot;3G网络数据&quot;;</span><br><span class="line">        &#125; else if (type == ConnectivityManager.TYPE_WIFI) &#123;</span><br><span class="line">            connType = &quot;WIFI网络&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">        return connType;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/监听GPS和网络的广播/" data-id="cjajd03pu000kdwllwa9nc71v" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/11/28/2月来学习总结/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

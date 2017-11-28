@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-AndroidStudio" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/AndroidStudio/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1你好，我是程序疯子！</p>
+<p>本文纯手工编写，作为对AndroidStudio使用的一个总结，作为一个Android开发者，应该跟上移动互联网的步伐，从ADT迁移到AndroidStudio，建议新手直接使用AndroidStudio来进行开发；</p>
+<p>###<strong>本文目录</strong></p>
+<ol>
+<li>AndroidStudio的优势</li>
+<li>AndroidStudio环境搭建</li>
+<li>AndroidStudio相关设置</li>
+<li>AndroidStudio基本使用</li>
+<li>写在最后</li>
+</ol>
+<h4 id="AndroidStudio的优势"><a href="#AndroidStudio的优势" class="headerlink" title="AndroidStudio的优势"></a><strong>AndroidStudio的优势</strong></h4><p>1.可以直接编辑9文件，把PS做出来的UI重命名为.9后放入AndroidStudio处理，左边和上边的一像素表示拉伸区域，右边和下边的像素表示内容区域（如文字），人人都可以成为设计师；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-833eb37bd45f1c1d.png" alt="直接编辑9文件"></p>
+<p>2.布局界面渲染速度有了明显提升（多机型界面适配变得方便了），在相对布局下面还可以直接拖拉控件，调试更方便，可以图文并发，这就有点Xcode的感觉了，可以切换机型，切换系统版本，切换主题，还支持多布局；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-5ef477f6650564d7.png" alt="界面调试"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-9faf1aeb58340e6a.png" alt="多布局支持"></p>
+<p>3.深黑色的UI看上去不是很MAN吗（我对黑色诱惑难以抵挡），很像后期剪辑制作的工作台，尤其适合程序员深夜敲代码，五颜六色的语句搭配，而且每种参数的颜色都是可以在设置里自定义的；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-ca7daee47730dc91.png" alt="夜间模式"></p>
+<p>4.AndroidStudio自动集成了终端，版本控制（Svn，Git），性能分析等诸多工具，可以方便的获取手机截图；原来我使用GitHub提供的客户端进行代码的提交，如今我改用Git很方便，GitHub上的代码是公开的，私密的需要付费，所以大多数公司用的还是SVN，但是Git@OSC是免费的；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-13b4892824e71807.png" alt="性能分析和截图"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-a2f0e92afc7a12a5.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="分享到GitHub"></p>
+<p>5.AndroidStudio的模拟器比ADT的快了许多，现在反而更喜欢使用模拟器去测试，这里要下载Intel的镜像，而且可以体验Android-L新系统的诸多特性，当然了Generation模拟器还是最强的；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-6e3d9163ca6abe93.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Android-L新界面"></p>
+<p>6.颜色资源文件里面可以直接显示颜色值预览，点击预览小图标，还可以直接更改颜色，不用去记住颜色数值，设计师高兴坏了吧，不光是颜色，还有图片，shape，文字都可以预览了；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-6fc6ea059dede094.png" alt="颜色值实时显示"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-da35a7e708cf9bba.png" alt="shape实时显示"></p>
+<p>7.新建Android项目时的模板很好用，新建Activity和Fragment会同时生成一个layout布局文件，新建四大组件还会自动在manifest里面注册，还可以把新建的Activity设为LaunchActivity，方便测试，更有Xcode的感觉了；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-ddb9aa6576cd00f6.png" alt="新建界面"></p>
+<p>8.作为基于IDEA开发的AndroidStudio，它必然会有基于上下文的代码完成提示和重构，以及强大的搜索功能，和无序匹配关键字，还有各项完善的设置等等，同时它也不需要保存(IntelliJ的许多产品都是这样的，如phpStorm，webStorm)，以后就忘了保存操作吧；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-2724d2c623fdc9a0.png" alt="无序匹配关键字"></p>
+<p>9.AndroidStudio可以直接使用Maven仓库中各种第三方库，同时集成了在GitHub上谷歌发布的示例和第三方库，这些开源项目可以一键导入，类似js的CDN引用；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-9e8aeaaf3bde2b54.png" alt="一键调用"></p>
+<p>10.在Debug时可以在断点的上下文环境中临时编写并执行任意代码，实时查看变量，还可以查看bitmap图片；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-f185e77c59612d3e.png" alt="Debug是看图"></p>
+<p>11.其他汇总：</p>
+<blockquote>
+<p>代码提示和搜索功能非常强大，非常智能，比如AndroidStudio会智能预测并给你最优的提示，每一次并非给你相同的提示结果，而是你最想用最可能用的结果；<br>截图带有设备框，可随时录制模拟器视频；<br>可以直接打开文件所在位置；<br>即使文件关闭依然可以回退N个历史；</p>
+</blockquote>
+<hr>
+<h4 id="AndroidStudio环境搭建"><a href="#AndroidStudio环境搭建" class="headerlink" title="AndroidStudio环境搭建"></a><strong>AndroidStudio环境搭建</strong></h4><p>1.sdk-tools无法更新，导致AndroidStudio各种下载不了，无法使用，解决办法（AndroidStudio和ADT通用）：<br>打开SDKManager，在偏好设置里面填写服务器（ubuntu.buct.edu.cn）和端口号（80），并勾选强制使用https；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-789e735f4d469992.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="SDK更新设置"></p>
+<p>2.AndroidStudio提示安装build-tools或者sdk，先打开file→project structure里面选择sdk的路径，这里建议和eclipse的sdk分开（如果ADT过旧），另起一个目录存放，然后一种是用上面的方法用sdk-tools安装缺少的东西，另一种就是到 <a href="http://www.androiddevtools.cn" target="_blank" rel="noopener">http://www.androiddevtools.cn</a> 去下载缺少的东西，有sdk-tools，build-tools，sdk，android-library等，这个网站可以帮助你搭建好AndroidStudio开发环境，下载后要放到sdk-tools的相应目录下面，建议采用第一种做法添加服务器自动下载；</p>
+<p>3.提示安装Java请去<a href="">Oracle官网下载Java8</a>，Eclipse和JDK的版本要对应，同为32或者64位（PC上面）；</p>
+<p>4.顺便说一下PC上面JDK环境的配置：要在系统变量里面的path，classpath和JAVA_HOME添加值，如果没有这三个请新建，最好追加到前面，相邻之间使用分号隔开；</p>
+<ul>
+<li>path：%JAVA_HOME%\bin;</li>
+<li>classpath：.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar;</li>
+<li>JAVA_HOME：输入JDK的安装路径，可以去Java的安装目录去复制地址栏，大约是这样的C:\Program Files\Java\jdk1.8.0，可以安装到D盘，只要以jdk1.X结尾就可以；</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-645d95d25f38b85e.png" alt="JAVA_HOME配置"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-8b50838606726ea7.png" alt="path配置"></p>
+<p>验证：命令提示符输入java-version测试；</p>
+<p>5（可选）.有的可能需要屏蔽host，Mac的打开方式:<br>sudo /Applications/TextEdit.app/Contents/MacOS/TextEdit /etc/hosts<br>209.116.186.212 www.google.com<br>209.116.186.212 www.google.com.hk<br>209.116.186.212 accounts.google.com<br>209.116.186.212 chrome.google.com<br>74.125.113.121 developer.android.com<br>203.208.46.146 dl.google.com<br>203.208.46.146 dl-ssl.google.com</p>
+<p>6（可选）.AndroidStudio跳过首次加载在安装文件下面的build.gradle最后加一句话：<br>disable.android.first.run=true；<br>gradle默认的位置在 /Users/&lt;用户名&gt;/.gradle/wrapper/dists/下，可以手动下载后解压放进去；<br>同时如果导入项目的时候一直在Build的话，那是他正在从Gradle官网下载相应版本的Gradle文件，这种情况可以手动从国内网站下载诸如gradle-2.4all后放到该路径下；</p>
+<p>7.AndroidStudio配置Git，GitHub和Svn：</p>
+<ul>
+<li><p>使用Git@OSC的请先下载<a href="http://git-scm.com/downloads" target="_blank" rel="noopener">Git客户端</a>，然后<a href="https://git.oschina.net/oschina/git-osc/wikis/帮助#ssh-keys" target="_blank" rel="noopener">参考这里配置</a>，把生成的ssh添加到网站上;<br>具体使用可以参考<a href="http://www.tuicool.com/articles/Efimae" target="_blank" rel="noopener">这篇文章</a>;</p>
+</li>
+<li><p>使用GitHub又不想输命令的可以下载GitHub客户端，登陆之后在AndroidStudio的设置VersionControl页面选择Git（Mac不需要），配置git.exe路径，PC在AppData下面某个bin里面（如C:\Users\Administrator\AppData\Local\GitHub\PortableGit_c2ba306e536fdf878271f7fe636a147ff37326ad\bin\git.exe）；</p>
+</li>
+<li><p>使用SVN：PC需要安装TortoiseSVN客户端，Mac不需要配置<br>使用版本管理有一个专用的VCS菜单，这里面操作都有，第一次要先Enable Version Control<br>从个人开发者角度来讲，Git@OSC可以取代GitHub；<br>从公司开发者角度来讲，Git@OSC可以取代SVN；<br>先创建分支，再commit到本地，再切换到主分支merge合并，解决冲突后commit and push；</p>
+</li>
+</ul>
+<p>8.至此，AndroidStudio环境基本搭建好了，但是不一定顺利，有的多安装几次就能成功，如果你有VPN，那就不会有这些问题，首次进入项目产生的问题请参考Gradle相关的知识吧，同ADT一样，一般XML文件的错误会导致代码报错，Studio代码报错了应该先去看看Gradle有什么地方出错了，比如切换到Android标签后生成的路径不对，那么可以切换到Project标签下查看完整的项目，看看是不是编译的安卓SDK和本地的不一致，Gradle版本不一致，引用的jar包不存在等等；</p>
+<h4 id="AndroidStudio相关设置"><a href="#AndroidStudio相关设置" class="headerlink" title="AndroidStudio相关设置"></a><strong>AndroidStudio相关设置</strong></h4><p>1.设置软件字体：Appearance里面勾选 Override default fonts by (not recommended) ，选择一款支持中文的字体即可；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-08e9043ffb5b08f1.png" alt="设置软件字体"></p>
+<p>2.设置内容字体：在Editor里面，Show only monospaced fonts表示只显示等宽字体，编程使用等宽字体较多，且效果较好；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-c4428431cdd99008.png" alt="设置内容字体"></p>
+<p>3.AndroidStudio设置快捷键：可以直接设置成eclipse的配置，在右侧keymap中选择eclipse即可，也可以自定义快捷键；</p>
+<p>常用的一些快捷键：<br>快速生成方法（包含重载函数，生成构造函数，getset方法），生成方法注释（Fix doc comment），移动代码和向下复制，运行和调试，查找和替换，变量跳转，快速提取，查找替换等等；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-54736cdbe2140717.png" alt="快捷键设置"></p>
+<p>4.代码提示全匹配：Editor-&gt;CodeCompletion, 选择none就是不管大小写都匹配，引用资源文件的时候一般我们输入R.之后会产生一个大写变量，取消勾选Insert selected variant by typing dot……可以解决这个问题；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-a0656cb2fd6cddf1.png" alt="代码提示"></p>
+<p>5.更改编辑器代码元素的颜色：这里可以完全自定义，比如把构造函数改成绿色，把类名改为蓝色，把局部变量改为黄色，把静态变量改为紫色，随你；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-0dfa61fa318caf49.png" alt="更改编辑器代码元素的颜色"></p>
+<p>6.更改主题：Editor-&gt;General-&gt;Appearance， 右侧 theme中设置darcula暗色调主题；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-ad4616c7ae8a9501.png" alt="更改主题"></p>
+<p>7.取消拼写检查：Editor -&gt;Inspections 取消勾选Spelling Typo；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-0bd836e8bc65ef6e.png" alt="取消拼写检查"></p>
+<p>8.文件编码：在File Encodings里面，把IDE Encoding，Project Encoding和Properties Fiels都统一设置为utf-8；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-61af17a00ef60950.png" alt="文件编码"></p>
+<p>9.在编辑区域中部有一条竖线，是提醒程序员一行的代码长度最好不要超过这条线，取消显示在Editor-&gt;General-&gt;Appearance里面取消勾选 Show right margin (configured in Code Style options)；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-6f6a30539e24381d.png" alt="取消提示竖线"></p>
+<p>10.显示行号：Editor-&gt;General-&gt;Appearance里面勾选Show line numbers，在每一行前面点击一下就可以添加一个断点;</p>
+<p>11.代码格式设置：在Code Style里面，这是设置代码格式化的样式，也就是书写风格；<br>注释在行中间：Code Style-&gt;Java-&gt;Wrapping and Braces-&gt;Keep when reformatting-&gt;Comment at first column；<br>大括号另起一行：Wrapping and Braces-&gt;Braces placement下面的三个选项改为Next line<br>一个Tab代替几个空格：Tabs and Indents<br>表达式里操作符间的空格：Space-&gt;Method call parentheses</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-1b34233c2532b388.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="格式注释"></p>
+<p>12.添加代码头注释：在File and Code Templates里面有Include，在File Header里面添加描述，比如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">*  作者    你的名字</span><br><span class="line">*  时间    $&#123;DATE&#125; $&#123;TIME&#125;  </span><br><span class="line">*  文件    $&#123;PROJECT_NAME&#125;</span><br><span class="line">*  描述    </span><br><span class="line">*/</span><br></pre></td></tr></table></figure></p>
+<p>为方法生产头说明，在快捷键里面设置了Fix doc comment之后，在方法上面按下即可生成；</p>
+<p>13.插件管理：Plugins右侧会显示出已经安装的插件列表，我们可以有选择的禁用一些：</p>
+<ul>
+<li>Google Cloud Tools For Android Studio（连不上）</li>
+<li>Google Cloud Testing（连不上）</li>
+<li>Google Login（连不上）</li>
+<li>hg4idea（版本控制）</li>
+<li>CVS Integration（版本控制）<br>AndroidStudio提供的导入AndroidSample的功能会随着前三个的禁用而关闭；</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-0f803620095daa4e.png" alt="插件管理"></p>
+<p>14.自动导入：从其他地方复制了一段代码，默认是不会自动导入这段代码使用到的类，可以在Editor-&gt;Auto Import勾选Add unambiguous improts on the fly；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-3d03d564f3e34a03.png" alt="自动导入"></p>
+<p>15.新建代码模板设置：我们可以给新建的Activity或者其他类加一些方法，比如我给Activity加了生命周期的方法作为模板；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-6a051338e8786f59.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="代码模板设置"></p>
+<p>16.自定义快速代码片段生成：Live Templates里面，比如输sout会自动补成println()，系统默认的设置可以参考<a href="http://ask.android-studio.org/?/question/217" target="_blank" rel="noopener">这里</a>，点击加号之后建立完后点击Define，选择Java即可，比如我们可以添加一个switch-case-break语句模板，因为默认的只出一个switch语句；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-33827c8cfa7d0da1.png" alt="自定义快速代码片段生成"></p>
+<p>17.关于JDK，SDK路径，项目引用都在File-&gt;Project Structure里面去设置，这里类似ADT的build-path；</p>
+<p>18.面板的开启：在菜单栏View-&gt;Tool Windows里面，如终端，预览，TODO，版本控制等等；</p>
+<p>19.导出设置：ADT的设置导出功能接近不可用，需要手动拷贝隐藏文件，AndroidStudio则提供了这个功能，不因卸载重装而影响使用习惯；</p>
+<h4 id="AndroidStudio的使用"><a href="#AndroidStudio的使用" class="headerlink" title="AndroidStudio的使用"></a><strong>AndroidStudio的使用</strong></h4><p>1.AndroidStudio的目录结构：</p>
+<ul>
+<li>Project视图</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-2e7b61902c43c0c9.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Project视图"></p>
+<table>
+<thead>
+<tr>
+<th>文件（夹）名</th>
+<th style="text-align:left">用途 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.gradle</td>
+<td style="text-align:left">Gradle编译系统，版本由wrapper指定</td>
+</tr>
+<tr>
+<td>.idea</td>
+<td style="text-align:left">Android Studio IDE所需要的文件</td>
+</tr>
+<tr>
+<td>build</td>
+<td style="text-align:left">代码编译后生成的文件存放的位置</td>
+</tr>
+<tr>
+<td>gradle</td>
+<td style="text-align:left">wrapper的jar和配置文件所在的位置</td>
+</tr>
+<tr>
+<td>.gitignore</td>
+<td style="text-align:left">git使用的ignore文件</td>
+</tr>
+<tr>
+<td>build.gradle</td>
+<td style="text-align:left">gradle编译的相关配置文件，这里区分是Project的和Moudle的</td>
+</tr>
+<tr>
+<td>gradle.properties</td>
+<td style="text-align:left">gradle相关的全局属性设置</td>
+</tr>
+<tr>
+<td>gradlew</td>
+<td style="text-align:left">*nix下的gradle wrapper可执行文件</td>
+</tr>
+<tr>
+<td>graldew.bat</td>
+<td style="text-align:left">windows下的gradle wrapper可执行文件</td>
+</tr>
+<tr>
+<td>local.properties</td>
+<td style="text-align:left">本地属性设置（key设置，android sdk位置等属性），这个文件是不推荐上传到VCS中去的</td>
+</tr>
+<tr>
+<td>settings.gradle</td>
+<td style="text-align:left">和设置相关的gradle脚本</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Android视图</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-948c80899bc8f183.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Android视图"></p>
+<table>
+<thead>
+<tr>
+<th>文件（夹）名</th>
+<th style="text-align:left">用途 </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>build</td>
+<td style="text-align:left">编译后的文件存在的位置（包括最终生成的apk也在这里面）</td>
+</tr>
+<tr>
+<td>libs</td>
+<td style="text-align:left">依赖的库所在的位置（jar和aar)</td>
+</tr>
+<tr>
+<td>src</td>
+<td style="text-align:left">源代码所在的目录</td>
+</tr>
+<tr>
+<td>src/main</td>
+<td style="text-align:left">主要代码所在位置（src/androidTest)就是测试代码所在位置了</td>
+</tr>
+<tr>
+<td>src/main/assets</td>
+<td style="text-align:left">android中附带的一些文件</td>
+</tr>
+<tr>
+<td>src/main/java</td>
+<td style="text-align:left">最最重要的，我们的java代码所在的位置</td>
+</tr>
+<tr>
+<td>src/main/jniLibs</td>
+<td style="text-align:left">jni的一些动态库所在的默认位置(.so文件)</td>
+</tr>
+<tr>
+<td>src/main/res</td>
+<td style="text-align:left">android资源文件所在位置</td>
+</tr>
+<tr>
+<td>src/main/AndroidManifest.xml</td>
+<td style="text-align:left">清单文件</td>
+</tr>
+<tr>
+<td>build.gradle</td>
+<td style="text-align:left">和这个项目有关的gradle配置，相当于这个项目的Makefile，一些项目的依赖就写在这里面</td>
+</tr>
+<tr>
+<td>proguard.pro</td>
+<td style="text-align:left">代码混淆配置文件</td>
+</tr>
+</tbody>
+</table>
+<p>2.Eclipse里面导入AndroidStudio项目：</p>
+<ul>
+<li>AndroidStudio中src目录里面包括整个项目的所有代码包括资源文件和xml，所以直接将AndroidStudio目录里面的src -&gt;main 目录里面的java文件夹名改为src ，然后将main里面的内容（不包括main）拷贝到一个新的以你项目名称命名的文件夹中，然后用eclipse导入就可以了；</li>
+</ul>
+<p>3.AndroidStudio里导入Eclipse项目：</p>
+<ul>
+<li>这里直接import project或者import moudle一路确定即可；<br>project相当于ADT中的workspace，moudle相当于ADT里的project，moudle必须依托于project存在，其实这个关系是和Xcode项目类似的；</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-29763751f1463eb2.png" alt="直接导入"></p>
+<p>4.本地依赖：jar包和aar包生成的路径，只要构建后就会生成</p>
+<ul>
+<li>.jar：库/build/intermediates/bundles/debug(release)/classes.jar</li>
+<li>.aar：库/build/outputs/aar/libraryname.aar</li>
+</ul>
+<p>5.jar包的使用：</p>
+<ul>
+<li>使用Gradle命令：<br>将jar包拷贝到libs目录，build.gradle中添加：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">        compile fileTree(include: [&apos;*.jar&apos;], dir: &apos;libs&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>单个文件则是<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">        compile files(&apos;libs/fastjson-1.2.2.jar&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>重新编译一次项目既可完成加载，点击AVD Manager左边的图标；</p>
+<ul>
+<li>或者使用图形化操作，在File-&gt;Project Structure里面选择File dependency，如果是引用导入的第三方库，则是选择Module dependency，若是引用Maven仓库中的第三方库，则选择Library dependency;</li>
+</ul>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-ae7a5e803a3671e1.png" alt="引用jar包和项目"></p>
+<p>6.so文件的引用：<br>在“src/main”目录中新建名为“jniLibs”的目录，将so文件复制、粘贴到“jniLibs”目录内；</p>
+<p>7.aar本地加载：<br>aar文件是含有res资源的jar包，这是为了便于安卓开发引用，不用再去拷贝那么多资源文件了；<br>第一步：在文件系统操作，将aar拷贝到libs目录下；<br>第二步：build.gradle配置文件(Module的那个)中更改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">repositories &#123;</span><br><span class="line">        flatDir &#123;</span><br><span class="line">                dirs &apos;libs&apos;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">dependencies &#123;</span><br><span class="line">        compile(name:&apos;library&apos;, ext:&apos;aar&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里分别添加了”repositories“与更改了”dependencies“，然后重新编译一次项目就可以正常使用了；</p>
+<p>如果是库项目引用aar文件需要拷贝一份到主项目里面，就相当于原来ADT的库项目里包含assert文件；</p>
+<p>8.使用指定的keystore：<br>在build.gradle文件下面android{}里面添加以下语句，路径请替换，查看SHA1可以使用命令行，也可以使用图形化界面Project Structure；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">signingConfigs &#123;</span><br><span class="line">        debug &#123;</span><br><span class="line">                storeFile file(&quot;XXX\debug.keystore&quot;)</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>9.关于各种第三方项目的引用，可以参考<a href="http://ask.android-studio.org/?/article/37" target="_blank" rel="noopener">这篇文章</a>的总结;</p>
+<p>10.如果编辑器报gradle的某个方法无法识别，可能是新版本弃用了，那么需要去掉该方法，有的是版本的问题，可以试着把android{ }这个方法去了;也可以参考这篇<a href="http://www.jcodecraeer.com/a/anzhuokaifa/androidkaifa/2014/1115/1989.html" target="_blank" rel="noopener">导入GitHub项目Gradle出错的解决方案</a> ；</p>
+<p>11.路径名字中不能有汉字  报如下错误：<br>Error:(1, 0) Your project path contains non-ASCII characters. This will most likely<br>cause the build to fail on Windows. Please move your project to a different<br>directory. See <a href="http://b.android.com/95744" target="_blank" rel="noopener">http://b.android.com/95744</a> for details.</p>
+<p>12.AS出现Error:(1, 0) Plugin with id ‘com.android.application’ not found.<br>在项目最外层的build.gradle文件加入如下代码刷新（try again）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">buildscript &#123;     </span><br><span class="line">     repositories &#123;          </span><br><span class="line">          mavenCentral()     </span><br><span class="line">     &#125;     </span><br><span class="line">    dependencies &#123;          </span><br><span class="line">          classpath &apos;com.android.tools.build:gradle:1.2.3&apos;     </span><br><span class="line">     &#125;</span><br><span class="line"> &#125; </span><br><span class="line"> allprojects &#123;     </span><br><span class="line">      repositories &#123;          </span><br><span class="line">          mavenCentral()     </span><br><span class="line">      &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>13.SSL peer shut down incorrectly<br>这个问题通常出现在Android Studio更新失败的时候，或者你导入了别人的项目的时候，AS提示你下载一个什么gradle的东西，然后又下不下来。可以这样解决：Gradle version 和android plugin version 改为当前你安装的版本，如果你懒得找，可以直接打开一个可以运行的项目，对着改过来就可以;</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-d5b58f106f5d1338.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="AS里查找"><br><img src="http://upload-images.jianshu.io/upload_images/202169-efd969794833324a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="资源管理器查找"><br>]</p>
+<p>14.配置Svn出错请到Preference里面打开Version Control下的Subversion的General面板，把3个复选框都去了再试试；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-f6da98f2c417e5dd.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="Svn配置出错"></p>
+<p>15.AndroidStudio的Error和Warning都在右边显示；右键Refactor-&gt;move操作可以把一个内部类分出去，Refactor-&gt;extract-&gt;method可以把大方法中的一段代码分到一个小方法里；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-bb81f524d632bd78.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="方法分离"></p>
+<h4 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a><strong>写在最后</strong></h4><p>如果不得不使用ADT的话，可以参考我的另一篇文章<a href="http://www.jianshu.com/p/ca866f0302d7" target="_blank" rel="noopener">Eclipse提升工作效率的配置</a>，那是我曾经使用ADT的时候总结的一篇文章；</p>
+<ul>
+<li>AndroidStudio项目结构切换到Android标签下简单明了，不像ADT那么杂乱；</li>
+<li>现在GitHub上的很多代码（如开源组件）都使用AndroidStudio项目了；</li>
+<li>AndroidStudio需要JDK1.7以上，默认从4.0版本开始兼容，开发者也应该多多学习一些新的API特性，2014年终的数据显示2.3及以下的用户占10%，除非公司有需求，否则完全没必要去支持，另外ADT官方已经不积极维护了；</li>
+</ul>
+<p>使用AndroidStudio的时候也有一些不习惯的小地方，当然也可能是我没有找到相关设置的地方：</p>
+<ul>
+<li>比如Module的删除要在顶部路径栏里面；</li>
+<li>生成的方法没有参数，需要自己手动一个个填；</li>
+</ul>
+<p>但是用了这么久，我已经习惯了使用AndroidStudio，感觉如鱼得水，这一篇暂时到这里，以后我还会写一篇实现个人敏捷开发的文章，那里会提到一些关于使用AndroidStudio进一步提高效率的一些内容，欢迎阅读；</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/202169-5af2c8f07e3c4735.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="icon_chatter_url_default.png"></p>
+<p><a href="http://upload-images.jianshu.io/upload_images/202169-5af2c8f07e3c4735.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" target="_blank" rel="noopener">http://upload-images.jianshu.io/upload_images/202169-5af2c8f07e3c4735.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/AndroidStudio/" data-id="cjajd03p50001dwlloqxqvqzp" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-组合模式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/组合模式/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>该模式用来生成组织结构，文件，目录这样的东西，各个元素都是一样的结构；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public interface Company &#123;</span><br><span class="line">    String getInfo();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">public class Employee implements Company &#123;</span><br><span class="line">    String name;</span><br><span class="line">    String dpt;</span><br><span class="line"></span><br><span class="line">    public Employee(String name, String dpt) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.dpt = dpt;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    public String getInfo() &#123;</span><br><span class="line">        return &quot;name: &quot; + name + &quot;  dpt: &quot; + dpt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public class ConcreteCompany implements Company &#123;</span><br><span class="line">    String dpt;</span><br><span class="line">    String name;</span><br><span class="line">    List&lt;Company&gt; list = new ArrayList&lt;Company&gt;();</span><br><span class="line"></span><br><span class="line">    public void add(Company company) &#123;</span><br><span class="line">        list.add(company);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public void remove(Company company) &#123;</span><br><span class="line">        list.remove(company);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public ConcreteCompany(String name,String dpt) &#123;</span><br><span class="line">        this.name = name;</span><br><span class="line">        this.dpt = dpt;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public List&lt;Company&gt; getChild()&#123;</span><br><span class="line">        return list;</span><br><span class="line">    &#125;</span><br><span class="line">    @Override</span><br><span class="line">    public String getInfo() &#123;</span><br><span class="line">        return &quot;name: &quot; + name + &quot;  dpt: &quot; + dpt;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>测试代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">public static void display(ConcreteCompany company) &#123;</span><br><span class="line">        for (Company c : company.getChild()) &#123;</span><br><span class="line">            if (c instanceof Employee) &#123;</span><br><span class="line">                System.out.println(c.getInfo());</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                System.out.println(&quot;\n&quot; + c.getInfo());</span><br><span class="line">                display(((ConcreteCompany) c));</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"> public static void main(String[] args) &#123;</span><br><span class="line">        ConcreteCompany company = new ConcreteCompany(&quot;san&quot;, &quot;boss&quot;);</span><br><span class="line"></span><br><span class="line">        ConcreteCompany company1 = new ConcreteCompany(&quot;tom&quot;, &quot;cto&quot;);</span><br><span class="line">        ConcreteCompany company2 = new ConcreteCompany(&quot;dav&quot;, &quot;ceo&quot;);</span><br><span class="line">        ConcreteCompany company3 = new ConcreteCompany(&quot;amy&quot;, &quot;coo&quot;);</span><br><span class="line">        ConcreteCompany company4 = new ConcreteCompany(&quot;eny&quot;, &quot;cmo&quot;);</span><br><span class="line"></span><br><span class="line">        company.add(company1);</span><br><span class="line">        company.add(company2);</span><br><span class="line">        company.add(company3);</span><br><span class="line">        company.add(company4);</span><br><span class="line"></span><br><span class="line">        &#123;</span><br><span class="line">            Employee employee1 = new Employee(&quot;suk&quot;, &quot;android&quot;);</span><br><span class="line">            Employee employee2 = new Employee(&quot;kya&quot;, &quot;ios&quot;);</span><br><span class="line">            Employee employee3 = new Employee(&quot;drs&quot;, &quot;html&quot;);</span><br><span class="line">            Employee employee4 = new Employee(&quot;ser&quot;, &quot;php&quot;);</span><br><span class="line"></span><br><span class="line">            company1.add(employee1);</span><br><span class="line">            company1.add(employee2);</span><br><span class="line">            company1.add(employee3);</span><br><span class="line">            company1.add(employee4);</span><br><span class="line">        &#125;</span><br><span class="line">        &#123;</span><br><span class="line">            Employee employee1 = new Employee(&quot;dxs&quot;, &quot;sale&quot;);</span><br><span class="line">            Employee employee2 = new Employee(&quot;gbv&quot;, &quot;product&quot;);</span><br><span class="line">            Employee employee3 = new Employee(&quot;ert&quot;, &quot;operate&quot;);</span><br><span class="line">            Employee employee4 = new Employee(&quot;jhy&quot;, &quot;hr&quot;);</span><br><span class="line"></span><br><span class="line">            company2.add(employee1);</span><br><span class="line">            company2.add(employee2);</span><br><span class="line">            company3.add(employee3);</span><br><span class="line">            company4.add(employee4);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        System.out.println(company.getInfo());</span><br><span class="line">        display(company);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>运行结果<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">name: san  dpt: boss</span><br><span class="line"></span><br><span class="line">name: tom  dpt: cto</span><br><span class="line">name: suk  dpt: android</span><br><span class="line">name: kya  dpt: ios</span><br><span class="line">name: drs  dpt: html</span><br><span class="line">name: ser  dpt: php</span><br><span class="line"></span><br><span class="line">name: dav  dpt: ceo</span><br><span class="line">name: dxs  dpt: sale</span><br><span class="line">name: gbv  dpt: product</span><br><span class="line"></span><br><span class="line">name: amy  dpt: coo</span><br><span class="line">name: ert  dpt: operate</span><br><span class="line"></span><br><span class="line">name: eny  dpt: cmo</span><br><span class="line">name: jhy  dpt: hr</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/组合模式/" data-id="cjajd03pv000ldwllu3reqjuc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-给APK瘦身" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/给APK瘦身/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android的apk文件越来越大了这已经是一个不争的事实。在Android 还是最初版本的时候，一个app的apk文件大小也还只有2 MB左右，到了现在，一个app的apk文件大小已经升级到10MB到20MB这个范围了。apk文件大小的爆炸式增长主要是因为用户对app质量的期待越来越高以及开发者的开发经验增长，具体体现在以下几个方面：</p>
+<ul>
+<li>Android设备<em>dpi</em>的多样化 ([l|m|tv|h|x|xx|xxx]dpi)</li>
+<li>Android平台的进化，开发工具的改进以及开源类库生态系统的丰富</li>
+<li>用户对高质量UI的期待</li>
+<li>其他原因</li>
+</ul>
+<p>Android开发者在设计一个app的时候应该将最终发布一个轻量级app作为一个最佳实践来考虑。为什么？首先这就意味着你拥有了一个简洁，易维护代码基础。其次，官方应用商店对超过50MB的apk设置了拓展包文件下载选项，apk文件在50MB以下更容易让用户下载。最后，我们的应用程序环境是一个带宽有限，存储空间有限的环境，apk安装文件越小，下载就会越快，安装也会更快，良性循环，最后说不定用户因为这个给好评。<br>在大部分情况下，apk大小的增长是为了满足消费者的需要和期待。然而，我认为apk大小的增速已经超过了用户对app期待的增速。所以，很大程度上，官方应用商店里面的那些程序可以瘦身至它们现在大小的一半甚至更多。</p>
+<p>APK 文件格式<br>在说如何给apk瘦身之前，让我们先来看看apk文件内部的结构到底是怎么一回事。说简单点，一个apk文件就是包含一些文件的压缩包。作为开发者，我们通过使用unzip命令解压这个apk文件一探apk的内部结构。下面的文件结构就是我们使用unzip <your_apk_name>.apk</your_apk_name></p>
+<p>这个命令所获得的：</p>
+<blockquote>
+<p>/assets<br>/lib<br>/armeabi<br>/armeabi-v7a<br>/x86<br>/mips<br>/META-INF<br>MANIFEST.MF<br>CERT.RSA<br>CERT.SF<br>/res<br>AndroidManifest.xml<br>classes.dex<br>resources.arsc</p>
+</blockquote>
+<p>我们可能对上面大部分的文件和目录都很熟悉。它们和我们在实际开发app的时候所看到得项目结构一样，包含了：<br>/assets<br>/lib<br>/res<br>AndroidManifest.xml<br>还有一些文件可能是我们第一次看到。<br>一般说来，classes.dex, 它包含了我们所写的Java代码经过编译后class文件；<br>resources.arsc包含了预编译之后的资源文件（比如values文件，XML drawables 文件等)<br>由于apk文件只是一个简单地压缩文件，这就意味着它有两种大小：即压缩前的大小和压缩后的大小。这篇文章我将主要关注压缩后的大小。</p>
+<p>如何减少apk文件大小<br>减少apk文件大小可以从几个方面入手。由于每个app都是不同的，所以没有什么绝对规则来给apk文件瘦身。作为apk文件的三个重要组成部分，我们可以考虑从它们开始入手：<br>Java 源代码<br>资源文件（resources/assets）<br>native code</p>
+<p>所以接下来的招式都是由减少这些组件的大小出发，进而减少整个app的大小。</p>
+<h3 id="掌握良好的编码习惯"><a href="#掌握良好的编码习惯" class="headerlink" title="掌握良好的编码习惯"></a>掌握良好的编码习惯</h3><p>这是减少apk文件至关重要的第一步。你要对自己的代码了如子掌。你要移除掉所有无用处的dependency libraries，让你的代码一天比一天优秀，持续地优化你的代码。总而言之，保持一个简洁，最新的代码基础是减少apk文件至关重要的一环。<br>当然，从零开始一个项目并为这个项目保持一份简洁的代码基础很容易。项目越老，这个工作就越困难。事实上，拥有一大段历史背景的项目必须要去处理各种死代码和无用代码。还好有许多的开发工具可以帮我们来做这些事情……</p>
+<h3 id="使用Proguard"><a href="#使用Proguard" class="headerlink" title="使用Proguard"></a>使用Proguard</h3><p>Proguard 是一个很强悍的工具，它可以帮你在代码编译时对代码进行混淆，优化和压缩。它有一个专门用来减少apk文件大小的功能叫做 tree-shaking。Proguard 会遍历你的所有代码然后找出无用处的代码。所有这些不可达（或者不需要）的代码都会在生成最终的apk文件之前被清除掉。Proguard 也会重命名你的类属性，类和接口，然整个代码尽可能地保持轻量级水平。<br>也许现在你会认为 Proguard 是一个相当有效地工具。但是能力越大，责任也就越大。现在许多开发这认为Proguard有点让人不省心，因为它会重度依赖反射。哪些类或者属性需要被处理或者不能处理都要开发者对 Proguard 进行配置。</p>
+<h3 id="广泛使用-Lint"><a href="#广泛使用-Lint" class="headerlink" title="广泛使用 Lint"></a>广泛使用 Lint</h3><p>Proguard 只会对 Java 代码起作用，那么对哪些资源文件呢？比如一张图片my_image在res/drawable文件夹中，没有被使用，Proguard 只会移除掉R类中的引用，但是图片依然还在文件夹中。<br>Lint 一个静态的代码分析器，你只需通过调用./gradlew lint<br>这个简单地命令它就能帮你检查所有无用的资源文件。它在检测完之后会提供一份详细的资源文件清单，并将无用的资源列在“UnusedResources: Unused resources” 区域之下。只要你不通过反射来反问这些无用资源，你就可以放心地移除这些文件了。<br>Lint 会分析资源文件(比如/res文件夹下面的文件) ，但是会跳过 assets 文件 (/assets文件夹下面的文件)。事实上assets 文件是可以通过它们的文件名直接访问的，而不需要通过Java引用或者XML引用。因此，Lint 也不能判定某个 asset 文件在项目中是否有用。这全取决于开发者对这个文件夹的维护了。如果你没有使用某个asset 文件，那么你就可以直接清除这个文件。</p>
+<h3 id="对资源文件进行取舍"><a href="#对资源文件进行取舍" class="headerlink" title="对资源文件进行取舍"></a>对资源文件进行取舍</h3><p>Android 支持多种设备。Android的系统设计让它可以支持设备的多样性：屏幕密度，屏幕形状，屏幕大小等等。到了Android 4.4，它支持的屏幕密度包括： ldpi, mdpi, tvdpi, hdpi, xhdpi, xxhdpi and xxxhdpi。但是你要知道的一点是，Android 支持这么多的屏幕密度并不意味着你需要为每一个屏幕密度提供相应的资源文件。<br>如果你知道某些屏幕密度的设备只有很少部分用户在使用，那么你就可以直接不需要使用相应屏幕密度的资源文件。就我个人而言，我只会为我的应用提供 hdpi, xhdpi and xxhdpi这几个屏幕密度的支持。如果某些设备不是这几个屏幕密度的，不用担心，Android 系统会自动使用存在的资源为设备计算然后提供资源文件。<br>我这么做得原因很简单。首先，这些设备屏幕密度就能覆盖我 80% 的用户。其次，xxxhdpi 这个屏幕密度只是在为未来的设备做准备，但是未来还未到来。最后，我真的不怎么关心低屏幕密度（比如mdpi 和 ldpi），无论我为这几个屏幕密度努力，结果都是令人伤心地，还不如直接让Android系统对 hdpi 资源文件进行适当地缩放来匹配相应地低端机型。<br>同样地，在drawable-nodpi文件夹里面维持一个文件也能节省空间。当然前提是你觉得对这个文件进行相应地缩放之后呈现的效果你能接受或者这个文件出现的几率很少。</p>
+<h3 id="资源文件最少化配置"><a href="#资源文件最少化配置" class="headerlink" title="资源文件最少化配置"></a>资源文件最少化配置</h3><p>Android 开发经常会依赖各种外部开源代码库，比如Android Support Library, Google Play Services, Facebook SDK 等等。但是这些库里面并不是所有的资源文件你都会用到。比如，Google Play Services 里面会有一些为其他语种提供翻译，而你的app又不需要这个语种的翻译，而且这个库里面还包含了我的app中不支持的 mdpi 资源文件，还好从Android Gradle Plugin 0.7 开始，你可以配置你的app的build系统。这主要是通过配置resConfig和resConfigs以及默认的配置选项。下面的 DSL （Domain Specific Language）就会阻止 aapt（Android Asset Packaging Tool）打包app中不需要的资源文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">defaultConfig &#123;</span><br><span class="line">// ...</span><br><span class="line">resConfigs &quot;en&quot;, &quot;de&quot;, &quot;fr&quot;, &quot;it&quot;</span><br><span class="line">resConfigs &quot;nodpi&quot;, &quot;hdpi&quot;, &quot;xhdpi&quot;, &quot;xxhdpi&quot;, &quot;xxxhdpi&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="压缩图片"><a href="#压缩图片" class="headerlink" title="压缩图片"></a>压缩图片</h3><p>Aapt（Android Asset Packaging Tool）就内置了<a href="http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap" target="_blank" rel="noopener">保真图像压缩算法</a>。例如，一个只需 256 色的真彩PNG图片会被aapt 通过一个颜色调色板转化成一个 8-bit PNG 文件。这可以帮助你减少图片文件的大小。当然你还可以通过Google查找相应的优化工具，比如 pngquant, ImageAlpha 和 ImageOptim 等。你可以从中选择一个适合你的工具。<br>还有一种只在Android平台上存在的图片文件也可以优化，它就是 9-patches。就我目前所知道，我还没发现有这个文件的优化工具。然而你只需要求你的设计师将它的可扩展区域和内容区域尽可能地减少即可。这不但可以减少资源文件的大小，还能使得以后资源文件的维护变得更加简单。</p>
+<h3 id="限制app支持的cpu-架构的数目"><a href="#限制app支持的cpu-架构的数目" class="headerlink" title="限制app支持的cpu 架构的数目"></a>限制app支持的cpu 架构的数目</h3><p>一般说来Android 使用Java 代码即可以满足大部分需求，不过还是有一小部分案例需要使用一些 native code。就像之前对资源文件那样opinionated，你可以这些 native code opinionated。 在当前的Android 生态系统中，让你的app支持 armabi 和 x86 架构就够了。这里有一篇相当不错的<a href="http://blog.algolia.com/android-ndk-how-to-reduce-libs-size/" target="_blank" rel="noopener">关于如何瘦身native 代码库</a>的文章，你可以参考参考。</p>
+<h3 id="尽可能地重用"><a href="#尽可能地重用" class="headerlink" title="尽可能地重用"></a>尽可能地重用</h3><p>重用资源可能是你在进行移动开发时需要了解的最重要的优化技巧之一。比如在一个ListView或者RecyclerView，重用可以帮助你在列表滚动时保持界面流畅。重用还可以帮你减少apk文件的大小。例如，Android 提供了几个工具为一个asset文件重新着色，在Android L中你可以以用android:tint和android:tintMode来达到效果，在老版本中则可以使用ColorFilter；<br>如果系统中有两种图片，一种图片是另一种图片翻转180°得到的，那么你就可以移除一种图片，通过代码实现。比如你现在有两种图片分别命名为ic_arrow_expand和ic_arrow_collapse；<br><a href="http://greenrobot.qiniudn.com/wp-content/uploads/2014/11/expand_collapse.png" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/202169-05f29896c54e2bde.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="expand_collapse"></a></p>
+<p>你可以直接移除掉ic_arrow_collapse文件，然后在ic_arrow_expand的基础上创建一个RotateDrawable。这个方法也可以让你减少设计人员的工作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;rotate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">android:drawable=&quot;@drawable/ic_arrow_expand&quot;</span><br><span class="line">android:fromDegrees=&quot;180&quot;</span><br><span class="line">android:pivotX=&quot;50%&quot;</span><br><span class="line">android:pivotY=&quot;50%&quot;</span><br><span class="line">android:toDegrees=&quot;180&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="在合适的时候使用代码渲染图像"><a href="#在合适的时候使用代码渲染图像" class="headerlink" title="在合适的时候使用代码渲染图像"></a>在合适的时候使用代码渲染图像</h3><p>在某些情况下，直接使用Java 代码渲染图像也能获得不错的效果。比如逐帧动画就是一个很好的例子。最近我都在尝试一些Android Wear 的开发，了解了一下<a href="https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary" target="_blank" rel="noopener">Android wearable support library</a>。就像其他的Android support library 一样，这个库里面也有一些工具来处理穿戴设备的。<br>不过让我吃惊的是，当我简单地构建了一个 “Hello World”示例，最后得到的apk文件竟然有1.5MB。于是我快速地研究了一下wearable-support.aar文件，发现这个库有两个逐帧动画，并分别支持了3种不同的屏幕密度：一个 “success” 动画 (31 frames) 和一个 “open on phone” 动画 (54 frames)。</p>
+<p>这样做得好处就是 (我当然在讽刺) 每帧显示33ms，这使得整个动画保持在30fps的频率。如果每帧16ms这将会导致整个库是之前的两倍大。如果你去看源码你会发现很有趣,在generic_confirmation_00175这一帧 (15 行) 将持续显333ms。generic_confirmation_00185紧跟着它。这个优化节省了9个类似的帧 (包含了从176 帧到 184 帧) 。不过最后神奇的是wearable-support.aar竟然神奇的包含了这个9个完全无用的帧，而且还以3中屏幕密度展示。在代码中来渲染这样的动画明显会很花时间。然而当你维持动画运行在60fps这样的频率可以大幅度的减少apk的大小。在写这篇博文的时候，Android还没提供工具来渲染这样的动画。但是我希望Google正在开发新一代的轻量级实时渲染系统来保证material design的细节呈现。当然“Adobe After Effect to VectorDrawable” 之类的设计工具也能提供很多方便。</p>
+<h3 id="如何更进一步"><a href="#如何更进一步" class="headerlink" title="如何更进一步?"></a>如何更进一步?</h3><p>上面所有的招式都集中在app或者library 开发者。也许我们还可以在app分发渠道方面为apk大小做出一些改变？我想可以在app 分发服务器端做一些改进，或者在官方应用商店。例如，我们可以期待官方应用商店在用户安装app的时候为设备绑定相应的native 库而摒弃那些无用的。<br>同样地，我们还可以想象只根据目标设备的配置来打包应用。不幸的是，这可能破坏Android 生态一个重要的功能特性：配置热置换。事实上，Android一开始就是位处理各种实时的配置更改（语言，屏幕转向）而设计的。如果我们移除掉与目标屏幕不兼容的资源文件，这可以极大的减少文件大小。不过Android需要处理实时的<a href="http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY" target="_blank" rel="noopener">屏幕密度更改</a>。即便我们假设废除这种功能，我们仍然需要处理为不同的屏幕密度设计的图片以及其他配置（比如屏幕朝向，最小宽度等）。<br>服务器端的apk打包看起来很强大。但这样会冒很大得风险，因为最终传送给用户的apk会于开发者发给的服务器的完全不同。分发一些缺失资源文件的apk可能会导致app崩溃。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>设计就是在一个约束集里面找出最好的方案。显然apk文件的大小就是一个约束。不要害怕为了让多个方面变得更好而放松一个方面的约束。例如，当你要降低UI的渲染效果时，不要犹豫，因为这可以让apk的大小减小，同时使得app的运行也更加流畅。你99%的用户是感受不到UI质量变低的，但是他们会注意到apk文件变小了，运行也更加流畅了。总之，你需要将app各方面进行整体考虑，而不是仅仅几个方面的斟酌。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/给APK瘦身/" data-id="cjajd03pw000mdwll5j8pjfe1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-软件思想" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/软件思想/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##2.软件设计##<br><br><br>作为程序员，我觉得如果对产品感兴趣，可以研究下用户体验，转产品经理；如果对架构设计感兴趣，可以尝试设计一些框架，转系统架构师；如果倾向于管理团队，可以尝试转技术总监；若对业务项目感兴趣，可以尝试转PM，当然这些岗位不一定会同时存在，而且他们的侧重点不同，都需要比较丰富的经验；<br>对于技术团队，在开发上面，我觉得我们尽可能的去面向抽象编程，也可以理解为面向接口编程，而这个接口的具体实现则不去关心，这样可以最大限度的降低耦合度，提高协作率，同时也可以最大程度上提升可扩展性和可维护性，拿Android客户端来说，完全可以设计一套基于业务的抽象接口，实现彼此隔离，只不过会很耗时，而且需要考虑的很周全；</p>
+<p>比如登录模块，可以设计一个ILogin接口，包含requestLogin(String phone,String password) 和resultLogin(boolean result,String memeberId)2个方法，分别是请求登录传递参数和登录结果的回调，那么用到登录的地方直接创建一个ILogin的实例，调用相关方法即可，而实现该接口的类则只负责进行相关的网络请求，通过这么一个标准通信，就将实现者和使用者隔离开来，即便一方更改代码，也不会影响另一方，这就是面向抽象编程的魅力；<br>其次就是合理的设计软件结构，不要把相同的代码复制来粘贴去，当一段代码重复用到3次就该考虑要重构了，采用面向对象的思想，合理的使用继承，多态，封装，抽象，回调等特性，重用已有代码，消除冗余，同时可以保持条理清晰，书写简洁；</p>
+<blockquote>
+<p>举个搜索的例子：<br>搜索超市和搜索商品就是类似的功能，不同的只是列表的每一项的布局和内容，那么就应该有一个SearchBase<t>抽象模板类，把所有的布局，数据请求都封装好，只把item的布局赋值和搜索的url和请求字段抽象出来交于子类实现，同时不管以后再加什么功能，都不需要更改代码，如搜索商品，那就继承SearchBase<good>，如搜索超市，那就继承SearchBase<shop>，如搜索评价，那就继承SearchBase<judge>，如搜索订单，那就继承SearchBase<order>，这就完成了所有的搜索业务；</order></judge></shop></good></t></p>
+</blockquote>
+<p>需求分析很重要，流程图必须有，而且要细，周全，这是软件开发的基础，然后需要制作原型图，这之后要进行软件框架的基本设计，模块划分，最后再开始编码；<br>对于多个相似的业务建议先分析，找规律，发现共同点，看看可否分成多个固定的开发流程，将每个流程优化，并对彼此进行有序的衔接，从而形成业务开发流水线，只把不同的地方抽象出来交给子类实现，并辅以一些代码模板和工具，这将极大的提升开发效率；</p>
+<p>比如零步社区的客户端，大约有十几个相似的业务，如我的评价，我的订单，购物车列表，超市列表，商品列表，我的地址，我的优惠券等等，这些完全可以构建成一条标准流水线，即先基于json数据构建实体对象（字典），进行网络请求，将json解析并给实体赋值，显示大列表，大致是这么个过程，然后针对每一个过程我都找了相应的工具去自动生成代码，人只做每个流程间的衔接，以及每个业务个性化的东西；<br>合理的使用设计模式，将会让我们的编码变得更从容，比如工厂模式可以让我们自由的在正式环境和测试环境间切换；装饰器模式可以让我们在不改变类的结构上增加新的功能等等；<br><br> </p>
+<p>##3.版本控制##<br><br><br>整体使用Git进行版本控制，分支功能要开始使用，master主干要稳定，随时可以发布新版本；新的功能拉dev分支，修复bug拉bug分支，完成后本地进行测试，无误后本地commit，pull一下，有冲突先解决，再merge到master主干上面，push上去，这可以避免我们因有未完成的功能而又有需要修复的bug并发布的问题，同时避免调试产生的一些的问题；<br><img src="[http://upload-images.jianshu.io/upload_images/202169-4008e382e2f8639a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240*
+&#39;" alt="git使用流程">; background-size: cover; background-position: 0px 2px;”&gt;*](<a href="http://link.zhihu.com/?target=http%3A//upload-images.jianshu.io/upload_images/202169-4008e382e2f8639a.png%3FimageMogr2/auto-orient/strip%257CimageView2/2/w/1240" target="_blank" rel="noopener">http://link.zhihu.com/?target=http%3A//upload-images.jianshu.io/upload_images/202169-4008e382e2f8639a.png%3FimageMogr2/auto-orient/strip%257CimageView2/2/w/1240</a>))<br>还有一些其他的建议，比如结对编程，遇到复杂的问题，两个人可以坐在一起编写代码，这样考虑的会更周全些，问题解决的也会更快写；团队也可以阅读彼此的代码，发现可能存在的bug，因为找别人的代码的bug比找自己的更容易；</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/软件思想/" data-id="cjajd03px000ndwllr38t6v26" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-技术整理/IOS" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/IOS/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>可选？ 避免nil 主要在if中用 默认赋值nil<br>强制解析可选！<br>a??b 可选运算符,a不为nil就返回a，否则返回b<br>description属性</p>
+<p>for ijh in 512…1024<br>for ijh in 512..1024 左开右闭<br>..不包含上界</p>
+<p>数组元素类型可以不一致<br>数组和string一样可变，取代ns，可以append，insert，相当于arraylist</p>
+<p>switch-case不用break<br>支持范围<br>case中的元组 _表示无需匹配</p>
+<p>for _ in 集合<br>元组和字典类似<br>for i in 1…100 或者开闭</p>
+<p>xcode删除一行<br>_通配符</p>
+<p>静态变量：class var country:String{  return “中国”  }<br>类的变量需要初始化，init方法，各种重载<br>权限基于文件</p>
+<p>java int的最大数2亿<br>整数会报0的异常，浮点数则是这些个数<br>Double.POSTIVE_INFINITY Double.NAN<br>三元表达式类型兼容<br>radom左开右闭<br>ceil，floor最近整数<br>math.round加上0.5再截断<br>arrays.sort<br>数组带的二分查找方法<br>可变参数只有一个且为最后<br>date getYear减去1970 getMonth0-11 getHour0-23<br>getDay0-6（日-六）<br>getDate1-31<br>getminute0-59<br>final声明的引用变量只是对象不能变，属性是可以变得，如数组，指针不能变</p>
+<p>父类声明new子类，调用的是父类的变量，看声明的引用<br>声明父类new子类，方法调用子类的，必须是共同方法，子类独有的不能调用，即重载的才能用，多态</p>
+<p>键盘用command shift K<br>如何看错误栈<br>cgfloat和int的转换<br>如何复制文件<br>本地怎么使用github<br>xib类似于fragment</p>
+<p>强制解析和没有叹号不是同一种类型<br>给viewcontrol设置类，选定后</p>
+<p>不出现注释<br>解决：finder — 个人—资源库–Developer–Xcode – DerivedData      DerivedData底下你的项目 + ModuleCache  一起删掉 ，然后重启XCDOE  </p>
+<p>键盘 command shift k<br>绑定控件：故事版里面不需要打开助手<br>写完之后绑定或者界面拖都可以<br>绑完之后改了代码得重绑<br>//类和故事版的控件绑定后，初始化要用到这个初始化方法<br>required init(coder aDecoder: NSCoder) {<br>    super.init(coder: aDecoder)<br>}</p>
+<p>storyboard使用，跳转界面，控件绑定<br>返回上一页，调用finish方法 dismissModalViewControllerAnimated<br>nib就是单独的故事版，跳转界面用presentView<br>报错和空格等号有关系<br>使用nib界面界面传值就是调用变量而已，先定义一个viewcontroller对象<br>parentviewcontroller</p>
+<p>1.点击按钮显示日期选择器的日期：</p>
+<p>@IBOutlet weak var btn: UIButton!<br>@IBOutlet weak var data: UIDatePicker!</p>
+<p> @IBAction func showDate(sender: AnyObject) {<br>        var date=data.date<br>        var df = NSDateFormatter()//直接初始化<br>        df.dateFormat=”yyyy年MM月dd日 HH：mm：ss”//日期格式写法<br>        var datastr = df.stringFromDate(date)<br>        var message = “您选择的日期和时间是:(datastr)”</p>
+<pre><code>    let alert = UIAlertView()
+    alert.title=&quot;当前日期和格式&quot;
+    alert.message=message
+    alert.addButtonWithTitle(&quot;确定&quot;)
+    alert.show()
+}
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[request requestForPOSTWithUrl:</span><br><span class="line">@&quot;http://applingbushequ.nat123.net/lingbushequ/src/lso2o/mobile/api_coupon.php?commend=couponstore&quot; </span><br><span class="line">postData:[NSString stringWithFormat:@&quot;member_id=%@&amp;store_id=%@&quot;,member_id,store_id]];</span><br><span class="line">    request.successRequest = ^(NSDictionary *couponDic)&#123;</span><br><span class="line">        NSLog(@&quot;========= coupon dic = %@&quot;,couponDic);</span><br><span class="line">        NSNumber *code = [couponDic objectForKey:@&quot;code&quot;];</span><br><span class="line">        if (code.integerValue == 200) &#123;</span><br><span class="line">            NSNumber *isyouhuiquan = [couponDic objectForKey:@&quot;isyouhuijuan&quot;];</span><br><span class="line">            NSNumber *islingqu = [couponDic objectForKey:@&quot;islingqu&quot;];</span><br><span class="line">            NSNumber *isxiaofei = [couponDic objectForKey:@&quot;isxiaofei&quot;];</span><br><span class="line">            if (isyouhuiquan.integerValue == 1 &amp;&amp; isxiaofei.integerValue == 0 &amp;&amp; islingqu == 0) &#123;</span><br><span class="line">                NSDictionary *datas = [couponDic objectForKey:@&quot;datas&quot;];</span><br><span class="line">                if ([[YanMethodManager defaultManager] isDictionaryEmptyWithDic:datas] == NO) &#123;</span><br><span class="line">                    NSNumber *amount = [datas objectForKey:@&quot;amount&quot;];</span><br><span class="line">                    _couponAmount = amount.floatValue;</span><br><span class="line">                &#125;</span><br><span class="line">                [weakSelf addRedPacketSubview];</span><br><span class="line">            &#125; else &#123;</span><br><span class="line">                [weakSelf closeRedpacketView];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+<p>@interface定义一个类<br>@property属性可以用.来引用，m文件里要用下划线引用<br>变量以下划线开始命名，变量和属性不一样<br>导入自定义类要在m文件里<br>弱引用解决循环引用，还有自动计数器<br>oc中用到的基本都是对象，强转要加<em><br>使用strong属性后要置为nil<br>用好快速帮助，包括参数，返回值，描述，版本，例子相关<br>多个控件整体对齐<br>//数组和字典创建的新写法，值在前，键在后<br>     NSArray </em>array = @[@”1”,@”2”,@”3”];<br>     NSDictionary *dic=@{@”zhi”:@”jian”,@”zhi2”:@123};</p>
+<p>1.oc中的自定义view<br>弱引用才会加下划线<br>输入中括号的技巧，还有回车键<br>看帮助文档</p>
+<p>数组下标是objectAtIndex<br>字典设置元素setObject:@”one” forkey:@”1”<br>添加元素addEntriesFromDictionary:dic<br>删除元素removeObjectForKey</p>
+<p>NSInteger转int，int才能用switch-case语句<br>    NSInteger *next=32;<br>    int te=next;//NSInteger转int，推荐使用NSInteger</p>
+<ul>
+<li>(id)initWithFrame:(CGRect)frame{<br>  self =[super initWithFrame:frame];<br>  if (self) {<br>  }<br>  return self;<br>}</li>
+</ul>
+<p>2.基础知识<br>   //    NSLog(@”nihao:%i”,a);<br>    NSArray <em>a2 = [NSArray array];<br>    //声明数组后面要加nil<br>    NSArray </em>a3=[NSArray arrayWithObjects:@”1”,@”2”,nil];<br>    //输出String是%@<br>    //可变数组就是arraylist<br>    NSMutableArray <em>b=[NSMutableArray arrayWithObjects:@”1”,@”2”, nil];<br>    [b addObject:@”31”];<br>    [b addObject:@”32”];<br>    [b addObject:@”33”];<br>    [b addObject:@”34”];<br>    //    NSLog(@”%@”,b);<br>    //代码创建视图,这是初始化二合一的方法<br>    UILabel </em>v =[[UILabel alloc] initWithFrame:CGRectMake(10, 150, 300, 100)];<br>    v.text=@”我是label”;<br>    v.font=[UIFont fontWithName:@”Verdana” size:30];<br>    v.textColor=[UIColor blueColor];<br>    [v setBackgroundColor:[UIColor redColor]];<br>    [self.view addSubview:v];<br>    UITextField <em>qwe =[[UITextField alloc] initWithFrame:CGRectMake(30, 350, 300, 100)];<br>    //    占位符<br>    //    qwe.placeholder=@”123”;<br>    qwe.text=@”123”;<br>    qwe.textColor=[UIColor blueColor];<br>    //    文本框样式<br>    qwe.borderStyle=UITextBorderStyleRoundedRect;<br>    [qwe becomeFirstResponder];<br>    //图片大或多会内存溢出<br>    UIImage </em>i=[UIImage imageNamed:@”1.png”];<br>    _iv.image=i;<br>    UIImageView <em>v2=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@”1.png”]];<br>    //设置缩放模式<br>    v2.contentMode=UIViewContentModeScaleAspectFill;<br>    //改变位置和大小<br>    v2.frame=CGRectMake(100, 100, 100, 100);<br>    //改变中心位置<br>    v2.center=CGPointMake(0, 0);<br>    //改变位置，移动<br>    v2.transform=CGAffineTransformMakeTranslation(10, 10);<br>    //bounds属性改变大小<br>    v2.bounds=CGRectMake(200, 200, 200, 200);<br>    //旋转属性，传弧度，角度</em>PI/180<br>    v2.transform=CGAffineTransformMakeRotation(3.1415926);<br>    //缩放属性<br>    v2.transform=CGAffineTransformMakeScale(3, 3);<br>    [self.view addSubview:v2];<br>    //frame指的是：该view在父view坐标系统中的位置和大小（参照点是父亲的坐标系统）<br>    //bounds指的是：该view在本身坐标系统中的位置和大小（参照点是本身坐标系统）<br>    //改变return键作用<br>    -(BOOL)textView:(UITextView <em>)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString </em>)text{<br>        if ([text isEqualToString:@”\n”]) {<br>            [te resignFirstResponder];<br>            return NO;<br>        }<br>        return YES;<br>    }<br>    //关闭键盘</p>
+<pre><code>- (IBAction)ni:(id)sender {
+    [f resignFirstResponder];
+}
+</code></pre><p>3.<br>    //给textfield添加菜单项，在监听里面实现退出<br>    UIMenuItem <em>m =[[UIMenuItem alloc]initWithTitle:@”quit” action:@selector(quit:)];<br>    UIMenuController </em>menu =[UIMenuController sharedMenuController];<br>    [menu setMenuItems:[NSArray arrayWithObject:m]];<br>4.webview和dialog<br>    UIWebView <em>w=[[UIWebView alloc]initWithFrame:CGRectMake(0, 40, 320, 500)];<br>    //    [self.view addSubview:w];<br>    NSURL </em>url=[NSURL URLWithString:@”<a href="http://www.baidu.com/" target="_blank" rel="noopener">http://www.baidu.com</a>“];<br>    NSURLRequest <em>request =[NSURLRequest requestWithURL:url];<br>    [web loadRequest:request];<br>    //设置识别网页内容<br>    web.dataDetectorTypes=UIDataDetectorTypeAll;<br>    //支持缩放<br>    web.scalesPageToFit=YES;<br>    //实现代理后要设置自己为代理<br>    web.delegate = self;<br>    //载入html代码<br>    //    NSString </em>html=@”This is <font color="blue"><font size="35">HTML”;<br>    //    [w loadHTMLString:html baseURL:nil];<br>    //进度停止时自动隐藏<br>    dialog.hidesWhenStopped = YES;<br>    //在h文件中实现代理，这里就可以重写这几个方法了<br>    //长时间加载<br>    -(void)webView:(UIWebView <em>)webView didFailLoadWithError:(NSError </em>)error<br>    {<br>    }<br>    //加载结束<br>    -(void)webViewDidFinishLoad:(UIWebView <em>)webView{<br>        [dialog stopAnimating];<br>        NSLog(@”加载结束”);<br>        //设置控件的显示和隐藏<br>        [web setHidden:YES];<br>    }<br>    //开始加载<br>    -(void)webViewDidStartLoad:(UIWebView </em>)webView{<br>        [dialog startAnimating];<br>        NSLog(@”开始加载”);<br>    }<br>    -(IBAction)change:(id)sender{<br>        [t resignFirstResponder];<br>    }<br>    //通过return关闭键盘</font></font></p>
+<pre><code>- (IBAction)close:(id)sender {
+    [t resignFirstResponder];
+}
+- (IBAction)gotit:(id)sender {
+    NSURL *url=[NSURL URLWithString:edittext.text];
+    NSURLRequest *request =[NSURLRequest requestWithURL:url];
+    [web loadRequest:request];
+}
+</code></pre><p>//第一步,创建URL<br>NSURL *url = [NSURL URLWithString:@”http:// <a href="http://php.weather.sina.com.cn/iframe/index/w_cl.php" target="_blank" rel="noopener">php.weather.sina.com.cn/iframe/index/w_cl.php</a>? code=js&amp;day=2&amp;city=济南&amp;dfc=3”];</p>
+<p>//第二步,通过URL创建网络请求<br>NSURLRequest *request = [[NSURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePoli cy timeoutInterval:10];<br>//NSURLRequest初始化方法第一个参数:请求访问 路径,第二个参数:缓存协议,第三个参数:网络请求超 时时间</p>
+<p>//第三步,连接服务器<br>NSData <em>received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];<br>NSString </em>str = [[NSString alloc]initWithData:received encoding:NSUTF8StringEncoding];<br>printf(“%d”,str);</p>
+<p>UIImage <em>image=[[UIImage imageNamed:@”x.png”] stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];<br>UIImage </em>image2=[[UIImage imageNamed:@”y.jpg”]stretchableImageWithLeftCapWidth:12.0 topCapHeight:0.0];<br>[_btn setBackgroundImage:image forState:UIControlStateNormal];<br>[_btn setBackgroundImage:image2 forState:UIControlStateHighlighted];</p>
+<p>//html文件放在S下⾯面<br>UIWebView *w=[[UIWebView alloc]initWithFrame:CGRectMake(0, 40, 320, 500)];</p>
+<p>//载入html代码<br>NSString <em>filePath = [[NSBundle mainBundle] pathForResource:@”index”ofType:@”html”];<br>NSString </em>html = [[NSString alloc] initWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];<br>[w loadHTMLString:html baseURL:nil];</p>
+<p>1.模拟器的操作：<br>设置中文<br>屏幕旋转使用command+方向键（横竖屏的适配）<br>home键：command+shift+h<br>退出应用：双击home或点击xcode上的停止按钮<br>缩放尺寸：在菜单windows里面<br>模拟低内存警告，触发相应时间：在hardware菜单里，还有模拟来电话</p>
+<p>2.Xcode操作：<br>绑定苹果账号可以使用帮助文档，在help里面，还可以查找特定的类<br>自定义快捷键，删除一行需要装插件<br>有时没有代码提示：去掉文档注释中的中文试试<br>导航栏的标签依次是：项目，符号，搜索，问题，测试，调试，断店，日志<br>故事板中后四个标签依次是：标识，属性，尺寸，连接<br>工具库里面的四个标签依次是：文件模板，代码片段，对象库，媒体库<br>多标签：command+t<br>代码错误信息复制：切换到问题导航面板即可复制<br>格式化：选中后按ctrol+i，代码左右移使用command+[或]<br>新建一个故事板执行测试<br>符号导航器类似安卓里面的大纲视图<br>Xcode创建项目快照便于恢复，需要在终端敲两行命令  git config –global user.email “xxx@xxx”    git config –global <a href="http://user.name/" target="_blank" rel="noopener">user.name</a> “xxx”   然后就可以创建快照了</p>
+<p>3.IOS相关：<br>更换图标：在plist下面新建一项Icon file，值里面输入图片文件名<br>设置首屏：<br>OC中h文件里声明的IBOutlet在m文件里要加下划线调用<br>Supporting Files类似安卓的res文件夹，Info.plist类似manifest文件</p>
+<p>4.代码：</p>
+<p>首屏休眠时间：在AppDelegate.m里面的构造函数或者viewDidLoad()里面加 NSThread.sleepForTimeInterval(5)<br>关闭当前界面：self.dismissViewControllerAnimated(true , nil)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/IOS/" data-id="cjajd03q8000odwllazo9ay6e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-技术整理/Java的21个核心技术点" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/Java的21个核心技术点/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>写这篇文章的目的是想总结一下自己这么多年来使用java的一些心得体会，主要是和一些java基础知识点相关的，所以也希望能分享给刚刚入门的Java程序员和打算入Java开发这个行当的准新手们，希望可以给大家一些经验，能让大家更好学习和使用Java。 　　这次介绍的主要内容是和J2SE相关的部分，另外，会在以后再介绍些J2EE相关的、和Java中各个框架相关的内容。 　　经过这么多年的Java开发，以及结合平时面试Java开发者的一些经验，我觉得对于J2SE方面主要就是要掌握以下的一些内容。</p>
+<ol>
+<li>JVM相关(包括了各个版本的特性)</li>
+</ol>
+<p>　　对于刚刚接触Java的人来说，JVM相关的知识不一定需要理解很深，对此里面的概念有一些简单的了解即可。不过对于一个有着3年以上Java经验的资深开发者来说，不会JVM几乎是不可接受的。<br> 　　JVM作为java运行的基础，很难相信对于JVM一点都不了解的人可以把java语言吃得很透。我在面试有超过3年Java经验的开发者的时候， JVM几乎就是一个必问的问题了。当然JVM不是唯一决定技术能力好坏的面试问题，但是可以佐证java开发能力的高低。<br> 　　在JVM这个大类中，我认为需要掌握的知识有：<br> JVM内存模型和结构<br> GC原理，性能调优<br> 调优：Thread Dump， 分析内存结构<br> class 二进制字节码结构， class loader 体系 ， class加载过程 ， 实例创建过程<br> 方法执行过程<br> Java各个大版本更新提供的新特性(需要简单了解)</p>
+<ol>
+<li>Java的运行（基础必备）</li>
+</ol>
+<p>　　这条可能出看很简单，java程序的运行谁不会呢？不过很多时候， 我们只是单纯通过IDE去执行java程序，底层IDE又是如何执行java程序呢？很多人并不了解。<br> 　　这个知识点是最最基本的java开发者需要掌握的，初学java，第一个肯定是教你如何在命令行中执行java程序，但是很多人一旦把java学完了，IDE用上了，就把这个都忘了。为什么强调要知道这个呢，知道了java最纯粹的启动方式之后，你才能在启动出问题的时候，去分析当时启动的目录多少，执行命名如何，参数如何，是否有缺失等。 这样有利于你真正开发中去解决那些奇奇怪怪的可能和环境相关的问题。<br> 　　在这里需要掌握的知识有：<br> javac 编译java文件为 class 文件<br> java 命令的使用， 带package的java类如何在命令行中启动<br> java程序涉及到的各个路径(classpath， java。library。path， java运行的主目录等)</p>
+<ol>
+<li>数据类型</li>
+</ol>
+<p>　　这条没有什么好多说的，无非就是Java中的基本类型和对象类型的掌握。可以再了解一些JDK如何自动转换方面的知识，包括装箱拆箱等，还要注意避免装箱之后的类型相等的判断<br> 　　主要知识点：<br> 基本类型： int， long， float， double， boolean ， 。。。<br> 对应的对象类型： Integer 等类型到基本类型的转换， 装箱和拆箱<br> Object类型： equals， hashcode<br> String 类型的特点</p>
+<ol>
+<li>对象和实例，对象的创建</li>
+</ol>
+<p>　　在这方面，开发者需要了解class和instance的概念以及之间的差别， 这是java面向对象特性的一个基础。主要知识点有：<br> Class和 Instance 的概念<br> Instance 创建的过程：<br> 　　1。 无继承：分配内存空间， 初始化变量， 调用构造函数<br> 　　2。 有继承：处理静态动作， 分配内存空间， 变量定义为初始值 ， 从基类-&gt;子类， 处理定义处的初始化， 执行构造方法<br> 　　需要注意的点：<br> 　　　　静态属性等从基类-&gt;子类进行初始化<br> 　　　　默认无参构造方法相关的特性　　</p>
+<ol>
+<li>访问控制</li>
+</ol>
+<p>　　这也是java封装特性的一个基础，需要掌握的有：<br> public protected default private 对于class， method， field 的修饰作用</p>
+<ol>
+<li>流程控制</li>
+</ol>
+<p>　　Java 流程控制的基础， 虽然有些语法不一定很常用，但是都需要了解，并且在合适的地方使用它们。<br> 需要掌握的有：<br> if， switch， loop， for， while 等流程控制的语法</p>
+<ol>
+<li>面向对象编程的概念</li>
+</ol>
+<p>　　这是一个java的核心概念，对于任何java开发者都需要熟练掌握。Java中很多特性或者说知识点都是和java面向对象编程概念相关的。在我的理解，一个好的开发者不仅仅需要了解这些特性（知识点）本身，也更需要知道这些对象在java的面向对象编程概念中是如何体现出来的，这样更有利于开发者掌握java这门开发语言，以及其他面向对象编程的语言。在这里只是简单罗列了一下，主要的知识点包括有：<br> 面向对象三大特性：封装，继承，多态; 各自的定义概念，有哪些特性体现出来，各自的使用场景<br> 静态多分派，动态单分派的概念<br> 重载的概念和使用<br> 继承：接口多实现，基类单继承<br> 抽象，抽象类，接口<br> 多态：方法覆盖的概念和使用<br> 接口回调</p>
+<ol>
+<li>Static</li>
+</ol>
+<p>　　静态属性在java日常开发中也是经常使用，需要了解和 static 关键字相关的用法，还有和其他关键字的配合使用， 如是否可以和 abstract， final 等关键字联合使用。<br> 主要需要掌握的有：<br> 静态属性的定义，使用，以及类加载时如何初始化<br> 静态方法的定义和使用<br> 静态类的定义和使用<br> 静态代码块的定义和初始化时机</p>
+<ol>
+<li>基础知识点</li>
+</ol>
+<p>　　这里主要罗列一些散落的，没有系统归类的一些java知识点。在日常的开发中用到也不少。 这块内容其实还有很多，目前只是暂时归纳了这几个在这里：<br> 　　包括有：<br> equals ， hashcode ， string/stringbuffer ，final ， finally ， finalize</p>
+<p>10.集合框架</p>
+<p>　　这个是一个需要多加掌握的部分，做java开发，可以说没有不用到集合框架的，这很重要。但是这里的知识点并不难，但是对于集合最好要了解内部的实现方式，因为这样有助于你在各个不同的场景选择适合的框架来解决问题，比如有1W个元素的集合，经常要进行contains判断操作，知道了集合的特性或者内部实现，就很容易做出正确的选择。<br> 　　这里包括了如下内容(并发相关不包含在内)：<br> 集合框架的体系： 基础Collection ，Map<br> 具体集合实现的内容， List ，Set ，Map 具体的实现，内部结构， 特殊的方法， 适用场景等<br> 集合相关的工具类 Collections 等的用法</p>
+<p>11.异常框架</p>
+<p>　　异常在java的开发中可能没有那么被重视。一般遇到异常，直接上抛，或者随便catch一下处理之后对于程序整体运行也没有什么大的影响。不过在企业级设计开发中， 异常的设计与处理的好坏，往往就关系着这个系统整体的健壮性。一个好的系统的异常对于开发者来说，处理应该统一，避免各处散落很多异常处理逻辑；对于系统来说，异常应该是可控的，并且是易于运维的，某些异常出现后，应该有应对的方法，知道如何运维处理，所以虽然异常框架很简单，但是对于整个企业级应用开发来说，异常处理是很重要的，处理好异常就需要了解Java中的异常体系。<br> 　　这部分需要掌握的知识点不多，主要就是：<br> 异常的体系：<br> Throwable<br> Exception<br> RuntimeException<br> Error<br> RuntimeException 和 一般 Exception 的区别， 具体处理方法等</p>
+<ol>
+<li>Java IO</li>
+</ol>
+<p>　　IO 在java中不仅仅是文件读写那么简单，也包括了 socket 网络的读写等等一切的输入输出操作。比如说 标准HTTP请求中Post的内容的读取也是一个输出的过程，等等…<br> 　　对于IO，Java不仅提供了基本Input、Output相关的api，也提供了一些简化操作的Reader、Writer等api，在某些开发（涉及大量IO操作的项目）中也很重要，一般日常的开发中也会涉及（日志，临时文件的读写等）。<br> 　　在这中的知识点主要有：<br> 基本IO的体系： 包括有InputStream ， OutputStream， Reader/Writer， 文件读取，各种流读取等<br> NIO 的概念， 具体使用方式和使用场景</p>
+<p>13.多线程并发</p>
+<p>　　多线程是Java中普遍认为比较难的一块。多线程用好了可以有效提高cpu使用率， 提升整体系统效率， 特别是在有大量IO操作阻塞的情况下；但是它也是一柄双刃剑， 如果用不好，系统非但提升不大，或者没有提升，而且还会带来多线程之间的调试时等问题。<br> 　　在多线程中内容有很多，只是简单说明一下Java中初步使用多线程需要掌握的知识点，以后有机会单独再详细介绍一些高级特性的使用场景。<br> 多线程的实现和启动<br> callable 与 runable 区别<br> syncrhoized ，reentrantLock 各自特点和比对<br> 线程池<br> future 异步方式获取执行结果<br> concurrent 包<br> lock<br> ..</p>
+<p>14.网络</p>
+<p>　　Java中也是提供了可以直接操作 TCP协议、UDP协议的API。在需要强调网络性能的情况下，可以直接使用TCP/UDP 进行通讯。在查看Tomcat等的源码中，就可以看到这些相关API的使用情况。不过一般也比较少会直接使用TCP，会使用诸如MINA、Netty这样的框架来进行处理，因为这个方面的开发涉及不多，所以就不再详细罗列了。</p>
+<p>15.时间日期处理</p>
+<p>　　几乎对于每个应用来说，时间日期的处理也是绕不过去的，但是JDK8 之前的时间相关API用法并不友好。在那个时代，可以选择Joda等时间框架。到了JDK8 发布之后，全新的时间API基本融合了其他框架的优点，已经可以很好的直接使用了。<br> 　　对于Java开发者来说，需要熟练地使用API来对时间和日期做相关的处理。<br> 　　具体知识点不再罗列，会在以后再写个专门的文章来总结一下JDK8中时间日期API的用法。</p>
+<p>16.XML解析/ JSON解析</p>
+<p>　　其实这两块内容都不是J2SE里面的内容，但是在日常开发中，和其他程序交互，和配置文件交互，越来越离不开这两种格式的解析。<br> 　　不过对于一个开发者来说，能够了解一些XML/JSON具体解析的原理和方法，有助于你在各个具体的场景中更好的选择合适你的方式来使得你的程序更有效率和更加健壮。<br> 　　XML： 需要了解 DOM解析和 SAX解析的基本原理和各自的适用场景<br> 　　JSON： 需要了解一些常用JSON框架的用法， 如 Jackson， FastJson， Gson 等。。</p>
+<p>17.Maven的使用</p>
+<p>　　Maven也不是Java里面的内容，但是maven是革命性的，给java开发带来了巨大的便利。从依赖的引入和管理，开发流程的更新和发布产出，乃至版本的更新，使用maven可以大大简化开发过程中的复杂度，从而节省大量时间。可以说，maven已经成为java开发者的标配了。所以我把maven也作为一个java开发者对于基础必备的知识点。以后会再放上一些我的一些对于maven使用的经验和技巧等，这里就不再细说了。</p>
+<p>18.泛型</p>
+<p>　　这是JDK5开始引入的新概念，其实是个语法糖，在编写java代码时会有些许便利， 一般的应用或者是业务的开发，只需要简单使用，不一定会用到定义泛型这样的操作， 但是开发一些基础公共组件会使用到，可以在需要的时候再细看这个部分，一般情况下只要会简单使用即可。</p>
+<p>19.标注</p>
+<p>　　也是jdk5 之后引入的。spring是个优秀的框架，最开始就以xml作为标准的配置文件。不过到了Spring3 之后，尤其是 spring-boot 兴起之后，越来越推崇使用标注来简化xml配置文件了，对于开发者来说，可以节省不少xml配置的时间。但是劣势是在于标注散落在各个类中，不像xml，可以对所有配置有个全局性的理解和管理，所以还没有办法说完全就取代所有的xml。对于一般开发者，会使用标注即可，一些公共组建的开发者可能会需要了解标注的定义和实现，可以在具体需要的时候再细看。</p>
+<p>20.RMI</p>
+<p>　　RemoteMethodInvocation ，Java语言特有的远程调用接口，使用还是比较简单方便。不过需要跨语言的情况下，就需要使用 webservice 等其他方式来支持。一般来说，程序都不需要使用RMI，不过可以在特定的情况下使用，我就在一个项目中，使用RMI来进行程序远程启动停止的控制。</p>
+<p>21.JNI</p>
+<p>　　Java Native Interface，可以允许Java中调用本地接口方法，一般用于C/C++代码的调用。需要注意的是在java中加载so/dll文件的路径问题，本身调用接口并不复杂，但是经常在是否加载了所需的本地接口库中花费较多时间。</p>
+<p>　　以上也只是简单介绍了下我对于这些java基本知识点和技术点的一些看法和介绍， 这些内容都源自于我这些年来使用java的一些总结， 希望给刚刚接触Java， 或者打算从Java开发的人一些经验， 希望能够更有效率地学习和使用java， 避免走了弯路浪费了宝贵的时间。这当中还有些内容不够完善的地方，会通过以后的文章再添加上。由于个人能力有限，当然其中也会有些错误和疏漏，欢迎指正，一起讨论，共同来把这篇文章再完善下，希望它可以真正帮助到有需要的人。                </p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/Java的21个核心技术点/" data-id="cjajd03qa000pdwllm01qd7sf" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-技术整理/NDK配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/NDK配置/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>配置ndk环境<br>export NDK_ROOT=/Users/peizhifei/Library/Android/sdk/ndk-bundle<br>export PATH=$PATH:$NDK_ROOT/<br>ndk-build测试</p>
+<p>关联项目<br>local.properties  ndk.dir=/Users/Carson_Ho/Library/Android/sdk/ndk-bundle<br>gradle.properties  android.useDeprecatedNdk=true<br>// 对旧版本的NDK支持<br>build.gradle添加ndk节点<br>jni是在c上面封装的一层东西，jni有单独的东西，当然没那么复杂，把java的变量转成c的</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/NDK配置/" data-id="cjajd03qb000qdwlldirc83zs" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-技术整理/Studio技巧" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/Studio技巧/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>tab位置<br> 分割对比文件<br> 存储布局<br> project和大纲视图切换command 1 7<br> 添加到收藏里面 favourite面板  断点集合<br> 书签是代码的某一行 navigate bookmark<br> 状态栏锁子按钮保护<br> 高亮等级：语法，建议<br> 三击选中一行<br> 最近文件 alt shift a<br> 剪贴板粘 command shift v 这样可以多个复制<br> command shift c复制绝对文件路径 终端里面用<br> help-find action 快速设置，查找as<br> command alt f 全局搜索<br> command o 搜索类<br> command shift o 搜索文件<br> ctrl h 继承结构<br> command b 变量的用处<br> command shift back 上一次编辑处<br>ctrl shift f替换<br> command shift i 全局搜索字符串 正则搜索<br> command shift +- 展开折叠所有代码<br> command 。或者+-<br> ctrl space 智能建议<br> ctrl shift space 更加智能的建议</p>
+<p> alt command ／块注释<br> m，s的规范生成get和set时的忽略</p>
+<p> 定义动态模板使用command j插入<br> command移动有边界，alt shift 上下没有</p>
+<p> 代码排序 codestyle arrangement的顺序  code里面的一个菜单，属于代码规范类别</p>
+<p> command alt t生成代码环绕<br> ctrl t 重构的大菜单  修改签名<br> 静态变量和方法移动到另一个类</p>
+<p> 提取变量<br> 提取常量，比如key和onactivityresult之类<br> 提取方法，重复使用</p>
+<p>pull members up 把子类的变量推给父类<br> 代理代替继承 replace inheritance with delegation<br> 将构造函数变为工厂方法或者构造模式</p>
+<p> gitingore  local.properties是本机的sdk路径<br> 提交 command k<br> log视图 提交记录  双击查看改动<br> revert是回滚到上一个版本，并提交一次记录<br> reset head是重置，会删除提交记录</p>
+<p> 分支也要先提交再合并，没提交会出现smart checkout<br> 合并到master上要先在master，然后选择分支，点击merge和原来济南的一样，继续用起来</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/Studio技巧/" data-id="cjajd03qd000rdwllt5ho9112" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-技术整理/java" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/java/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Java<br>javac是编译器<br>java是解释器<br>javadoc生成html<br>javap是反编译，可以看到public的代码</p>
+<p>java -jar test.jar<br>jar有很多提取创建的方法<br>jar xf test</p>
+<p>编码规范，命令，注释，单元测试，类的设计，面向接口，性能<br>private final 变量</p>
+<p>使用整形要考虑表示范围<br>逻辑运算符和位运算符<br>左移相当于乘以2的n次方  2&lt;&lt;2=8</p>
+<blockquote>
+<blockquote>
+<p>是带符号右移</p>
+<blockquote>
+<p>是无符号右移</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>括号是最优先的<br>string的构造函数有截取的功能<br>substring是起始坐标<br>stringbuffer的缓冲容量capacity</p>
+<p>round四舍五入<br>floor是不大于<br>使用GregorianCalendar的get和set方法<br>导入静态的时候各种报错可以去import上面加*</p>
+<p>依赖和聚合不同<br>多态表现为重载和覆盖<br>静态内部类只能访问外部类的静态相关<br>内部类创建需要外部类的对象</p>
+<p>枚举替代了public static final定义类型，且构造函数私有<br>枚举也可以有构造函数和抽象方法</p>
+<p>创建对象的几种方式，构造函数，反射<br>获取class对象的3种方式，class就是字节码<br>获取构造函数constructor，属性field和方法method<br>反射的数组使用，一维数组当做object，二维是object[]</p>
+<p>枚举，泛型都是太多代码的实现固定<br>泛型也是需要写一堆冗余代码<br>参数化类型无继承特性<br>泛型只是限制集合中的输入类型，编译成功后就没用了<br>反射可以绕过泛型<br>泛型通配符？</p>
+<p>小程序<br>app.js相当于manifest文件<br>计算器程序</p>
+<p>使用view缓存，比如inflate的结果</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/java/" data-id="cjajd03qg000sdwllo0jub9hh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-技术整理/代码" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/代码/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>hashmap映射无序，key只许有一个null</p>
+<p>夜间模式<br>视频<br>mvp<br>权限</p>
+<p>书写ui看设计稿就想到要复用样式了，style继承<br>theme里面设置 windowContentOverlay是状态栏阴影<br>        <item name="windowBackground">@null</item><br>        <item name="android:windowContentOverlay">@null</item></p>
+<p>marterial主题 colorControlActivated colorControlHighlight</p>
+<p>View decorView = getWindow().getDecorView();<br>        //夜间模式<br>        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LOW_PROFILE);<br>    //隐藏导航栏<br>        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);<br>        //改变窗口时不要移动布局<br>        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE);<br>        //全屏，可以设置是否影响actionBar<br>        decorView.setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN);</p>
+<p>自定义view也要实现onSizeChanged()  if(w!=oldw || h!=oldh){ 复位参数 }<br>自定义view中构造函数使用this(context,null)  this(context,null,0)<br>绘图使用ps的图层概念</p>
+<p>animateLayoutChanges可以在代码里设置5种模式，出现，消失，调整等，LayoutTransition<br>简单的可以自定义adapter<br>listview的emptyview需要写在xml中<br>equals字符串写在前</p>
+<p> public void hidesToolbar() {<br>        ViewPropertyAnimator.animate(toolbar).translationY(-toolbar.getHeight())<br>                .setInterpolator(new AccelerateInterpolator(1))<br>                .start();<br>    }</p>
+<pre><code>public void showsToolbar() {
+    ViewPropertyAnimator.animate(toolbar).translationY(0)
+            .setInterpolator(new DecelerateInterpolator(1))
+            .start();
+}
+</code></pre><p>刚去汉图的时候做的列表，多类型，分页的，那个时候真的是</p>
+<p>switch只用int或integer<br>long,string 都不能作用于swtich<br>byte,short,char都可以隐含转换为int</p>
+<p>ART 的机制与 Dalvik 不同。在Dalvik下，应用每次运行的时候，字节码都需要通过即时编译器（just in time ，JIT）转换为机器码，这会拖慢应用的运行效率，而在ART 环境中，应用在第一次安装的时候，字节码就会预先编译成机器码，使其成为真正的本地应用。这个过程叫做预编译（AOT,Ahead-Of-Time）。这样的话，应用的启动(首次)和执行都会变得更加快速。</p>
+<p>优点：<br>1、系统性能的显著提升。<br>2、应用启动更快、运行更快、体验更流畅、触感反馈更及时。<br>3、更长的电池续航能力。<br>4、支持更低的硬件。<br>缺点：<br>1.机器码占用的存储空间更大，字节码变为机器码之后，可能会增加10%-20%（不过在应用包中，可执行的代码常常只是一部分。比如最新的 Google+ APK 是 28.3 MB，但是代码只有 6.9 MB。）<br>2.应用的安装时间会变长。</p>
+<p>当使用ThreadLocal维护变量时，ThreadLocal为每个使用该变量的线程提供独立的变量副本，所以每一个线程都可以独立地改变自己的副本，而不会影响其它线程所对应的副本。</p>
+<p>360插件：正确处理权限<br>常见的五个等级为：<br>前台进程（FOREGROUND_APP_ADJ=0）；<br>可见进程（PERCEPTIBLE_APP_ADJ=2）；<br>服务进程（SERVICE_ADJ=5）；<br>后台进程（CACHED_APP_ADJ=8）；<br>空进程（HIDDEN_APP_MIN_ADJ=15）。</p>
+<p>在Android系统中，应用进程停止运行有以下几个原因：</p>
+<p>1.用户主动退出；<br>2.Crash异常退出；<br>3.系统通过杀掉进程回收内存。</p>
+<p>其中，用户主动退出是合理行为；进程发生Crash后需要重新启动应用(有些情况会自动重启)。系统通过杀掉应用进程回收内存，理论上也是合理的行为。这里我们重点分析第三种情况。</p>
+<p>我们知道，Android有一个淘汰机制，即Android系统会根据应用的运行状态设置一个进程的优先级，然后根据系统整体内存使用状态进行调整，当内存占用达到一定阈值时，就需要把一些优先级低的进程杀掉，以保证其他进程能够有足够的内存使用。</p>
+<p>但是杀掉应用进程会对体验有较大的影响。如再次打开应用耗时会更长(冷启动)，如果能从最大程序上提高应用进程的存活率，可以提高热启动的概率，减少冷启动的概率，让用户更快进入应用。所以提高应用进程的存活率是非常有意义的。<br>应用进程优先级</p>
+<p>在Android系统中，应用进程的优先级(oom_adj值)分为以下等级，不同定义的进程系统采用了不同的管理机制。oom_adj值从-17到16，oom_adj越大，进程优先级越低。</p>
+<p>常见的五个等级为：<br>前台进程（FOREGROUND_APP_ADJ=0）；<br>可见进程（PERCEPTIBLE_APP_ADJ=2）；<br>服务进程（SERVICE_ADJ=5）；<br>后台进程（CACHED_APP_ADJ=8）；<br>空进程（HIDDEN_APP_MIN_ADJ=15）。</p>
+<p>当内存不足时，进程优先级低的(oom_adj越大的)、占内存大的App进程将会被优先杀掉，系统进程的规则如下：</p>
+<p>1.进程优先级设置为PERSISTENT_PROC_ADJ(-12)被杀概率要低。<br>2.进程优先级HEAVY_WEIGHT_APP_ADJ(4)，这种是Activity仅次于主进程，系统认为是高权重进程。<br>3.前台进程FORGROUND_APP_ADJ(0)，前台进程，是指正在前台运行的应用，被杀概率不大。<br>4.进程中没有任何Activity存在会优先被杀。<br>5.空进程最容易被杀。</p>
+<p>提高进程优先级进程保活</p>
+<p>上述分析可以，可以提高进程优先级使应用在后台的存活时间更长，一般使用以下几种方法实现。</p>
+<p>1）网络连接</p>
+<p>通过长连接心跳和进程保持通信，使进程保持活动状态，但如果系统内存非常紧张，也有可能被杀。</p>
+<p>2）利用系统现有机制</p>
+<p>一般可以利用注册系统消息(AlarmReceiver,RootReceiver等)，通过系统消息响应挂起进程。</p>
+<p>3）利用SyncAdapter</p>
+<p>利用Android系统提供的账号同步机制SyncAdapter，实现进程优先级提高。SyncAdapter是一个系统服务，通过系统的定时器更新应用程序数据ContentProvider，因为Sync服务工作在独立进程，并且由操作系统调度，进程属于核心进程级别，系统不会杀掉，而使用了SyncAdapter的进程优先级本身也会提高，从而降低应用进程被杀的概率。</p>
+<p>4）此外，降低应用内存开销是减小进程被系统回收概率的一个非常有效的方法。</p>
+<p>应用多进程有什么好处</p>
+<p>增加App可用内存</p>
+<p>在Android中，默认情况下系统会为每个App分配一定大小的内存。比如从最早的16M到后面的32M或者48M等。具体的内存大小取决于硬件和系统版本。</p>
+<p>这些有限的内存对于普通的App还算是够用，但是对于展示大量图片的应用来说，显得实在是捉襟见肘。</p>
+<p>仔细研究一下，你会发现原来系统的这个限制是作用于进程的(毕竟进程是作为资源分配的基本单位)。意思就是说，如果一个应用实现多个进程，那么这个应用可以获得更多的内存。</p>
+<p>于是，增加App可用内存成了应用多进程的重要原因。</p>
+<p>独立于主进程</p>
+<p>除了增加App可用内存之外，确保使用多进程，可以独立于主进程，确保某些任务的执行和完成。</p>
+<p>举一个简单的例子，之前的一个项目存在退出的功能，其具体实现为杀掉进程。为了保证某些统计数据上报正常，不受当前进程退出的影响，我们可以使用独立的进程来完成。</p>
+<p>onStartCommand返回START_STICKY<br>onDestroy中startself<br>Service后台变前置，setForground(true)<br>android:persistent = “true</p>
+<p>Android账号和同步机制 </p>
+<p>下面看一下如何实现这两个方法 首先要加载apk中的资源：</p>
+<p>protected void loadResources() {<br>    try {<br>        AssetManager assetManager = AssetManager.class.newInstance();<br>        Method addAssetPath = assetManager.getClass().getMethod(“addAssetPath”, String.class);<br>        addAssetPath.invoke(assetManager, mDexPath);<br>        mAssetManager = assetManager;<br>    } catch (Exception e) {<br>        e.printStackTrace();<br>    }<br>    Resources superRes = super.getResources();<br>    mResources = new Resources(mAssetManager, superRes.getDisplayMetrics(),<br>            superRes.getConfiguration());<br>    mTheme = mResources.newTheme();<br>    mTheme.setTo(super.getTheme());<br>}</p>
+<p>说明：加载的方法是通过反射，通过调用AssetManager中的addAssetPath方法，我们可以将一个apk中的资源加载到Resources中，由于addAssetPath是隐藏api我们无法直接调用，所以只能通过反射，下面是它的声明，通过注释我们可以看出，传递的路径可以是zip文件也可以是一个资源目录，而apk就是一个zip，所以直接将apk的路径传给它，资源就加载到AssetManager中了，然后再通过AssetManager来创建一个新的Resources对象，这个对象就是我们可以使用的apk中的资源了，这样我们的问题就解决了。</p>
+<pre><code>//第一种方式：  
+Classc1 = Class.forName(&quot;Employee&quot;);  
+
+//第二种方式：  
+//java中每个类型都有class 属性.  
+Classc2 = Employee.class;  
+
+//第三种方式：  
+//java语言中任何一个java对象都有getClass 方法  
+Employeee = new Employee();  
+Classc3 = e.getClass(); //c3是运行时类 (e的运行时类是Employee)  
+</code></pre><p>Objecto = c.newInstance(); //调用了Employee的无参数构造方法. </p>
+<p> //获取id属性<br>    Field idF = c.getDeclaredField(“id”);<br>    //实例化这个类赋给o<br>    Object o = c.newInstance();<br>    //打破封装<br>    idF.setAccessible(true); //使用反射机制可以打破封装性，导致了java对象的属性不安全。<br>    //给o对象的id属性赋值”110”<br>    idF.set(o, “110”); //set </p>
+<p>我们知道了在Service等非Activity的Context里面启动Activity为什么需要添加FLAG_ACTIVITY_NEW_TASK；</p>
+<p>私有或者隐藏的API可以使用，但必须处理好兼容性问题<br>renderscript</p>
+<p>git_android_dev2@115.28.230.86:/data/git/android</p>
+<p>左移是乘，右移是除<br>java高级</p>
+<p>List  set方法 isEmpty</p>
+<p>fragment写在viewcreater<br>点赞要成功</p>
+<p> try {<br>                if ( Environment.getExternalStorageState ().equals(<br>                        Environment.MEDIA_MOUNTED)) {<br>                    URL url2 = new URL (url);<br>                    // 创建连接<br>                    HttpURLConnection conn = (HttpURLConnection) url2<br>                            .openConnection();<br>                    conn.connect();<br>                    int length = conn.getContentLength();// 获取文件大小<br>                    InputStream is = conn.getInputStream();// 创建输入流<br>                    File fileDir = new File (savePath);<br>                    if (!fileDir.exists()) {<br>                        fileDir.mkdirs();<br>                    }<br>                    File apkFile = new File (savePath, “sanguo.apk”);<br>                    if (!apkFile.exists()) {<br>                        apkFile.createNewFile();<br>                    }<br>                    FileOutputStream fos = new FileOutputStream (apkFile);<br>                    int count = 0;<br>                    byte buf[] = new byte[1024];<br>                    do {<br>                        int numread = is.read(buf);<br>                        count += numread;<br>                        progress = (int) (((float) count / length) * 100);// 计算进度条位置<br>                        handler.sendEmptyMessage(DOWNLOAD);// 更新进度<br>                        if (numread &lt;= 0) { // 下载完成<br>                            handler.sendEmptyMessage(DOWNLOAD_FINISH);<br>                            break;<br>                        }<br>                        fos.write(buf, 0, numread);<br>                    } while (true);<br>                    fos.close();<br>                    is.close();<br>                }<br>            } catch (Exception e) {<br>                e.printStackTrace();<br>                handler.sendEmptyMessage(DOWNLOAD_ERROR);<br>            }</p>
+<p>延迟1秒弹出键盘来，从下往上弹的效果，配合tint实现状态栏沉浸，从下往上弹的效果很不错<br>public abstract class SearchBaseActivity<t> extends ListBaseActivity<t><br>        tempString = s;</t></t></p>
+<p>我原来的状态栏沉浸用的是tint<br>listview和scrollview增加弹性效果</p>
+<p>//压缩好比例大小后再进行质量压缩<br>  private Bitmap compressImage(Bitmap image) {</p>
+<pre><code>    ByteArrayOutputStream baos = new ByteArrayOutputStream();
+    image.compress(Bitmap.CompressFormat.JPEG, 100, baos);//质量压缩方法，这里100表示不压缩，把压缩后的数据存放到baos中
+    int options = 100;
+    while (baos.toByteArray().length / 1024 &gt; 100) {  //循环判断如果压缩后图片是否大于100kb,大于继续压缩
+        baos.reset();//重置baos即清空baos
+        image.compress(Bitmap.CompressFormat.JPEG, options, baos);//这里压缩options%，把压缩后的数据存放到baos中
+        options -= 10;//每次都减少10
+    }
+    ByteArrayInputStream isBm = new ByteArrayInputStream(baos.toByteArray());//把压缩后的数据baos存放到ByteArrayInputStream中
+    Bitmap bitmap = BitmapFactory.decodeStream(isBm, null, null);//把ByteArrayInputStream数据生成图片
+    return bitmap;
+}
+</code></pre><p>土地管理是先插在本地数据库，然后手动同步到服务器或者自动同步上去<br>离线地图开发</p>
+<p>圆形按钮效果<br>&lt;?xml version=”1.0” encoding=”utf-8”?&gt;</p>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" ;="" android:exitfadeduration="@android:integer/config_shortAnimTime"><br>    <item android:state_pressed="true"><br>        <shape android:shape="oval" android:uselevel="false"><br>            <solid android:color="@color/yigreen_pressed"><br>            <!--<stroke--><br>            <!--android:width="1dp"--><br>            <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x21;&#x2d;&#45;&#x61;&#x6e;&#x64;&#x72;&#x6f;&#x69;&#x64;&#x3a;&#x63;&#x6f;&#x6c;&#x6f;&#114;&#x3d;&#34;&#64;&#99;&#111;&#108;&#111;&#x72;&#x2f;&#103;&#x72;&#101;&#x65;&#x6e;&#x22;&#47;">&#x21;&#x2d;&#45;&#x61;&#x6e;&#x64;&#x72;&#x6f;&#x69;&#x64;&#x3a;&#x63;&#x6f;&#x6c;&#x6f;&#114;&#x3d;&#34;&#64;&#99;&#111;&#108;&#111;&#x72;&#x2f;&#103;&#x72;&#101;&#x65;&#x6e;&#x22;&#47;</a>–&gt;<br>            <size android:width="8dp" android:height="8dp"><br>        </size></solid></shape><br>    </item><br>    <item><br>        <shape android:shape="oval" android:uselevel="false"><br>            <solid android:color="@color/colorPrimary"><br>            <!--<stroke--><br>            <!--android:width="1dp"--><br>            <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#33;&#x2d;&#x2d;&#x61;&#110;&#100;&#x72;&#111;&#x69;&#100;&#58;&#99;&#x6f;&#108;&#x6f;&#114;&#61;&#x22;&#64;&#99;&#x6f;&#x6c;&#111;&#114;&#47;&#x67;&#x72;&#x65;&#101;&#x6e;&#x22;&#47;">&#33;&#x2d;&#x2d;&#x61;&#110;&#100;&#x72;&#111;&#x69;&#100;&#58;&#99;&#x6f;&#108;&#x6f;&#114;&#61;&#x22;&#64;&#99;&#x6f;&#x6c;&#111;&#114;&#47;&#x67;&#x72;&#x65;&#101;&#x6e;&#x22;&#47;</a>–&gt;<br>            <size android:width="8dp" android:height="8dp"><br>        </size></solid></shape><br>    </item><br></selector>
+
+<p>开始下载，取不到city就不行<br>city = location.getCity();<br> ArrayList<mkolsearchrecord> records = mOffline.searchCity(city);<br>                if (records != null &amp;&amp; records.size() != 0) {<br>                    int cityid = Integer.parseInt(String.valueOf(records.get(0).cityID));<br>                    mOffline.start(cityid);<br>                } else {<br>                    TS.t(mActivity, “暂无该城市的离线地图”);<br>                }</mkolsearchrecord></p>
+<p>下载进度<br>case MKOfflineMap.TYPE_DOWNLOAD_UPDATE: {<br>                MKOLUpdateElement update = mOffline.getUpdateInfo(state);<br>                // 处理下载进度更新提示<br>                if (update != null) {<br>                    dialog.setProgress(update.ratio);<br>                    dialog.setContent(city + “离线地图下载中”);<br>                    if (update.ratio == 100) {<br>                        dialog.setContent(city + “离线地图下载完成”);<br>                        TS.t(mActivity, “离线地图下载完成”);<br>                        dialog.dismiss();<br>                        updateView();<br>                    }<br>                }<br>            }<br>break;</p>
+<p>  mMapView.showScaleControl(false);<br>        mMapView.showZoomControls(false);<br>        mBaiduMap.setMyLocationEnabled(true);<br>        // 定位初始化<br>        mLocClient = new LocationClient(this);<br>        mLocClient.registerLocationListener(myListener);<br>        LocationClientOption option = new LocationClientOption();<br>        option.setOpenGps(true);// 打开gps<br>        option.setCoorType(“bd09ll”); // 设置坐标类型<br>        option.setScanSpan(1000);<br>        //这句和离线地图<br>    option.setIsNeedAddress (true);<br>        mLocClient.setLocOption(option);<br>        mLocClient.start();</p>
+<p> @Override<br> public void onReceiveLocation(BDLocation location) {<br> if (!one) {<br>            //la纬度 lo经度<br>            la = location.getLatitude();<br>            lo = location.getLongitude();<br>            if (la != 0 &amp;&amp; lo != 0) {<br>                // 构造定位数据<br>                locData = new MyLocationData.Builder()<br>                        // 定位经度<br>                        .accuracy(location.getRadius())<br>                                // 此处设置开发者获取到的方向信息，顺时针0-360<br>                        .direction(location.getDirection())<br>                        .latitude(location.getLatitude())<br>                        .longitude(location.getLongitude()).build();<br>                // 设置缩放<br>                mMapStatus = new MapStatus.Builder()<br>                        .target(new LatLng(location.getLatitude(), location<br>                                .getLongitude())).zoom(16).build();<br>                mBaiduMap.setMyLocationData(locData);<br>                MapStatusUpdate mMapStatusUpdate = MapStatusUpdateFactory<br>                        .newMapStatus(mMapStatus);<br>                // 改变地图状态<br>                mBaiduMap.setMapStatus(mMapStatusUpdate);<br>                //                Tools.toast (mActivity, la + “”, lo + “”, location.getCity ());</p>
+<p> //定位会弄2次<br> one = true;<br>            }<br>        }<br> }</p>
+<p>长按返回数据点，定位，离线地图管理<br>  mBaiduMap.setOnMapLongClickListener(new BaiduMap.OnMapLongClickListener() {<br>            public void onMapLongClick(LatLng point) {<br>                if (point != null &amp;&amp; point.latitude != 0 &amp;&amp; point.longitude != 0) {<br>                    Intent intent = new Intent();<br>                    intent.putExtra(“la”, point.latitude);<br>                    intent.putExtra(“lo”, point.longitude);<br>                    // TODO: 2016/1/18 0018<br>                    setResult(LandDetailActivity.RESULT_OK, intent);<br>                    AnimUtil.animBackFinish(mActivity);<br>                } else {<br>                    TS.t(mActivity, “请重新长按”);<br>                }<br>            }<br>        });</p>
+<p>  android:fitsSystemWindows=”true”<br>UUID.randomUUID().toString();</p>
+<p>曾经学习的bmob，直播，md的写的app，冬天和夏天</p>
+<p> recycleView.setHasFixedSize(true);</p>
+<p>  if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP) {<br>            Slide transition = new Slide();<br>            transition.excludeTarget(android.R.id.statusBarBackground, true);<br>            getWindow().setEnterTransition(transition);<br>            getWindow().setReturnTransition(transition);<br>        }</p>
+<p>聊天列表根据type去inflate不同的布局</p>
+<p> //标准snackbar的使用<br>    public static void tip(Activity activity, CharSequence string) {<br>        if (activity != null) {<br>            View view = activity.getWindow().getDecorView().getRootView();<br>//            activity.findViewById(R.id.activity_base_container)<br>            if (activity.getWindow().peekDecorView() != null) {<br>                InputMethodManager inputmanger = (InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE);<br>                inputmanger.hideSoftInputFromWindow(view.getWindowToken(), 0);<br>            }<br>            Snackbar sb = Snackbar.make(view, string, Snackbar.LENGTH_SHORT);<br>            sb.setText(string);<br>            Snackbar.SnackbarLayout sbView = (Snackbar.SnackbarLayout) sb.getView();<br>//            sbView.setBackgroundColor(view.getResources().getColor(R.color.colorPrimary));<br>            TextView textView = (TextView) sbView.findViewById(R.id.snackbar_text);<br>//            textView.setTextColor(Color.WHITE);<br>            textView.setTextSize(18);<br>            textView.setGravity(Gravity.CENTER);<br>            sbView.setPadding(0, 60, 0, 0);<br>            sb.show();<br>        }<br>    }</p>
+<p> webView.addJavascriptInterface(new PayJavaScriptInterface(), “pay”);<br>        webView.setWebViewClient(new WebViewClient() {<br>            public boolean shouldOverrideUrlLoading(WebView view, String url) {<br>                //这是在捕捉网页中的电话链接<br>                if (phone) {<br>                    Intent intent = new Intent(Intent.ACTION_DIAL, Uri<br>                            .parse(“tel:” + url));<br>                    getActivity().startActivity(intent);<br>                } else {<br>                    progressBar.setVisibility(View.VISIBLE);<br>                    webView.loadUrl(url);<br>                }<br>                return true;<br>            }<br>        });<br>        // 设置进度条<br>        webView.setWebChromeClient(new WebChromeClient() {<br>            @Override<br>            public void onProgressChanged(WebView view, int newProgress) {<br>                progressBar.setProgress(newProgress);<br>                if (newProgress == 100) {<br>                    progressBar.setVisibility(View.GONE);<br>                }<br>                super.onProgressChanged(view, newProgress);<br>            }<br>        });</p>
+<p> public class PayJavaScriptInterface {<br>        PayJavaScriptInterface() {<br>        }</p>
+<pre><code>@JavascriptInterface
+public String clickOnAndroid(String[] js) {
+    if (StringUtil.isEmpty(S.readString(mActivity, MyConst.KEY_MEMBERID, &quot;&quot;))) {
+        AnimUtil.animToBottom(mActivity);
+    }
+</code></pre><p>//            Tools.dialog(mActivity, “你要购买” + js[0] + “,\n” + “口味是” + js[1] + “,一共是” + js[2] + “元”, true, null);<br>            return “成功添加到购物车”;<br>        }<br>    }</p>
+<p>音频 字节流<br>录音 播放的采样率不一样</p>
+<p>supertoast的撤销的回调<br>dbHelper.delete(bean2.getId());<br>                list.remove(position);<br>                adapter.notifyDataSetChanged();<br>                toast.setOnClickWrapper(new OnClickWrapper(“1”, new SuperToast.OnClickListener() {</p>
+<pre><code>    @Override
+    public void onClick(View view, Parcelable token) {
+        if (token != null) {
+            dbHelper.insert((TODO) token);
+            list.add(position, bean2);
+            adapter.notifyDataSetChanged();
+        }
+    }
+
+}), bean2);
+</code></pre><p> if (bean.isdone()) {<br>            text.setTextColor(Color.GRAY);<br>            text.getPaint().setFlags(Paint.STRIKE_THRU_TEXT_FLAG);//删除线<br>        } else {<br>            text.setTextColor(Color.parseColor(“#01579b”));<br>            text.getPaint().setFlags(Paint.LINEAR_TEXT_FLAG);//恢复正常<br>        }</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/代码/" data-id="cjajd03qh000tdwllmwrmwxt3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    <a class="extend prev" rel="prev" href="/page/2/">&laquo; __('prev')</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">__('next') &raquo;</a>
+  </nav>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

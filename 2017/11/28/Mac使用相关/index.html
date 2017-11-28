@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="勾选任何来源：sudo spctl –master-disable  隐藏和显示文件：显示：defaults write com.apple.finder AppleShowAllFiles -bool true隐藏：defaults write com.apple.finder AppleShowAllFiles -">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/Mac使用相关/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="勾选任何来源：sudo spctl –master-disable  隐藏和显示文件：显示：defaults write com.apple.finder AppleShowAllFiles -bool true隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false  2.quicklook支持pdf文档类复制的开启和关闭（">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="勾选任何来源：sudo spctl –master-disable  隐藏和显示文件：显示：defaults write com.apple.finder AppleShowAllFiles -bool true隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false  2.quicklook支持pdf文档类复制的开启和关闭（">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Mac使用相关" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/Mac使用相关/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>勾选任何来源：sudo spctl –master-disable</p>
+<ol>
+<li>隐藏和显示文件：<br>显示：defaults write com.apple.finder AppleShowAllFiles -bool true<br>隐藏：defaults write com.apple.finder AppleShowAllFiles -bool false</li>
+</ol>
+<p>2.quicklook支持pdf文档类复制的开启和关闭（导致图片出现空白）<br>defaults write com.apple.finder QLEnableTextSelection -bool TRUE;killall Finder<br>defaults delete com.apple.finder QLEnableTextSelection;killall Finder</p>
+<p>3.卸载系统应用，直接拖到应用程序到终端命令<br>cd /Applications/<br>sudo rm -rf /Applications/DVD\ Player.app</p>
+<p>4.显示隐藏的资源库<br>chflags nohidden ~/Library</p>
+<p>5.一些系统资源路径<br>/系统/资源库/CoreServices<br>/System/Library/CoreServices/Dock.app/Contents/Resources</p>
+<p>7.Quicktime自动播放：<br>defaults write com.apple.QuickTimePlayerX MGPlayMovieOnOpen 1</p>
+<p>8.侧边栏变英文：<br>touch ~/downloads/.localized</p>
+<p>9.其他</p>
+<ul>
+<li>Finder添加收藏快捷方式，工具名字，排列方式，自定义工具栏，根据所选项目建立文件夹，桌面文件显示选项；</li>
+<li>显示简介里修改默认打开方式，图片的样板，相当于副本；</li>
+</ul>
+<p>10.配置环境变量：</p>
+<ol>
+<li>找到android sdk的本地路径，adb命令在platform-tool下面,记为XXXX，我的路径是<br>/Applications/eclipse/android-sdk-mac_x86/platform-tools</li>
+<li>打开终端输入<br>touch .bash_profile<br>open -e .bash_profile  点回车</li>
+<li>添加路径<br>.bash_profile打开了，我们在这里添加路径，如果打开的文档里面已经有内容，我们只要之后添加XXXX(注意前面一定要用分号隔开)，如果是一个空白文档的话，我们就输入以下内容<br>export PATH=${PATH}:XXXX<br>保存，关掉这个文档；</li>
+<li>终端输入命令：source .bash_profile</li>
+<li>终端输入命令：adb点回车，如果未显示command not found，说明此命令有效，环境变量设置完成；</li>
+</ol>
+<p>11.sublime</p>
+<p>在Sublime里面按下Control+~进入控制台，输入代码，就完成扩展包得安装，以后安装插件只需要按下Command Shift P，选择install……命令，输入相应插件名称即可；</p>
+<ul>
+<li>Emmet插件：快速编写html5；</li>
+<li>Spacegray主题插件：美化界面；<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  &quot;theme&quot;: &quot;Spacegray Eighties.sublime-theme&quot;,</span><br><span class="line">  &quot;color_scheme&quot;: &quot;Packages/Theme - Spacegray/base16-eighties.dark.tmTheme&quot;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>12.打卡任何来源 sudo spctl –master-disable </p>
+<p>修改dock图标<br>修改音效<br>shift-command-6来给 Touch Bar 截图</p>
+<p>打开终端，在终端中输入：sudo vim /etc/hosts 回车<br>然后再最后一行添加：115.28.230.86 douxingtest<br>当然你也可以把你的电脑代理到代理地址<br>115.28.230.86 douxing.com www.douxing.com</p>
+<p>Windows<br>Hosts地址<br>C:\Winnt\System32\Drivers\etc<br>用管理员身份打开<br>在最后一行添加：115.28.230.86 douxingtest</p>
+<ol>
+<li>复制粘贴：cmd+c→cmd+v</li>
+<li>剪切粘贴：cmd+c→cmd+option+v</li>
+</ol>
+<p>command+h：隐藏<br>command+option+h：隐藏该程序以外的所有程序<br>command+n：新建<br>command+t：字体格式</p>
+<p>safari：<br>command+t：新建标签<br>command++：放大缩小<br>command+d：保存书签</p>
+<p>智能搜索文件，查出各种种类，标记<br>QQ邮箱需要一个授权码</p>
+<p>演讲者注释<br>iPhone遥控ppt，使用remote，并且使用荧光笔<br>mac投影，手机遥控<br>同时输出iPhone和Mac在一个界面上：<br>Mac连iPhone，qt新建影片录制，设备改用iPhone</p>
+<p>从全选视频到选取片段，即时重放<br>这种片段选取的方式<br>音乐的淡入淡出<br>视频效果的入口<br>特效和速度都可以粘贴属性<br>匹配两个片段的颜色</p>
+<p>防抖<br>片段修剪器<br>精确修剪器，双击间隙<br>录制画外音 配音</p>
+<p>按q是连接，给某一段视频连接一个图像<br>option在音频轨道上面添加关键帧，调整音量</p>
+<p>文档扫描，todo，上传各种附件<br>删除线代替删除<br>创建模板<br>分享笔记，导出，这个印象笔记没有<br>建立知识库<br>历史版本<br>阅读密码，这个实用<br>照片中转站，附件中心</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/Mac使用相关/" data-id="cjajd03pb0005dwllk5alsyv8" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/Mac配置ADB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/RecyclerView监听滑动隐藏Toolbar/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>My New Post | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://yoursite.com/2017/11/28/My-New-Post/index.html">
+  <meta name="description" content="1.通过URL调起百度地图客户端http://lbsyun.baidu.com/index.php?title=uri/api/android1Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(&amp;quot;baidumap://map/navi?q">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/百度地图/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-11-28T08:20:05.379Z">
+<meta property="og:description" content="1.通过URL调起百度地图客户端http://lbsyun.baidu.com/index.php?title=uri/api/android1Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(&amp;quot;baidumap://map/navi?query=朝阳门&amp;amp;type=BLK&amp;quot;));intent.setFlag">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="1.通过URL调起百度地图客户端http://lbsyun.baidu.com/index.php?title=uri/api/android1Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(&amp;quot;baidumap://map/navi?query=朝阳门&amp;amp;type=BLK&amp;quot;));intent.setFlag">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,33 +63,25 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-百度地图" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/28/My-New-Post/" class="article-date">
-  <time datetime="2017-11-28T08:20:05.000Z" itemprop="datePublished">2017-11-28</time>
+    <a href="/2017/11/28/百度地图/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      My New Post
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>1.通过URL调起百度地图客户端<br><a href="http://lbsyun.baidu.com/index.php?title=uri/api/android" target="_blank" rel="noopener">http://lbsyun.baidu.com/index.php?title=uri/api/android</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(&quot;baidumap://map/navi?query=朝阳门&amp;type=BLK&quot;));intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);startActivity(intent);</span><br></pre></td></tr></table></figure></p>
+<p>配置方面<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.在AndroidStudio中不出现要调试的Application，需要在gradle中加一句debugger true，然后重新运行；</span><br><span class="line">2.真的没有log就使用命令行吧，adb logcat -v time -s CruiserService &gt;2.txt，这样就把log保存到一个文件里，然后再查找；</span><br><span class="line">3.有的APK手机卸载后再装就怎么也装不上 Android INSTALL_FAILED_UID_CHANGED，那么需要在root的手机去/data/data/删除该包名的文件即可；</span><br><span class="line">4.打开广播开关: adb shell dumpsys activity log br on  </span><br><span class="line">5.打印相关广播的log: adb shell dumpsys activity b</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/28/My-New-Post/" data-id="cjajd03pe0007dwllhfi9icrc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/28/百度地图/" data-id="cjajd03pq000gdwllreum5y6v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,7 +90,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/28/技术整理/高级知识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/28/基于AndroidStudio的高效开发流水线/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -105,9 +100,9 @@
     </a>
   
   
-    <a href="/2017/11/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/11/28/复用Fragment的通用Activity/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>

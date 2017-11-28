@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；一.基本组件1.文本框（TextView） 这是使用最多的控件，用于显示文字内容，其他的一些基本组件基本都继承自他；良好的文字排版可以给用户带来心理的舒畅，设计稿上的文字排版一般都会非常好看，可是到了手机上却变了样，可能是标注不够充分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/Android从细节提升用户体验/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；一.基本组件1.文本框（TextView） 这是使用最多的控件，用于显示文字内容，其他的一些基本组件基本都继承自他；良好的文字排版可以给用户带来心理的舒畅，设计稿上的文字排版一般都会非常好看，可是到了手机上却变了样，可能是标注不够充分，或是理解不到位，我从以下几个方面介绍一下，主要有字体，尺寸，颜色，对齐，空白，">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；一.基本组件1.文本框（TextView） 这是使用最多的控件，用于显示文字内容，其他的一些基本组件基本都继承自他；良好的文字排版可以给用户带来心理的舒畅，设计稿上的文字排版一般都会非常好看，可是到了手机上却变了样，可能是标注不够充分，或是理解不到位，我从以下几个方面介绍一下，主要有字体，尺寸，颜色，对齐，空白，">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Android从细节提升用户体验" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/Android从细节提升用户体验/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；"><a href="#本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；" class="headerlink" title="本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；"></a>本文基于Android开发中常用的组件，结合具体操作，聊聊如何从细微之处提升用户体验；</h5><h4 id="一-基本组件"><a href="#一-基本组件" class="headerlink" title="一.基本组件"></a>一.基本组件</h4><h5 id="1-文本框（TextView）"><a href="#1-文本框（TextView）" class="headerlink" title="1.文本框（TextView）"></a>1.文本框（TextView）</h5><blockquote>
+<p>这是使用最多的控件，用于显示文字内容，其他的一些基本组件基本都继承自他；良好的文字排版可以给用户带来心理的舒畅，设计稿上的文字排版一般都会非常好看，可是到了手机上却变了样，可能是标注不够充分，或是理解不到位，我从以下几个方面介绍一下，主要有字体，尺寸，颜色，对齐，空白，行距，行数，这也是我认为使用TextView必须设置的属性；</p>
+</blockquote>
+<p>1.字体：Android默认是Roboto，如果在个别地方使用自定义字体，那么可以通过setTypeface(Typeface.createFromAsset(getAssets(), “fonts/mini.ttf”))来设置存放在assert资源目录下的字体，如果全局使用了一种字体，那么建议自定义一个TypefaceTextView来使用；</p>
+<p>2.尺寸：Android字体默认单位是sp，他在dp的基础上针对文字做了优化，显示效果更好，谷歌建议采用android:textAppearance=”?android:attr/textAppearanceLarge/Small/Medium”形式来进行显示，他会根据设备去做适配，但是如果要实现微调的话，还是要自己去写具体数值，再根据分辨率进行适配，建议针对文字尺寸做一套大小等级，然后根据等级去引用；</p>
+<p>3.颜色：色彩的搭配很重要，深浅层次可以突出重点，建议文字的颜色也定义一套层级，比如一级黑，二级灰，三级浅灰，四级亮白，然后根据color的层级去引用；</p>
+<p>4.对齐：即gravity属性，单个文字的对齐方式有居左（left），居右（right），水平居中（center_horizontal），垂直居中（center_vertical），center（居中）等许多种，或是他们的组合，一般单个文本会采用居中对齐，多个文字的对齐方式则会整体左对齐或是右对齐；</p>
+<p>5.空白：这里指padding属性，而非margin，padding是要包含到view的宽高里面的，善用空白会让文字便于阅读，不显得紧凑，一般都会给文字设置paddingLeft/Right/Top/Bottom属性；其实不光文本，其他的view，尤其是viewGroup，给内部组件四周留些空白会使整体的布局变得更优雅；</p>
+<p>6.行数：</p>
+<ul>
+<li>设计图上的文字好看因为他是写固定了的，可是程序中的文字却是会变的有时长有时短，因此使用一个TextView的时候我们需要考虑是否限制单行（singleLine），如果限制单行，那么要考虑最大字数（maxEms）是多少，超过的文字是要怎么显示，尾部/中部/头部添加省略号（android:ellipsize=”end/start/middle”），还是使用跑马灯（ellipsize=”marquee”，focusable=”true”）；</li>
+<li>如果文字内容是自适应高度的，那么要考虑最大行数是多少（maxLines），最大高度和最小高度根据需要去添加，如果限制了maxHeight，那么滚动条的显示方式（scrollbars=”vertical/horizontal”）也需要设置一下；</li>
+</ul>
+<p>7.行距，如果文本有很多行，那么建议调整一下行距（lineSpacingExtra=”3dp”），Android默认的行距略窄；</p>
+<p>8.性能优化：</p>
+<ul>
+<li>比如4个并列显示的TextView可以采用转义换行字符合并成一个TextView，减少View的绘制个数，对于带样式的可以采用Spannable和HTML格式来显示；</li>
+<li>对于四周带图片的的TextView，比如个人中心里面的左边图标，中间文字，右边一边小箭头的就没必要使用3个组件而采用一个TextView来实现，使用drawableLeft/Right/Top/Bottom来设置图片，使用drawablePadding来微调图文边距，这个方法屡试不爽，极大的减少了制View的个数；</li>
+</ul>
+<p>9.其他：文字内容是否需要自动识别链接（autoLink），是否需要粗体斜体（textStyle）等样式，是否设置透明度（alpha）；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">//这里给出上述TextView的属性集合</span><br><span class="line">&lt;TextView    </span><br><span class="line">     android:layout_width=&quot;match_parent&quot;    </span><br><span class="line">     android:layout_height=&quot;wrap_content&quot;    </span><br><span class="line">     android:gravity=&quot;center&quot;    </span><br><span class="line">     android:layout_margin=&quot;5dp&quot;    </span><br><span class="line">     android:padding=&quot;5dp&quot;    </span><br><span class="line">     android:singleLine=&quot;true&quot;    </span><br><span class="line">     android:ellipsize=&quot;end&quot;    </span><br><span class="line">     android:maxEms=&quot;15&quot;    </span><br><span class="line">     android:lineSpacingExtra=&quot;3dp&quot;    </span><br><span class="line">     android:textSize=&quot;14sp&quot;    </span><br><span class="line">     android:textColor=&quot;#eeeeee&quot;    </span><br><span class="line">     android:autoLink=&quot;phone&quot;    </span><br><span class="line">     android:text=&quot;Hello World!&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p></p><p> </p>
+<h5 id="2-按钮（Button）"><a href="#2-按钮（Button）" class="headerlink" title="2.按钮（Button）"></a>2.按钮（Button）</h5><blockquote>
+<p>按钮是一个需要和用户交互的组件，因此对于用户的点击要及时的给予反馈（使用selector），对于不可点击的状态要给予显示，使用button必须设置background；</p>
+</blockquote>
+<p>1.状态：一个按钮至少应该有可用（enable=”true”），不可用（enable=”false”），按下（pressed=”true”）三态，按下的状态可以简单的把透明度调到50%(8位16进制颜色值前两位代表透明度，如#500000ff表示有一半透明度的蓝色)，但一定要有，这三者共同组成一个基本的selector，对于需要选中的要有selected状态，这个一般出现在底部导航选中或这列表某一项选中；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//exitFadeDuration属性可以实现状态间的动画过渡</span><br><span class="line">&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;  android:exitFadeDuration=&quot;100&quot;&gt;</span><br><span class="line">     &lt;item android:state_enabled=&quot;false&quot; android:drawable=&quot;@drawable/button_unable&quot;/&gt;    </span><br><span class="line">     &lt;item android:state_pressed=&quot;true&quot; android:drawable=&quot;@drawable/button_pressed&quot;/&gt;    </span><br><span class="line">     &lt;item android:state_enabled=&quot;true&quot; android:drawable=&quot;@drawable/button_enable&quot;/&gt;</span><br><span class="line">&lt;/selector&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2.背景：对于采用背景（background）变换的按钮，建议优先使用xml文件来编写shape，其次是使用.9文件，最后才使用压缩后的图片，这样可以从点滴之处减小安装包的体积；</p>
+<p>3.文字按钮：Button继承自TextView，所以其他一些属性都可以套用，对于文字按钮，即没有背景（background）的点击需要改变文字颜色，给用户一个回馈，颜色的selector和背景的selector类似；</p>
+<p>4.配合EditText：程序里面经过判断之后对于不可点击的按钮要setEnable（false），并且在点击的时候弹出一个当前不可用的提示；</p>
+<p>5.其他：一个按钮的可触摸区域不应小于手指触碰的最小面积，即48dp，文字按钮的触摸区域为18sp；</p>
+<p></p><p> </p>
+<h5 id="3-输入框（EditText）"><a href="#3-输入框（EditText）" class="headerlink" title="3.输入框（EditText）"></a>3.输入框（EditText）</h5><blockquote>
+<p>EditText继承了TextView并实现了输入文字的功能，也是一个和用户进行交互的组件，使用EditText需要设置hint，inputType，imeOptions属性来提升体验；</p>
+</blockquote>
+<p>1.提示：hint属性一定要有，也可以称作占位符，textColorHint可以设置提示文字颜色，一般是要比显示的文字低一个等级；</p>
+<p>2.输入类型：指定了inputType会出现相应的键盘，如数字，电话，密码或文本，对于密码文本需要在右边添加一个切换显示方式的按钮；</p>
+<p>3.设置右下角的键盘动作（imeOptions）是什么，是search，next，done，还是go；</p>
+<p>4.快速删除：当用户输入内容之后，右边出现一个叉号，快速清空所输内容，而不用一直按back键；</p>
+<p>5.验证：提交信息的时候一定要进行验证，或者实时验证，诸如邮箱，手机等格式，或者长度等，对于空格要考虑是否trim掉，如果输入不合法要给予一个提示，比如右边出现红色的提示文字，我一般是让输入框左右晃动一下；</p>
+<p>6.设置右下角回车的事件，不需要按钮来辅助执行;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">editText.setOnKeyListener(new View.OnKeyListener() &#123;</span><br><span class="line">           @Override</span><br><span class="line">           public boolean onKey(View v, int keyCode, KeyEvent event) &#123;</span><br><span class="line">               if (keyCode==KeyEvent.KEYCODE_ENTER)&#123;</span><br><span class="line">               &#125;</span><br><span class="line">               return true;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br></pre></td></tr></table></figure></p>
+<p>7.设置光标（selection）所在的位置，一般是设置在最后一位（setSelection(mResultText.length())）</p>
+<p>8.增强的搜索体验：给输入框添加监听器，监听用户输入的字符串，实现实时搜索或过滤，或者根据输入内容进行数据库的匹配，显示相关条目；</p>
+<p>9.限制输入的内容：可以设置（android:digits=”1234567890.+-*/%\n()”），还可以根据需求屏蔽长按，设置其为不可复制；</p>
+<p>10.设置不可编辑：可以采用旧的api（editable=false）或者新的setInputType(InputType.TYPE_NULL)；<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;EditText</span><br><span class="line">      android:layout_width=&quot;match_parent&quot;</span><br><span class="line">      android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">      android:inputType=&quot;number&quot;</span><br><span class="line">      android:imeOptions=&quot;actionDone&quot;</span><br><span class="line">      android:hint=&quot;请输入内容&quot;</span><br><span class="line">      android:textColorHint=&quot;#bbbbbb&quot;</span><br><span class="line">      /&gt;</span><br></pre></td></tr></table></figure></p>
+<p></p><p> </p>
+<h5 id="4-图片（ImageView）"><a href="#4-图片（ImageView）" class="headerlink" title="4.图片（ImageView）"></a>4.图片（ImageView）</h5><blockquote>
+<p>图片需要设置前景图和缩放属性，不论是设计还是开发都需要考虑到这一点；</p>
+</blockquote>
+<p>1.前景和缩放：src属性是图片特有的，用于显示一张图片，但是图片的大小和view的大小一般是不一致的，这就需要设置缩放模式（scaleType），所以这两个属性一般是成对出现的，基本的模式有不下10种，常用的有拉伸铺满（fitXY），居中缩放（centerInside），裁剪（centerCrop） ，一般的banner显示是会让宽度为屏幕宽度，高度自适应；</p>
+<p>2.背景：任意一个view都可以设置背景（setBackgrounResourse），背景是和view的宽高一致的，所以图片用来做背景通常是会发生形变的，但是背景和前景一起设置，有的时候可以做出一些特殊的效果；</p>
+<p>3.项目中常用到的图片一般是从网络上面取得，这就需要显示一张占位图来宣传品牌标识，对于图片库建议采用FaceBook的Freso库，圆角，圆形，或者其他效果都有很好的封装；</p>
+<p>4.素材管理：</p>
+<ul>
+<li>并不是使用图片就会显得高大上，图片的质量很重要，尤其是那些需要用户提供内容的软件；</li>
+<li>对于项目中使用的UI素材，一般是使用一套720P的放于drawable-xhdpi下，如果要适配1080P，需要一套大尺寸的图放于drawable-xxhdpi下；</li>
+<li>对于命名采用通用命名，共用文件，避免重复，如ic_actionbar_delete，iv_splash_bg；</li>
+<li>对于大图需要经过压缩处理，无透明通道使用jpg会更小，有透明通道的单色图可以使用png-8来压缩；</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;ImageView</span><br><span class="line">      android:layout_width=&quot;match_parent&quot;</span><br><span class="line">      android:layout_height=&quot;wrap_content&quot;</span><br><span class="line">      android:src=&quot;@drawable/ic_actionbar_add&quot;</span><br><span class="line">      android:scaleType=&quot;centerCrop&quot;</span><br><span class="line">      android:alpha=&quot;0.6&quot;</span><br><span class="line">      /&gt;</span><br></pre></td></tr></table></figure>
+<p></p><p> </p>
+<h5 id="5-布局（ViewGroup）"><a href="#5-布局（ViewGroup）" class="headerlink" title="5.布局（ViewGroup）"></a>5.布局（ViewGroup）</h5><blockquote>
+<p>Android提供了多种类型的父容器，我们应当针对布局的特性，复杂性和性能优化方面合理的进行选择，主要的ViewGroup有FrameLayout，Linearlayout，Relativelayout，GridLayout和下一节的AbsListView；</p>
+</blockquote>
+<p>1.FrameLayout：是最轻量级的容器，性能比较好，建议优先考虑，一般fragment的container会用，还有一些看起来是相对布局的样式也可以使用FrameLayout来实现，依赖于gravity属性；</p>
+<p>2.Linearlayout：对于子控件的出现或消失可以给一个过渡动画（android:animateLayoutChanges=”true”），避免突兀，对于适配使用weight属性，平分布局的分割线可以用deliver；</p>
+<p>3.Relativelayout：相对布局可以实现比较复杂的布局，常用于列表的每一项的布局，但是我觉得还是尽量减少子控件之间的依赖，多使用相对于父容器的属性，这样设置view可见和不可见的时候不会影响其他组件的显示；</p>
+<p>4.布局适配：Android的UI适配可以采用百分比库，这个库可以按照屏幕或父容器宽高进行子控件的宽高的分配，这是我认为目前比较合理的适配方案；</p>
+<p></p><p> </p>
+<h5 id="6-列表（AbsListView）"><a href="#6-列表（AbsListView）" class="headerlink" title="6.列表（AbsListView）"></a>6.列表（AbsListView）</h5><blockquote>
+<p>列表是安卓中大量使用到的组件，一般有LIstView，GridView，新的RecycleView</p>
+</blockquote>
+<p>1.空视图：当列表为空的时候，要放置缺省图和说明文字，给予用户提示，空视图最好可以点击，并执行重新加载的请求；</p>
+<p>2.下拉刷新：让列表支持下拉刷新的功能，以便用户可以及时的获取最新的内容；下拉一般是用户主动去触发，对于编辑之后返回列表需要刷新的采用自动刷新；</p>
+<p>3.分页加载：当列表内容过多的时候要采用分页加载，一般是一次取20条，当列表滑到最底端的时候自动去请求下一页的数据或者是上拉刷新下一页；</p>
+<p>4.缓存：当有网的时候请求网络数据，没有网的情况下使用本地缓存，即用户上一次看过的列表内容；</p>
+<p>5.列表中的图片：采用异步加载，不阻塞线程，从占位图到网络图的出现给一个alpha动画，避免突兀，使用弱引用及时回收图片，避免内存溢出；</p>
+<p>6.列表中的控件：需要考虑列表整体是否需要被点击，列表内单个控件的点击行为是什么，建议根据实体去进行操作；</p>
+<p>7.列表样式：</p>
+<ul>
+<li>MaterialDesign提倡使用CardView去承载一个卡片，卡片四周会有阴影效果（根据光线的角度而变），给用户一种凸起的感觉，未使用CardView的可以去写一个border来实现这一效果；</li>
+<li>分割线：若要使用分割线一般是单独一条没有，最后一条没有，彼此的分割线左右都有一些间距，采用默认的分割线无法实现此效果，需要在item里面自己添加并通过adapter控制；</li>
+<li>圆角，时间轴效果：其实和分割线基本类似，判断是不是只有一条，是不是第一条，是不是最后一条，然后去设置不同的样式；</li>
+</ul>
+<p>8.复用：adapter里面的逻辑判断不要过于复杂，否则会影响界面滑动流畅度，adapter可以复用，如列表页，搜索结果页，我的内容页，都可以共用，通过构造函数传入的变量进行合理的重构；</p>
+<p>9.对于需要编辑的列表，编辑成功之后再刷新列表，而且是只刷新点击的那一条数据，这就需要在点击item的时候使用startActivityForResult，并用onActivityResult来接收结果；</p>
+<p>10.根据需要添加滑动删除功能，对于删除的item可以做一个逝去的动画，有一个体验规则是用户知道自己要做删除，所以删除前不要询问，而是在删除后给予一个撤销的功能，这个体验在绝大多数的国外软件中都有用到；</p>
+<p></p><p></p>
+<h5 id="7-开关，进度和提示框（Switch，Progress-Dialog-Toast）"><a href="#7-开关，进度和提示框（Switch，Progress-Dialog-Toast）" class="headerlink" title="7.开关，进度和提示框（Switch，Progress/Dialog/Toast）"></a>7.开关，进度和提示框（Switch，Progress/Dialog/Toast）</h5><p>1.开关：<br>其实开关和一个按钮没什么区别，只不过这种布尔值的按钮用起来比较方便，button完全可以替代它，一般有单选框（radiobutton），复选框（checkbox，switch），他有一个onCheckChangedListener，但我觉得还是使用button配合bean比较好；</p>
+<p>2.简单提示</p>
+<ul>
+<li>Toast可以以ApplicationContext为依托，有的提示是要在界面不存在之后就不提示，那么调用show的时候先判断下activity.isFinshing；</li>
+<li>SnackBar可以做交互，类似于撤销的那种样式，同时配合CoordinatorLayout可以实现最好的效果，这是MaterialDesign里面的组件，用法和Toast类似；</li>
+</ul>
+<p>3.对话框</p>
+<ul>
+<li>设计师称之为弹窗，本质上可以理解为和activity没有区别，该组件用于和用户交互，给予一个重要的提示，或者是一个明确的结果，或者是一个转圈圈，阻塞界面；</li>
+<li>安卓这一界面的实现有Dialog，PopupWindow和第三方的ActionSheet，他们都是异步的；</li>
+<li>进度需要一个可以展现企业品牌标识的logo，如唯品会的等待框，是其域名字母的波浪振动，有趣的动画可以降低用户等待的焦躁；进度不要锁死界面，这样当用户网络很差的时候可以点击返回取消；一个好的体验是采用分部进度，而不是用一个全局对话框，如购物类APP的首页banner广告采用一个内部等待框，中间爆品使用一个内部等待框，下部分类再用一个等待框，这样各个模块各自加载，不阻塞界面，一部分加载不出来也不响应用户去浏览其他信息，网易云阅读就是使用了这一特性；</li>
+</ul>
+<p></p><p></p>
+<h4 id="二-界面过渡"><a href="#二-界面过渡" class="headerlink" title="二.界面过渡"></a>二.界面过渡</h4><h5 id="1-过渡动画"><a href="#1-过渡动画" class="headerlink" title="1.过渡动画"></a>1.过渡动画</h5><ul>
+<li>Activity和Fragment间的跳转要有动画，动画是要给用户一个指引，带有逻辑，比如默认的跳转动画是去采用左出右进，回（back）采用右出左进，对于登陆这样的界面可以采用下进下出的动画，而对于列表筛选器可以采用上进上出的动画；</li>
+<li>容器内的控件变化加上过渡动画，比如控件的出现和消失，移动，形变等，至少可以是个alpha动画；</li>
+<li>对于单个View的点击可以增加动画，比如放大并消失的动画；</li>
+</ul>
+<p></p><p></p>
+<h5 id="2-状态保存"><a href="#2-状态保存" class="headerlink" title="2.状态保存"></a>2.状态保存</h5><blockquote>
+<p>伴随着界面的切换和旋转，旧的activity和fragment的view可能会重绘，这样就有可能失去view当前的状态，如用户的输入内容（EditText），浏览的列表项（ListView）等等，这就需要我们手动保存数据并复原（在onSaveInstanceState里面把要保存的数据记录下来，并在onRestoreInstanceState中恢复）；</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">  public void onSaveInstanceState(Bundle outState, PersistableBundle outPersistentState) &#123;</span><br><span class="line">      super.onSaveInstanceState(outState, outPersistentState);</span><br><span class="line">      outState.putString(&quot;edit&quot;, editText.getText().toString());</span><br><span class="line">      outState.putInt(&quot;list&quot;,listView.getLastVisiblePosition());</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  @Override</span><br><span class="line">  protected void onRestoreInstanceState(Bundle savedInstanceState) &#123;</span><br><span class="line">      super.onRestoreInstanceState(savedInstanceState);</span><br><span class="line">      editText.setText(savedInstanceState.getString(&quot;edit&quot;));</span><br><span class="line">      listView.setSelection(savedInstanceState.getInt(&quot;list&quot;));</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同理在我们自定义View的时候也应该考虑到哪些状态需要保存并复写这两个方法；</li>
+</ul>
+<p></p><p></p>
+<h5 id="3-滑动返回"><a href="#3-滑动返回" class="headerlink" title="3.滑动返回"></a>3.滑动返回</h5><blockquote>
+<p>用户常见的手势有touch，click，swipe，flip，我们在开发程序的时候应该尽量采用滑动手势去替代点击行为，因为用户是懒惰的，产品越简单越易操作越好；</p>
+</blockquote>
+<ul>
+<li>比如activity采用右滑返回就比点击左上角的返回按钮要好，当然这一特性要给以用户提示；</li>
+<li>再比如底部的导航和选择器（Segment），做成可以左右滑动的就比只能点击的体验要好（要善用ViewPager）；</li>
+</ul>
+<p></p><p></p>
+<h5 id="4-界面跳转"><a href="#4-界面跳转" class="headerlink" title="4.界面跳转"></a>4.界面跳转</h5><ul>
+<li>点击事件触发之后，进行一下逻辑判断，然后立刻跳转，在界面上给予响应，相应的数据在新的界面内部请求完成，要优先响应用户的点击；</li>
+<li>对于公用界面，做一个封装，如登录页，购买页面，在该类的内部封装静态的使用intent传递数据的方法，根据传入的类型，字段来决定显示的<br>什么样式和内容；</li>
+</ul>
+<p></p><p></p>
+<h4 id="三-安卓适配"><a href="#三-安卓适配" class="headerlink" title="三.安卓适配"></a>三.安卓适配</h4><blockquote>
+<p>Android程序需要适配很多机型，而适配又分很多种类型，主要是分辨率，系统版本，屏幕尺寸，处理器，我一般会去<a href="http://www.umindex.com/devices/android_os" target="_blank" rel="noopener">友盟指数</a>去查看近期的数据统计，它是针对国内用户的数据统计；</p>
+</blockquote>
+<ul>
+<li>UI适配：<br>也可以称为分辨率适配，目前安卓机型按照720P开发即可，然后对1080P做一下素材上的适配，设计师给iOS设计的2X图正好放xhdpi下，3X放xxhdpi下；具体操作我所知的有3种，1是代码做适配，通过计算屏幕宽高给控件分配尺寸，2是编写多个xml文件配合资源限定符做适配，3是采用百分比库做适配，快速而且高效；</li>
+<li>系统版本适配：<br>就统计指数来看，目前2.3的操作系统只占1.7%，如果没有实际需求完全没必要去兼容，而3.0是一个历史版本，所以只需要针对4.0以上的系统进行开发即可，这样可以充分使用新的api（如fragment，actionbar，gridlayout，popupMenu，animator）制作各种特效，但如果必须要兼容2.3系统，那么可以使用兼容库，如supportv4（兼容fragment），supportv7（兼容actionbar），nineold（兼容动画），对于其他的兼容可以写一个xxCompat方法，在方法内根据系统的版本号来决定采用新旧api获取相应结果；</li>
+<li>屏幕尺寸适配：<br>安卓机型一般分布为从4寸到12寸，以7寸为分界线划分为手机和平板，所以这一点就是针对平板做适配，新写一个HD版本比较费时而且不易维护，这里可以采用fragment做适配，左右分屏，原来左边导航点击事件是跳转新的activity，做一层判断如果是平板，则右侧切换fragment，具体操作起来有时候还是需要分开写类；</li>
+<li>cpu适配：<br>高通，华为，MTK，NVIDA，X86的cpu有些lib库可能需要做一下适配，这个简单的一般出现在用到so文件的地方，比如百度地图的jar包提供了各种cpu的so库，其他的则需要使用jni和ndk编程了；</li>
+</ul>
+<p></p><p></p>
+<h4 id="四-其他"><a href="#四-其他" class="headerlink" title="四.其他"></a>四.其他</h4><p></p><p></p>
+<h5 id="1-与时俱进，进一步提升用户体验"><a href="#1-与时俱进，进一步提升用户体验" class="headerlink" title="1.与时俱进，进一步提升用户体验"></a>1.与时俱进，进一步提升用户体验</h5><ul>
+<li>一个原则：对于用户的操作（需要上传到服务器），首先给其成功的反馈（如switch置为true），然后在后台进行处理，失败则给出失败的提示并还原UI（如将switch置为false），对于删除操作成功则给予是否撤销的提示，这种做法对用户体验更佳，微信的先本地后网络的操作基本上都是这样的；</li>
+<li>MaterialDesign：Android开发界面采用MaterialDesign的控件和设计理念，如Snackbar的交互会比Toast好一点，Toolbar可以实现很多的特效（如个人中心常用到），RecycleView可以用来替代ListView，CardView可以轻易实现卡片布局等等；</li>
+<li>状态栏沉浸：给4.4以上的系统用户一个沉浸式体验；</li>
+<li>滑动：较好的体验是控件随指尖滑动，而不是滑动完之后才改变位置，如viewpager的指示器跟随滑动距离而移动，图片的高斯模糊随着手指滑动的距离而变模糊，高级的还会有加速度的计算，善用scroller来实现滑动特效；</li>
+<li>搜索体验：给输入框添加监听器，实时搜索或过滤，提供历史记录和清除功能；</li>
+</ul>
+<p></p><p></p>
+<h5 id="2-优化代码，提升性能"><a href="#2-优化代码，提升性能" class="headerlink" title="2.优化代码，提升性能"></a>2.优化代码，提升性能</h5><ul>
+<li>使用include复用xml布局文件（如actionbar，精致的分割线，公用头，列表的item）;</li>
+<li>使用merge来减少层级嵌套，可以抵消一个父容器（一般是只有宽高属性，若有背景色边距等还不行），attachToRoot要设置为true，并且使用inflate指定parent；</li>
+<li>一般布局中的控件需要gone并在某些情况下需要visiable的时候，可以使用viewstub，它可以延迟加载布局；</li>
+<li>能使用FrameLayout尽量用，它是最轻量级的容器；</li>
+<li>使用Spanned样式文本来消除多个TextView，减少视图个数；</li>
+<li>善用个别属性（如drawableLeft）来减少视图个数；</li>
+<li>从业务逻辑上进行优化；</li>
+</ul>
+<p></p><p></p>
+<h5 id="3-测试和调试"><a href="#3-测试和调试" class="headerlink" title="3.测试和调试"></a>3.测试和调试</h5><ul>
+<li>入门的测试使用云测，提供一个直接进入主界面的安装包上传，选择要测试的机型，操作系统，分辨率然后提交进行盲测，结果中有测试截图和崩溃日志，根据这个可以做一些初步的改进；</li>
+<li>UI测试，使用UIAutomator框架进行UI测试，搭建IDEA测试环境进行针对性的操作测试；</li>
+<li>查看布局边界：开启这一调试可以看到每一个布局的边界，既可以学习别人代码布局，也可以查看自己的布局边界是否正确；</li>
+<li>避免过度渲染：开启视图渲染层级来观察哪些界面被过度渲染了，从好到差依次是蓝，绿，淡红和红，对于过度渲染的界面要发现问题，尤其是ListView的item，这是成倍性能消耗，有的是主题设置了一层颜色，ListView又设置了一层颜色，item的父容器又设置了一层颜色，这就有2次过度渲染，需要通过xml和代码共同调节，当然这个调试项也可以用来观察学习其他软件的优化程度；</li>
+<li>操作时通过AndroidStudio查看cpu和内存的变化来优化性能；</li>
+</ul>
+<p></p><p></p>
+<h5 id="4-安装包体积优化"><a href="#4-安装包体积优化" class="headerlink" title="4.安装包体积优化"></a>4.<a href="http://www.jianshu.com/p/4571a01dbd16" target="_blank" rel="noopener">安装包体积优化</a></h5><blockquote>
+<p>可以从这几个方面入手来优化体积：第三方库，服务器，图片；</p>
+</blockquote>
+<ul>
+<li>第三方库的引入会大大增加文件的体积，尤其是带资源的，jar包和lib库都不小，而且还有针对各种cpu适配的lib库，这里可以根据需要进行取舍，对于一些简易的功能自己写；</li>
+<li>对于很大的资源，如字体，主题，离线地图等，存放到服务器上面，让用户手动去下载，还有一些UI素材也可以存放到服务器上面；</li>
+<li>能用代码做到的尽量不用图片（如shape），图片使用压缩后的图片，在PS里面进行合理的压缩，在不失真的前提下减小体积，合理管理素材，采用通用命名法则共用重用文件；</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/Android从细节提升用户体验/" data-id="cjajd03p80002dwllgf4v1wvd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/2月来学习总结/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/Html和Android简单对比/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

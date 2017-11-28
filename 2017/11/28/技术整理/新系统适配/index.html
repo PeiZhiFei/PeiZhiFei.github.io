@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>My New Post | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://yoursite.com/2017/11/28/My-New-Post/index.html">
+  <meta name="description" content="加入白名单权限适配桌面快捷方式 // 在Android 6.0及以上系统，若定制手机使用到doze模式，请求将应用添加到白名单。if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.M) {    String packageName = trackApp.ge">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/技术整理/新系统适配/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-11-28T08:20:05.379Z">
+<meta property="og:description" content="加入白名单权限适配桌面快捷方式 // 在Android 6.0及以上系统，若定制手机使用到doze模式，请求将应用添加到白名单。if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.M) {    String packageName = trackApp.getPackageName();    boolean isIgnoring = powe">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="加入白名单权限适配桌面快捷方式 // 在Android 6.0及以上系统，若定制手机使用到doze模式，请求将应用添加到白名单。if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.M) {    String packageName = trackApp.getPackageName();    boolean isIgnoring = powe">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,33 +63,25 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-技术整理/新系统适配" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/28/My-New-Post/" class="article-date">
-  <time datetime="2017-11-28T08:20:05.000Z" itemprop="datePublished">2017-11-28</time>
+    <a href="/2017/11/28/技术整理/新系统适配/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      My New Post
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>加入白名单<br>权限适配<br>桌面快捷方式</p>
+<p>// 在Android 6.0及以上系统，若定制手机使用到doze模式，请求将应用添加到白名单。<br>if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.M) {<br>    String packageName = trackApp.getPackageName();<br>    boolean isIgnoring = powerManager.isIgnoringBatteryOptimizations(packageName);<br>    if (!isIgnoring) {<br>        Intent intent = new Intent(<br>Settings.ACTION_REQUEST_IGNORE_BATTERY_OPTIMIZATIONS);<br>        intent.setData(Uri.parse(“package:” + packageName));<br>        try {<br>            startActivity(intent);<br>        } catch (Exception ex) {<br>            ex.printStackTrace();<br>        }<br>    }<br>}</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/28/My-New-Post/" data-id="cjajd03pe0007dwllhfi9icrc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/新系统适配/" data-id="cjajd03ql000ydwll4sxzba3q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,7 +90,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/28/技术整理/高级知识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/28/技术整理/安卓学习/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -105,9 +100,9 @@
     </a>
   
   
-    <a href="/2017/11/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/11/28/技术整理/源码学习/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>

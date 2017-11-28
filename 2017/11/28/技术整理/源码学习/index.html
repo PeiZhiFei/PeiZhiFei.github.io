@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>My New Post | Hexo</title>
+  <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="My New Post">
-<meta property="og:url" content="http://yoursite.com/2017/11/28/My-New-Post/index.html">
+  <meta name="description" content="源码 binder：ipc rpc 共享内存实名binder是系统的binder word count. String s = “This is a book. There is a chair. Today is Monday. I’m going to school soon. There are teachers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/技术整理/源码学习/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:updated_time" content="2017-11-28T08:20:05.379Z">
+<meta property="og:description" content="源码 binder：ipc rpc 共享内存实名binder是系统的binder word count. String s = “This is a book. There is a chair. Today is Monday. I’m going to school soon. There are teachers at school”; a 2book 1chair 1….school 2…">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Post">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="源码 binder：ipc rpc 共享内存实名binder是系统的binder word count. String s = “This is a book. There is a chair. Today is Monday. I’m going to school soon. There are teachers at school”; a 2book 1chair 1….school 2…">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -60,33 +63,48 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-技术整理/源码学习" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/11/28/My-New-Post/" class="article-date">
-  <time datetime="2017-11-28T08:20:05.000Z" itemprop="datePublished">2017-11-28</time>
+    <a href="/2017/11/28/技术整理/源码学习/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
 </a>
     
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      My New Post
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>源码</p>
+<p>binder：ipc rpc 共享内存<br>实名binder是系统的binder</p>
+<p>word count.</p>
+<p>String s = “This is a book. There is a chair. Today is Monday. I’m going to school soon. There are teachers at school”;</p>
+<p>a 2<br>book 1<br>chair 1<br>….<br>school 2<br>…</p>
+<p>public static void printWordCount(String s) {<br>      Map<string,integer> result=new HashMap<string,integer> ;<br>      StringBuilder temp=new StringBuilder();</string,integer></string,integer></p>
+<pre><code>for(int i=0;i&lt;s.length;i++){
+    char c=s.index(i);
+    if(c==&apos;!&apos;||c==&apos; &apos;||c==&apos;,&apos;||c==&apos;.&apos;||c==&apos;?&apos;||c==&apos;:&apos;||c==&apos;;&apos;||i==s.length-1){
+        Integer x=(Integer) result.get(temp.toLowerCase()); 
+        reslut.put(temp.toString().toLowerCase(),x+1);
+        temp.setLength(0);
+    }
+    else{
+        temp.append(c);
+    }      
+}
+
+Set&lt;String&gt; set=result.keySet();
+ // sort by alphabatical
+Iterator l=set.iterator();
+while(l.hasNext()){
+   System.out.println(l.next()+&quot;  &quot; +result.get(l.next())));
+}
+</code></pre><p>}</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/11/28/My-New-Post/" data-id="cjajd03pe0007dwllhfi9icrc" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/源码学习/" data-id="cjajd03qm000zdwlly9tebmys" class="article-share-link">Share</a>
       
       
     </footer>
@@ -95,7 +113,7 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/11/28/技术整理/高级知识/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/11/28/技术整理/新系统适配/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
@@ -105,9 +123,9 @@
     </a>
   
   
-    <a href="/2017/11/28/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/11/28/技术整理/算法题/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title"></div>
     </a>
   
 </nav>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="h5的dom树类似android的xml，用来布局界面，h5的样式基本都在css里面，android的一般都写在layout.xml里面，复用的写在style.xml里面；  js通过选择器或者id获取到元素后来操作dom，android在java类里面通过xml中的id找到控件来赋值，js也会直接通过代码输出标签，a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/Html和Android简单对比/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="h5的dom树类似android的xml，用来布局界面，h5的样式基本都在css里面，android的一般都写在layout.xml里面，复用的写在style.xml里面；  js通过选择器或者id获取到元素后来操作dom，android在java类里面通过xml中的id找到控件来赋值，js也会直接通过代码输出标签，android也会在一些情况下使用代码编写布局并添加到界面上；  jquery和">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="h5的dom树类似android的xml，用来布局界面，h5的样式基本都在css里面，android的一般都写在layout.xml里面，复用的写在style.xml里面；  js通过选择器或者id获取到元素后来操作dom，android在java类里面通过xml中的id找到控件来赋值，js也会直接通过代码输出标签，android也会在一些情况下使用代码编写布局并添加到界面上；  jquery和">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Html和Android简单对比" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/Html和Android简单对比/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li><p>h5的dom树类似android的xml，用来布局界面，h5的样式基本都在css里面，android的一般都写在layout.xml里面，复用的写在style.xml里面；</p>
+</li>
+<li><p>js通过选择器或者id获取到元素后来操作dom，android在java类里面通过xml中的id找到控件来赋值，js也会直接通过代码输出标签，android也会在一些情况下使用代码编写布局并添加到界面上；</p>
+</li>
+<li><p>jquery和css的选择器用来选择dom元素，可以是单个或者数组，android中不存在选择器，每个元素都是通过id来引用，没有id的控件代码中基本不会用到；</p>
+</li>
+<li><p>js可以给dom元素添加多个事件，android多个会覆盖，最后一个有效，他们一般都会把事件写到代码里面而不是dom里，这样易于修改，js的事件冒泡类似于android的事件分发，子元素优先获取事件，自己消费完之后如果拦截则停止，屏蔽掉父元素的点击事件，不拦截则向上传递给父元素，return true相当于e.stopPropagation（）；</p>
+</li>
+<li><p>h5的列表一般是通过代码输出，有多少个输出多少个，所以删除修改编辑等方式操作的都是那个对象，android是使用adapter给列表赋值，经过优化重用了布局，会导致错位，数组越界等问题，需要配合实体类和标志来解决；</p>
+</li>
+<li><p>h5的ajax类似android的第三方网络请求库，通过ajax实现的标签切换就类似activity切换fragment；</p>
+</li>
+<li><p>h5的一个html文件类似于android的一个activity，当然有的一个html文件是多页面的如jquerymobile，界面之间传参h5通过get请求附加到url上，android通过intent可以传递基本数据类型和序列化的对象；</p>
+</li>
+<li><p>h5的标签类似android的控件，如img标签对应ImageView，h1~h6和p对应TextView，a和button对应Button等，许多h5的控件android需要第三方库来支持，android的ImageView不能加载网络图片，但是有个缩放属性scaleType，可以设置很多个值，居中裁剪，拉伸，居中适应等，这个属性h5中没有；</p>
+</li>
+<li><p>h5内容溢出有个overflow属性，android默认是根据高度截断的，如果想滚动，需要嵌套一个ScrollView，并且他只能有一个子View，和列表嵌套的时候还会出问题；</p>
+</li>
+<li><p>h5的宽高可以根据百分来写，android需要一个百分比库来支持；</p>
+</li>
+<li><p>h5的透明色要写成argb()，比较繁琐，android可以使用8位数字来表示，前2位指定透明度;</p>
+</li>
+<li><p>h5的localStorage类似android的sharepreference，sessionStorage有点像静态变量，webworker类似android的handler；</p>
+</li>
+<li><p>css3的动画类似android的属性动画，而非补间动画；</p>
+</li>
+<li><p>css3的transition自动添加动画这一属性android可以部分实现，在容器中添加animateLayoutChanges=”true”；</p>
+</li>
+<li><p>css的padding默认是会增加元素的宽高，android的padding如果宽高是具体的数字，那么将不会增加元素宽高，而会向内挤压元素，可能导致遮挡部分内容，应该像是css3中设置了box-sizing:border-box，如果宽或高是wrap_content那么就会增加宽或高；</p>
+</li>
+<li><p>css的margin和android类似，但是android的margin合并是叠加的，css是上下取最大，都可以用负间距；</p>
+</li>
+<li><p>css的absolute定位类似于android的FrameLayout帧布局，就像是ps的图层叠加，css中可以通过z-index来控制摆放顺序，android则通过书写顺序从下往上，css的top|left|bottom|right=”5px”相当于在FrameLayout中子元素设置layout_gravity=”top|left|bottom|right”，并加上<br>layout_margin(top|left|bottom|right)=”5px”；</p>
+</li>
+<li><p>css设置字体可以通过font-family直接引用浏览器中的字体，服务器的字体可以通过@font-face来引用，android定义字体可以使用TextView的setTypeface，并把字体拷贝到assert目录下，一般都是设置非系统的字体，所以都用代码设置；</p>
+</li>
+<li><p>css设置全局字体可以通过继承，android设置全局字体（仅系统自带的）可以通过设置theme，其他字体需要自定义控件或者使用库；</p>
+</li>
+<li><p>css中设置宽度并添加margin:0 auto可以把自己水平居中显示，这里我理解的是块级元素可以这么做，且主要用于容器，而子元素要水平居中需要添加text-align:center，android让自己水平居中不需要设置宽度具体数值，显示取决于父容器是什么，如果是RelativeLayout要指定layout_centerHorizontal=”true”，如果是LinearLayout和FrameLayout要指定layout_gravity=”center”；</p>
+</li>
+<li><p>css的文字居中可以设置text-align:center,android的文字居中可以设置gravity=”center_horizontal”；</p>
+</li>
+<li><p>css的text-align:center是容器给元素设置的，相当于android的LinearLayout，FrameLayout和RelativeLayout设置gravity=”center”，android的layout_gravity是设置子元素在父元素中的定位（RelativeLayout中无效），gravity是设置子元素的定位；</p>
+</li>
+<li><p>css的文字垂直居中需要设置行高line-height，然后就自动垂直居中了，android的文字垂直居中需要设置gravity=”center_vertical”，android文字水平垂直居中只需设置gravity=”center”；</p>
+</li>
+<li><p>css的border和background可以巧妙的结合做出各种各样的形状和效果，android通过书写drawable.xml来编写shape，比较繁琐，比如圆角，边框，图层叠加等等；</p>
+</li>
+<li><p>css按钮按下的状态通过伪类选择器来编写，android的view状态通过selector来编写，每个item指定一种状态或者多种状态的结合，顺序还有要求；</p>
+</li>
+<li><p>css的阴影效果通过box-shadow可以实现，android需要写drawable.xml；</p>
+</li>
+<li><p>h5引用的控件框架一般是通过添加class来实现，如bootstrap，android引用第三方控件库一般是通过使用自定义的View，在xml中放置，在代码里面使用api；</p>
+</li>
+<li><p>h5写对话框比较繁琐，android的对话框是创建对象的，比较方便；h5调试网络接口很方便；</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>html</th>
+<th>android     </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h1~h6,p</td>
+<td>TextView</td>
+</tr>
+<tr>
+<td>a,button,input[type=button]</td>
+<td>Button</td>
+</tr>
+<tr>
+<td>img</td>
+<td>ImageView</td>
+</tr>
+<tr>
+<td>video</td>
+<td>VideView（基本上很少用，采用第三方控件） </td>
+</tr>
+<tr>
+<td>div,header,section…</td>
+<td>LinearLayout，FrameLayout，RelativeLayout中的一个 </td>
+</tr>
+<tr>
+<td>ul</td>
+<td>RecyclerView，ListView</td>
+</tr>
+<tr>
+<td>input[type=checkbox]</td>
+<td>CheckBox，Switch</td>
+</tr>
+<tr>
+<td>input[type=radio]</td>
+<td>RadioButton</td>
+</tr>
+<tr>
+<td>input[type=range]</td>
+<td>SeekBar</td>
+</tr>
+<tr>
+<td>input[type=select]</td>
+<td>Spinner（基本上用第三方）</td>
+</tr>
+<tr>
+<td>input  autocomplete=”on”</td>
+<td>AutoCompleteTextView</td>
+</tr>
+<tr>
+<td>textarea</td>
+<td>EditText</td>
+</tr>
+<tr>
+<td>iframe</td>
+<td>WebView</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>css</th>
+<th>android     </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>color</td>
+<td>textColor</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>textstyle=”bold” 不能直接设置多粗   </td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>textSize</td>
+</tr>
+<tr>
+<td>text-align:center</td>
+<td>gravity=”center_horizontal” center是水平垂直都居中</td>
+</tr>
+<tr>
+<td>margin:0 auto</td>
+<td>layout_gravity=”center_horizontal”（FrameLayout和LinearLayout中）；layout_centerHorizontal=”true” （RelativeLayout中）</td>
+</tr>
+<tr>
+<td>transition</td>
+<td>animateLayoutChanges=”true” 部分有效果</td>
+</tr>
+<tr>
+<td>position:absolute;<br> left: 5px;</td>
+<td><b>FrameLayout和LinearLayout中：</b><br>layout_gravity=”left”;<br>margin_left=”5px”;<br><b>RelativeLayout中：</b><br>align_parentLeft=”true”;<br>margin_left=”5px”;</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>background=”@drawable/xxx”</td>
+</tr>
+<tr>
+<td>text-overflow:ellipsis</td>
+<td>android:maxEms=”12”;<br>android:singleLine=”true”;<br>android:ellipsize=”end”;</td>
+</tr>
+<tr>
+<td>vertical-align: middle</td>
+<td>gravity=”center_vertical”</td>
+</tr>
+</tbody>
+</table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/Html和Android简单对比/" data-id="cjajd03p90003dwllnkrmm1mk" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/Android从细节提升用户体验/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/Mac配置ADB/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

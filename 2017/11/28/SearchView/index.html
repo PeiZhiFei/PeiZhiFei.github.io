@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在menu里面创建item12345&amp;lt;item       android:id=&amp;quot;@+id/action_search&amp;quot;       android:title=&amp;quot;搜索&amp;quot;       app:actionViewClass=&amp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/SearchView/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在menu里面创建item12345&amp;lt;item       android:id=&amp;quot;@+id/action_search&amp;quot;       android:title=&amp;quot;搜索&amp;quot;       app:actionViewClass=&amp;quot;android.support.v7.widget.SearchView&amp;quot;       app:showA">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="在menu里面创建item12345&amp;lt;item       android:id=&amp;quot;@+id/action_search&amp;quot;       android:title=&amp;quot;搜索&amp;quot;       app:actionViewClass=&amp;quot;android.support.v7.widget.SearchView&amp;quot;       app:showA">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-SearchView" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/SearchView/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在menu里面创建item<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;item</span><br><span class="line">       android:id=&quot;@+id/action_search&quot;</span><br><span class="line">       android:title=&quot;搜索&quot;</span><br><span class="line">       app:actionViewClass=&quot;android.support.v7.widget.SearchView&quot;</span><br><span class="line">       app:showAsAction=&quot;always&quot; /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>在Activity中创建菜单<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">private SearchView searchView;</span><br><span class="line"></span><br><span class="line">@Override</span><br><span class="line">public boolean onCreateOptionsMenu(Menu menu) &#123;</span><br><span class="line">    //搜索过滤有问题</span><br><span class="line">    getMenuInflater().inflate(R.menu.menu_change, menu);</span><br><span class="line">    SearchManager searchManager =(SearchManager) getSystemService(Context.SEARCH_SERVICE);</span><br><span class="line">    MenuItem searchItem = menu.findItem(R.id.action_search);</span><br><span class="line">    searchView = (SearchView) MenuItemCompat.getActionView(searchItem);</span><br><span class="line">    ComponentName componentName = getComponentName();</span><br><span class="line">    searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName));</span><br><span class="line">    searchView.setQueryHint(&quot;请输入内容&quot;);</span><br><span class="line">    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() &#123;</span><br><span class="line">        @Override</span><br><span class="line">        public boolean onQueryTextSubmit(String s) &#123;</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        @Override</span><br><span class="line">        public boolean onQueryTextChange(String s) &#123;</span><br><span class="line">            newsFragment.filter(s);</span><br><span class="line">            return true;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    searchView.setOnCloseListener(() -&gt; &#123;</span><br><span class="line">        newsFragment.filter(&quot;&quot;);</span><br><span class="line">        return false;</span><br><span class="line">    &#125;);</span><br><span class="line">    return true;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在含有RecyclerView的Fragment中添加过滤方法，也就是调用adapter的过滤方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">public void filter(String s) &#123;</span><br><span class="line">    adapter.getFilter().filter(s);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>adapter实现filter接口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public Filter getFilter() &#123;</span><br><span class="line">    return new DataFilter(this, mItemList);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>实现过滤类<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">public class DataFilter extends Filter &#123;</span><br><span class="line"></span><br><span class="line">    private final ContentA adapter;</span><br><span class="line">    private final List&lt;Content&gt; originalList;</span><br><span class="line">    private final List&lt;Content&gt; filteredList;</span><br><span class="line"></span><br><span class="line">    public DataFilter(ContentA adapter, List&lt;Content&gt; originalList) &#123;</span><br><span class="line">        super();</span><br><span class="line">        this.adapter = adapter;</span><br><span class="line">        this.originalList = new LinkedList&lt;&gt;(originalList);</span><br><span class="line">        this.filteredList = new ArrayList&lt;&gt;();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected FilterResults performFiltering(CharSequence constraint) &#123;</span><br><span class="line">        filteredList.clear();</span><br><span class="line">        final FilterResults results = new FilterResults();</span><br><span class="line">        if (constraint.length() == 0) &#123;</span><br><span class="line">            filteredList.addAll(originalList);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            for (Content note : originalList) &#123;</span><br><span class="line">                if (note.getContent().contains(constraint) || note.getTitle().contains(constraint)) &#123;</span><br><span class="line">                    filteredList.add(note);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        results.values = filteredList;</span><br><span class="line">        results.count = filteredList.size();</span><br><span class="line">        return results;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    protected void publishResults(CharSequence constraint, FilterResults results) &#123;</span><br><span class="line">        adapter.getItemList().clear();</span><br><span class="line">        adapter.getItemList().addAll((ArrayList&lt;Content&gt;) results.values);</span><br><span class="line">        adapter.notifyDataSetChanged();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/SearchView/" data-id="cjajd03pg0009dwllwe34mxfd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/ScrollView的fillViewport撑满布局/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/技术整理/跨部门沟通/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="localStrage是用变量只能写不能读opacity: 0;浏览器加入历史记录，只有加入锚点不会刷新界面，其他都会window.onstatechange=window.onload或者通过history.pushstate，手动请求 window.onpopstate put delete方法,传输文件head获">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/技术整理/前端/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="localStrage是用变量只能写不能读opacity: 0;浏览器加入历史记录，只有加入锚点不会刷新界面，其他都会window.onstatechange=window.onload或者通过history.pushstate，手动请求 window.onpopstate put delete方法,传输文件head获取报文首部,不要内容options:询问支持什么方法 204 no conten">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="localStrage是用变量只能写不能读opacity: 0;浏览器加入历史记录，只有加入锚点不会刷新界面，其他都会window.onstatechange=window.onload或者通过history.pushstate，手动请求 window.onpopstate put delete方法,传输文件head获取报文首部,不要内容options:询问支持什么方法 204 no conten">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-技术整理/前端" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/前端/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>localStrage是用变量只能写不能读<br>opacity: 0;<br>浏览器加入历史记录，只有加入锚点不会刷新界面，其他都会<br>window.onstatechange=window.onload<br>或者通过history.pushstate，手动请求 window.onpopstate</p>
+<p>put delete方法,传输文件<br>head获取报文首部,不要内容<br>options:询问支持什么方法</p>
+<p>204 no content 请求处理成功,但没有返回,用于客户端向服务器发送信息<br>206 服务器响应客户端的部分请求 content-range<br>301 资源uri已更新,永久性重定向<br>302 临时重定向<br>303 临时重定向,客户端使用get方法<br>返回301 302 303都需要改用get方法<br>304 发送带条件请求,但是条件不符合<br>307 同302</p>
+<p>400 客户端语法错误<br>401 需要认证或认证失败 unauthorized<br>403 拒绝访问 forbidden<br>404 没有该资源<br>500 服务器错误<br>503 服务器负载或停机</p>
+<p>一台服务器使用虚拟主机可以提供多个域名的访问,host内必须指定uri<br>代理服务器<br>缓存服务器确保缓存资源的有效性</p>
+<p>pragma:no-cache</p>
+<p>content-type:text/html 报文主体对象类型<br>cache-control请求方有no-cache不缓存过期的资源,no-store不缓存<br>响应方有public所有人,private特定用户,可省略<br>s-maxage:忽略maxage,对多位用户使用的公共缓存器 缓存时间秒<br>max-age:缓存期没有超过发给的时间则请求缓存<br>min-fresh:过了该数值的资源都不能返回了<br>max-stale:接受过期的资源<br>revalidate会验证缓存的有效性<br>缓存扩展</p>
+<p>connection:keep-alive  close<br>date:报文创建时间<br>via:代理服务器</p>
+<p>请求首部字段:<br>accept:给我发某种格式的<br>text/html,text/xml,image/jpeg,q为权重值<br>accept-charset:返回这个字符集<br>accept-encoding:想要哪种编码的  gzip,deflate<br>accept-language:想要哪种语言的<br>authorization<br>from电子邮箱</p>
+<p>虚拟主机运行在一个ip上,因此需要head中添加host来区分<br>if和etag<br>proxy-authorization<br>range<br>user-agent:用户代理,平板,手机</p>
+<p>返回值<br>age表示多久前创建了响应<br>etag每份资源<br>location配合3xx<br>retry-after:多少时间后在来访问 3xx  503<br>server:服务器上安装的http程序信息<br>vary:</p>
+<p>实体:<br>allow:允许的方法<br>content-language<br>content-length<br>content-md5  无法判断篡改<br>expires:该资源你可以用到什么时间<br>last-modified:上一次修改的时间</p>
+<p>set-cookie和cookie<br>dnt:拒绝收集个人信息</p>
+<p>http加密正文内容或是https<br>双方身份的认证,证书,uid<br>下载文件提供md5,以判断文件是否被篡改</p>
+<p>https提供了这3种的保护,加密,认证,完整性保护<br>http和ssl通信,ssl和tcp通信<br>别的应用层也可以用ssl<br>算法公开,密钥私密,非对称密钥,公开密钥和私密密钥<br>openssl自认证</p>
+<p>敏感信息才用https,费用购买证书的<br>xss攻击:跨站脚本攻击,js代码<br>sql注入<br>os注入攻击比如发送邮件<br>php报错提示黑客</p>
+<p>彩虹表就是散列函数8位</p>
+<p>index是点击的时候取值，列表取值使用eq<br>比如现在有这么一个规律，hr是一段文章开始标志，我取出所有的hr，然后取每个hr后面的第一个p前4个字作为标题</p>
+<p>fetch需要promise的支持，uc<br>使用size和srcset实现图片的按设备加载，不支持ie或者picture和souce结合media</p>
+<p>clear:left是位于浮动元素右边或者下边<br>不clear就在右边或下边</p>
+<p>因此解决方案是利用支持的属性如：opacity: 0 或者 width:0, height:0 或者 visibility:hidden 来达到视觉上的隐藏效果。</p>
+<p>如果目标元素中有链接之类那么推荐用visibility而不是opacity,因为opacity为0时链接仍可以被点击。</p>
+<p>filter:alpha(opacity=40); /<em> For IE8 and earlier </em>/<br>css图像精灵就是图片拼合，必须限制背景的区域<br>background-origin:content-box;指定图片从哪里开始</p>
+<p>响应式图片<br>img {<br>    max-width: 100%;<br>    height: auto;<br>}</p>
+<p>表单焦点是outline，去表单样式，列表链接样式，还有边距<br>两个表单间距是回车引起的<br>还有inline-block有4个字符缩进<br>2个input间距合并</p>
+<p>在函数外声明的变量是全局变量，网页上的所有脚本和函数都能访问它<br>如果您把值赋给尚未声明的变量，该变量将被自动作为全局变量声明</p>
+<p>不包括工具栏和滚动条<br>var w=window.innerWidth|| document.documentElement.clientWidth|| document.body.clientWidth;</p>
+<p>function myFunction()<br>{<br> $(“p”).click(function(){<br>    $(this).hide();<br>  });<br>$(“#h01”).attr(“style”,”color:red”).html(“Hello jQuery”)<br>}<br>$(“p”).css(“background-color”,”red”);</p>
+<p>动画队列<br>  div.animate({height:’300px’,opacity:’0.4’},”slow”);<br>  div.animate({width:’300px’,opacity:’0.8’},”slow”);<br>  div.animate({height:’100px’,opacity:’0.4’},”slow”);<br>  div.animate({width:’100px’,opacity:’0.8’},”slow”);</p>
+<p>  下面的例子把 <div> 元素移动到右边，然后增加文本的字号：<br>  $(“button”).click(function(){<br>  var div=$(“div”);<br>  div.animate({left:’100px’},”slow”);<br>  div.animate({fontSize:’3em’},”slow”);<br>});</div></p>
+<p>模拟手机的网络环境，2g，gps，和禁用缓存<br>叹号，没执行，往下看看那里覆盖了<br>设置mobile-touch与否执行的事件不一样<br>sourse中点击大括号可以把合并压缩的代码复原<br>js代码里面加上debuger自动断点<br>console.error();</p>
+<p>侧边栏固定,是监听滚动事件，然后判断改变css样式，左侧目录固定，不能超过尾<br>图片墙：图片堆叠，有不规则的旋转角度，绝对定位，彼此交叉，鼠标移过z-index,正并放大</p>
+<p>阅读源码：从执行顺序入手，适当忽略细节<br>muse，edge animation cc  flash</p>
+<p>没有任何边框 srcdoc 指定文字，覆盖src  sandbox禁止提交表单 禁止运行js 异源，有4个选项</p>
+<iframe seamless srcdoc="string">
+
+<p>引入zepto框架，用tap代替click<br>tap原理 touchstart touchmove touchend<br>从触摸到离开时间间隔短，起点终点距离小</p>
+<p>$e.on(“tap”,function(){<br>    var target=e.target;<br>    target.addClass(“active”);<br>    setTimeOut(function(){<br>    target.removeClass(“active”);<br>    },150);<br>})</p>
+<p>全局滚动：body上<br>局部滚动：某个dom<br>安卓使用全局滚动，滚动条不错位<br>给固定头尾的加个padding<br>patter=”[0-9]”<br>全数字键盘</p>
+<p>search加个form 阻止onsubmit的默认行为<br>行内元素水平居中是给父元素设置text-align<br>定宽的块元素居中使用width margin：0 auto<br>不定宽块元素居中：改为行元素，或者position：relative left：-50%</p>
+<p>高度确定的单行文本居中，高度和行高一致<br>float和absolute会自动变为inline-block</p>
+<p>seo层级结构简单些，控制链接数量，面包屑<br>a rel=noflow不用爬了<br>表格的caption<br>重要的html内容放前面</p>
+<p>层叠顺序，布局，内容   文字后来居上<br>定位元素会覆盖普通元素相当于z-index auto</p>
+<p>border-collapse: collapse是表格的属性<br>合并边框先用去掉一边<br>父子同时出现：overflow：hidden</p>
+<p>去动画  mContentListView.setItemAnimator(null);<br>sublime先保存文件才可以用emmet<br>prettify 右键 格式化代码<br>spacegray  主题把大括号去了就可以了，json格式的</p>
+<p>./表示当前路径<br>../上一级路径</p>
+<p>font使用百分比，不是具体的px，相对属性<br>阅读背景色和文字色<br>文字间距，行距，缩进</p>
+<p>操作真实dom加上ref，然后使用ReactDom.findDOMNode(this.refs.xxx).value<br>把defaultValue当作初始值<br>表单的value和事件都用变量</p>
+<p>函数复用bind name 和初始值key是一样的，一个函数处理所有表单事件<br>e.target.name   e.target.value   e.target.checked</p>
+<p>父组件通过props传递给子组件，子组件通过事件传递给父组件，委托和属性<br>逻辑相同来源不同使用bind<br>子组件的事件使用this.props.handleChange,体哦啊用父元素的事件，委托出去<br>mixin，横向提取相似代码，面向切面，插件，即插即用<br>面向对象是纵向垂直提取</p>
+<p>全局性的* { box-sizing: border-box; }就非常不错<br>简洁属性合并写法<br>居中：top: calc(50% - 10px);<br>视图转换优于动画。除了opacity 和transform，避免动画其他属性。</p>
+<p>性能优化react 列表加key 父组件更新默认触发所有子组件更新<br>自组建覆盖should方法自行决定是否更新</p>
+<p>requestAnimationFrame，js模拟动画实现css的效果,优化后的效果，多个一起做，保证时间一致，平滑</p>
+<p>list和datalist使用display=none<br>check的indeterminate属性，不明确</p>
+<p>valueAsNumber做计算器<br>颜色选择器设置背景style的颜色<br>range配合output使用<br>progress使用setInterval方法<br>meter表示状态有样式的，min，max，low，hight，opm</p>
+<p>js事件直接把自己this传过去就不用getElementById了，直接innerHtml就行了</p>
+<p>onselect选中文字事件<br>onchange是内容变了，不是实时</p>
+<p>css属性继承，自body<br>零级事件是写button.onclick=function(){}<br>可以添加多个事件，按添加顺序来<br>true为拦截，false为冒泡<br>event.target  type<br>阻止冒泡，阻止默认（链接）</p>
+<p>word_wrap换行，根据宽度来的<br>class可以设置多个类，样式需要.class.class<br>static对z-index和left,top这些无效<br>瀑布流通过column-width来实现</p>
+<p>定义字体，格式<br>local，url，format（truetype）<br>font-size-adjust:0.6 修改字体保持字号不变 height/font-size</p>
+<p>inline-block和inline展现相同,却可以设置宽度，inline不能设置宽度</p>
+<p>inlinetable形成中间夹着表格，不是上下<br>div display list-item 变成了列表</p>
+<p>文字左右滑<br>overflow-x:scroll<br>overflow-y:hidden<br>white-wrap:nowrap</p>
+<p>box-sizing：content-box或border-box 宽高包括padding与否<br>background-clip background-origin 一样，都是位置从哪</p>
+<p>backgroun-image多个url一起使用，后面的repeat属性，position依次写<br>border-image9文件，4个参数，4个高度</p>
+<p>document.body.offsetWidth 不包括滚动条<br>windows.innerHeight 宽高<br>window。open(“.html”,”windowname”,”height=200,width=200,top=100,left=100”)</p>
+<p>dataTransfer.files[0],使用filereader</p>
+<p>清除浮动的几种方式，各自的优缺点<br>1.使用空标签清除浮动 clear:both（理论上能清楚任何标签，，，增加无意义的标签）<br>2.使用overflow:auto（空标签元素清除浮动而不得不增加无意代码的弊端,,使用zoom:1用于兼容IE）<br>3.是用afert伪元素清除浮动(用于非IE浏览器)</p>
+<p>设定width和margin 0 auto居中，拉小有问题<br>在这种情况下使用 max-width 替代 width 可以使浏览器更好地处理小窗口的情况</p>
+<p>box-sizing: border-box;<br>此时元素的内边距和边框不再会增加它的宽度，原来是向外缩，现在是向内缩</p>
+<p>position是一种布局<br>relative 表现的和 static 一样，除非你添加了一些额外的属性。<br>四个方向值和margin不要混了，他们结合postion使用的<br>absolute是相对于最近的“positioned”祖先元素，同级的就要使用margin了</p>
+<p>float是一种<br>图文环绕效果<br>clear之后就彼此分割了<br>浮动之后超过了父容器的大小，就需要添加overflow：auto</p>
+<p>使用inline-block之后相关的就可以不用清除浮动了<br>inline-block:要设置宽度，空格回车这些会产生空隙，使用fontsize短暂解决</p>
+<p>.three-column {<br>  padding: 1em;<br>  -moz-column-count: 3;<br>  -moz-column-gap: 1em;<br>  -webkit-column-count: 3;<br>  -webkit-column-gap: 1em;<br>  column-count: 3;<br>  column-gap: 1em;<br>}</p>
+<p>这个比float强多了<br>.container {<br>  display: -webkit-flex;<br>  display: flex;<br>}<br>.initial {<br>    空间足够的时候，我的宽度是200px，如果空间不足，我会变窄到100px，但不会再窄了。<br>  -webkit-flex: initial;<br>          flex: initial;<br>  width: 200px;<br>  min-width: 100px;<br>}<br>.none {<br>  -webkit-flex: none;<br>          flex: none;<br>  width: 200px;<br>}<br>.flex1 {<br>    我会占满剩余宽度的1/3。<br>  -webkit-flex: 1;<br>          flex: 1;<br>}<br>.flex2 {<br>    我会占满剩余宽度的2/3。<br>  -webkit-flex: 2;<br>          flex: 2;<br>}</p>
+<p>居中<br>.vertical-container {<br>  height: 300px;<br>  display: -webkit-flex;<br>  display:         flex;<br>  -webkit-align-items: center;<br>          align-items: center;<br>  -webkit-justify-content: center;<br>          justify-content: center;<br>}</p>
+<pre><code>水平居中包含两种情况：
+    块级元素的水平居中：margin:0px auto;
+    文字内容的水平居中：text-align: center;
+
+垂直居中：
+    常见的单行文字的垂直居中可设置文字所在行的height与
+    行高样式属性一致，比如：
+    div{
+        width: 400px;
+        height: 400px;
+        line-height: 400px;/*行高与div高度一致*/
+    }
+</code></pre><p>一个媒体查询实例，大屏幕下左侧导航，右边内容，小屏幕下列表置顶且横向</p>
+<p>@media screen and (min-width:600px) {<br>  nav {<br>    float: left;<br>    width: 25%;<br>  }<br>  section {<br>    margin-left: 25%;<br>  }<br>}</p>
+<p>@media screen and (max-width:599px) {<br>  nav li {<br>    display: inline;<br>  }<br>}</p>
+<p>li img直接横向排列，不用float<br>通过背景图片来设置特殊效果，盒子3d模型，颜色下，图片上，叠加<br>不设置高度相当于wrapcontent</p>
+<p>自动居中不要浮动 绝对定位<br>请详细观看盒子模型的立体图片，从第一层到第五层依次为：border、content+padding、background-image、background-color、margin。<br>float影响紧邻其后的元素，还有父元素，使用纵向排列的块级元素横向排列<br>父元素用width:100% + overflow:hidden<br>后面受影响的使用清除浮动除了clear:both还有</p>
+<p>相对定位：相对自身原有位置偏移，仍处于文档流中<br>无侵入，不影响其他元素<br>margin-top和top不一样，前者影响后边（自定义拖拽）</p>
+<p>绝对定位：脱离文档流，建立了以包含块为基准的定位<br>4个属性同时作用，relative是斗争，绝对是拉伸<br>设置绝对定位而没有宽度，则自适应</p>
+<p>图片压缩，自动反编译<br>document.documentElement.srollTop||document.body.srollTop滚动条的数值</p>
+<p>一图两用<br>background：url noreapet ；left top<br>background：url noreapet ；left -40px</p>
+<p>css绘图标 border-radius r1 r2 w1 w4 分享 放大镜  file-icon<br>outline border 压在边框的效果<br>box-shadow  水平 垂直 距离 颜色<br>box-shadow  水平 垂直 距离 扩张 颜色;还可以接受列表，绘制n个边框投影  实现多重边框<br>向内挤压，不影响别的</p>
+<p>渐变 位置和颜色 可以透明 多个<br>圆润的标签自己试试，径向渐变</p>
+<p>绝对定位的z-index受父元素的影响<br>relative限制absolute的边距 层级 溢出  正常的overflow对绝对定位不影响，加了相对才有用</p>
+<p>背景图片的repeat相当于9图片文件<br>@media only screen and (max-width:600px)（orientation:landscape|portrait）<br>在移动设备上面clear：both；<br>桌面设备上float：right；</p>
+<p>关系数据库<br>设计数据库，ER模型图<br>多对多的采用关联表</p>
+<p>添加mysql环境变量，类似git<br>cd D:\Soft\wamp\bin\mysql\mysql5.6.17\bin‘</p>
+<p>mysql-u root-p 123456    使用用户登录有密码输入-p<br>设置中文<br>show variables like ‘char%’;<br>set character_set_database=’utf8’;<br>status；看4个都是utf8才行</p>
+<p>show databases;<br>show tables;<br>describe user;显示详细信息，4位就够了<br>use 库/表</p>
+<p>必须一开始就登陆进来<br>ERROR 1044 (42000): Access denied for user ‘’@’localhost’ to database<br>退出后mysql -u root -p</p>
+<p>避免错误信息<br>drop database if exists nihao;</p>
+<p> create table if not exists stu<br> (id char(6) not null primary key,<br> name char(8) not null,<br> age int(6) default 10,<br> sex tinyint(1) default 1);</p>
+<p>临时表，复制结构<br>create temporary table if not exists user3 like stu;<br>复制内容<br>create table user4 as (select * from user);</p>
+<p> alter table user4 rename to stu4;<br> alter table user4 add score int(6) after name;<br> alter table stu4 change score s int(8) not null;<br> alter table stu4 modify scores int(5) not null;<br> alter table stu4 modify sex int(6),drop column s;</p>
+<p> 表明，列名，数据类型，长度，为空，默认值，约束，主键，外键<br> varchar，text，blob是可变的<br> char是4位以下</p>
+<p> insert into stu set id=2,name=’zhangsan’,sex=1,age=21;<br> 替换<br> replace into stu values(1,’kj’,14,0),(2,’gv’,15,1) ;</p>
+<p>load_file（路径）；存储图片<br>update stu set id=3,name=’bu’ where age=10;<br>delete from stu where name=’gv’;<br>联表更新，删除</p>
+<p>drop是删除表<br>显示创建表的语句<br>show create table stu;</p>
+<p>where不能用别名<br>select id as xuehao,name as ‘student name’,age as nianling from stu ;<br>select max(age),min(age) from stu;</p>
+<p>.* 任意长度的字符串<br>^.+ 任一字符开头任意长度的字符串<br>.com$ 以.com结尾的字符串<br>global不能定义赋值一起，在函数里定义</p>
+<p>mktime可以指定一个时间点(3,0,0,4,1,2016);<br>设置cookie的页面无法读取，离开才可以<br>要在php输出页面信息之前设置才有用</p>
+<p>session_start();<br>_session[‘k’]=’v’;<br>PHPSESSIONID之前的问题，header的一个key而已<br>通过hidden传递sessionid<br>登录后用start，退出后用destroy</p>
+<p>文件上传<br>post multpart<br>copy moveupload<br>大小限制<br>ini中的php配置file upload<br>file_upload=on<br>;表示注释，关闭<br>文件大小2M，8m<br>error 0-8 no 5<br>1 超过2M tmp_file为空了<br>2 超过表单max<br>3 部分上传<br>4 没有文件被上传<br>6 没有临时文件夹<br>7 写入失败</p>
+<p>修改wmap的路径，根目录导致php不通</p>
+<p>数组声明要指定长度或者这种int score[ ] = new int[ ] { 34, 90, 87, 54, 24 }在声明数组的同时赋值时不能指定数组长度</p>
+<p>Arrays.sort(hobbys);<br>Arrays.toString(hobbys)输出数组nums中的元素：[25，7，126，53，14，86]<br>Math.random() 生成 0–1 的浮点数，乘以几</p>
+<p>echo关键字与字符串之间至少要有一个空格<br>var_dump($string);<br>php变量的类型是可变的</p>
+<p>在大连学习python<br>python通过缩进控制<br>自富春乘以10  str len<br>函数是def，：代替括号</p>
+<p>入口<br>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    main()</p>
+<p>def doQingan(myLine):<br>    print ‘gui’<br>    print ‘bai ‘ * 3<br>    print myLine</p>
+<p>import sys<br>help(len)<br>print dir(sys)<br>help(sys.exit)<br>help(‘china’.split)<br>print dir(list)</p>
+<p>a, b, c=(int(x) for x int raw_input().split(‘ ‘))<br>print a+b+c<br>print sum(int(x) for x in raw_input().split()) </p>
+<p>&lt;?php<br>//首先采用“fopen”函数打开文件，得到返回值的就是资源类型。<br>$file_handle=fopen(“/data/webroot/resource/php/f.txt”,”r”);<br>if ($file_handle){<br>    //接着采用while循环（后面语言结构语句中的循环结构会详细介绍）一行行地读取文件，然后输出每行的文字<br>    while (!feof($file_handle)) { //判断是否到最后一行<br>        $line = fgets($file_handle); //读取一行文本<br>        echo $line; //输出一行文本<br>        echo “<br>“; //换行<br>    }<br>}<br>fclose($file_handle);//关闭文件<br>?&gt;</p>
+<p>error_reporting(0); //禁止显示PHP警告提示<br>unset($var3);后就是null，只声明也是<br>mixed表示参数类型可以接受为多种不同的类型<br>$p = “PII”;<br>define($p,3.14);<br>define(“PI”,3.14);<br>define第一个参数是string<br>mixed constant(string constant_name)去常量值，动态的<br>$c=&amp;$a;取地址，后续a变了，c也会变<br>“!=”和”&lt;&gt;”都表示比较两个数的值而不必比较数据类型<br>$b.=”werasfasdf”; 字符串连加<br>错误信息在$php_errormsg里<br>$num = rand(1,50);//获取1至50的随机数<br>函数不能返回多个值，但可以通过返回一个数组来得到类似的效果。<br>list ($one, $two, $three) = numbers();<br>$name = ‘func’;//调用可变函数 $name(); 变量为函数的名字<br>function_exists  file_exists<br>if (class_exists(‘MyClass’)) {<br>    $myclass = new MyClass();<br>}<br>也可以用类名创建对象<br>    $classname=’Car’;<br>    $car2=new $classname();</p>
+<p>echo $car-&gt;name;<br>在子类中如果定义了<strong>construct则不会调用父类的</strong>construct，如果需要同时调用父类的构造函数，需要使用parent::__construct()显式的调用，和java不一样</p>
+<p>class Car {<br>    //增加构造函数与析构函数<br>    function __construct(){<br>        print “父类构造函数\n”;<br>    }</p>
+<pre><code>function __destruct(){
+        print &quot;父类析构函数\n&quot;;
+}
+</code></pre><p>}</p>
+<p>class Car2 extends Car {<br>    //增加构造函数与析构函数<br>    function <strong>construct(){<br>        print “子类构造函数\n”;<br>        parent::</strong>construct();<br>    }</p>
+<pre><code>function __destruct(){
+        print &quot;子类析构函数\n&quot;;
+}
+</code></pre><p>}<br>$car = new Car();<br>$car1 = new Car2();</p>
+<p>$func = ‘getSpeed’;<br>$className = ‘Car’;<br>echo $className::$func();  //动态调用静态方法</p>
+<p>静态方法中，$this伪变量不允许使用。可以使用self，parent</p>
+<p>class Car {<br>    private $ary = array();</p>
+<pre><code>public function __set($key, $val) {
+    $this-&gt;ary[$key] = $val;
+}
+
+public function __get($key) {
+    if (isset($this-&gt;ary[$key])) {
+        return $this-&gt;ary[$key];
+    }
+    return null;
+}
+
+public function __isset($key) {
+    if (isset($this-&gt;ary[$key])) {
+        return true;
+    }
+    return false;
+}
+
+public function __unset($key) {
+    unset($this-&gt;ary[$key]);
+}
+</code></pre><p>}<br>$car = new Car();<br>$car-&gt;name = ‘汽车’;  //name属性动态创建并赋值<br>echo $car-&gt;name;</p>
+<p>可以使用mb_strlen()函数获取字符串中中文长度<br>echo mb_strlen($str,”UTF8”);<br>$pos = strpos($str, ‘imooc’); indexOf<br>$replace = str_replace(‘js’, ‘php’, $str);</p>
+<p>静态初始化块只在类加载时执行，且只会执行一次，同时静态初始化块只能给静态变量赋值，不能初始化普通的成员变量。</p>
+<p>程序运行时静态初始化块最先被执行，然后执行普通初始化块，最后才执行构造方法。由于静态初始化块只在类加载时执行一次，所以当再次创建对象 hello2 时并未执行静态初始化块。</p>
+<p>  // 初始化块，再创建一个实例时依然执行<br>    {<br>        System.out.println(“通过初始化块初始化sex”);<br>        sex = “男”;<br>    }</p>
+<pre><code>// 静态初始化块
+    static    { 
+    System.out.println(&quot;通过静态初始化块初始化age&quot;);
+    age = 20;
+}
+imooc为常量字符串，多次出现时会被编译器优化，只创建一个对象
+
+文件后缀名判断
+int index = fileName.lastIndexOf(&quot;.&quot;);
+    if(index!=-1&amp;&amp;index!=0){     
+    // 获取文件的后缀
+    String prefix = fileName.substring(index+1);   }
+    // 断必须包含&quot;.&quot;号，且不能出现在首位，同时后缀名为&quot;java&quot;
+    if ( prefix.equals(&quot;java&quot;)) {
+        System.out.println(&quot;Java文件名正确&quot;);
+    } else {
+        System.out.println(&quot;Java文件名无效&quot;);
+    }
+
+    // 获取邮箱中&quot;@&quot;符号的位置
+    int index2 = email.charAt(&apos;@&apos;);
+
+    // 获取邮箱中&quot;.&quot;号的位置
+    int index3 = email.indexOf(&apos;.&apos;);
+
+    // 判断必须包含&quot;@&quot;符号，且&quot;@&quot;必须在&quot;.&quot;之前
+    if (index2 != -1 &amp;&amp; index3 != -1&amp;&amp; index2 &gt;0  &amp;&amp;index3 &gt;0 &amp;&amp; index3 &gt; index2) {
+</code></pre><p>先创建父类对象，属性，构造函数<br>创建自类的时候也会创建父类，父类的属性和子类的无关，super调用即可；<br>创建了有参构造函数那么就不会自动生成一个空方法<br>final声明的变量，要在构造函数里面初始化</p>
+</iframe>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/前端/" data-id="cjajd03qi000udwll9h8n4siy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/技术整理/代码/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/技术整理/待整理-手机卫士-设计模式-面试指南-graddle-as技巧/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

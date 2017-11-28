@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="策略模式就是更改策略，封装算法命令模式是对动作解耦，分为执行者，执行的命令备忘录模式 混合设计模式：工厂策略，命令链对比工厂是整体对象，抽象工厂是产品族，建造者模式是构建部件的过程装饰模式是改变类的功能代理是对代理过程的控制装饰着装饰的是本家族，适配器是不同家族 底层东西都是面向过程写的性能好坏由设计决定，而不是语言 ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/技术整理/设计模式/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="策略模式就是更改策略，封装算法命令模式是对动作解耦，分为执行者，执行的命令备忘录模式 混合设计模式：工厂策略，命令链对比工厂是整体对象，抽象工厂是产品族，建造者模式是构建部件的过程装饰模式是改变类的功能代理是对代理过程的控制装饰着装饰的是本家族，适配器是不同家族 底层东西都是面向过程写的性能好坏由设计决定，而不是语言 需求是对客户来讲有价值的事，比如提款功能是部分过程，如密码验证，识别卡，点钞 当">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="策略模式就是更改策略，封装算法命令模式是对动作解耦，分为执行者，执行的命令备忘录模式 混合设计模式：工厂策略，命令链对比工厂是整体对象，抽象工厂是产品族，建造者模式是构建部件的过程装饰模式是改变类的功能代理是对代理过程的控制装饰着装饰的是本家族，适配器是不同家族 底层东西都是面向过程写的性能好坏由设计决定，而不是语言 需求是对客户来讲有价值的事，比如提款功能是部分过程，如密码验证，识别卡，点钞 当">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-技术整理/设计模式" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/技术整理/设计模式/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>策略模式就是更改策略，封装算法<br>命令模式是对动作解耦，分为执行者，执行的命令<br>备忘录模式</p>
+<p>混合设计模式：工厂策略，命令链<br>对比<br>工厂是整体对象，抽象工厂是产品族，建造者模式是构建部件的过程<br>装饰模式是改变类的功能<br>代理是对代理过程的控制<br>装饰着装饰的是本家族，适配器是不同家族</p>
+<p>底层东西都是面向过程写的<br>性能好坏由设计决定，而不是语言</p>
+<p>需求是对客户来讲有价值的事，比如提款<br>功能是部分过程，如密码验证，识别卡，点钞</p>
+<p>当初看这本书很走心，现在完全不在心思<br>5w1h去写用例，异常处理，替代处理<br>功能就是动词的一句话，提取出来<br>建模领域，找名词，加属性，联关系<br>方法就是找动词，把方法分配到类里面<br>然后就是应用设计模式，搞继承</p>
+<p>c里面的友元类和函数<br>析构函数需要virtual标识<br>继承有3种方式，protected和private是访问不到父属性和构造方法的<br>多继承产生菱形问题，就是不知道调用哪个父元素的方法<br>虚继承解决钻石问题<br>虚函数实现多态，相当于覆写<br>虚函数=0是抽象类，纯虚函数<br>接口里没有属性，全是纯虚函数</p>
+<p>java默认类不声明为public那么在不同包里面是无法访问到的<br>protected只有子类和同一包中的类访问<br>默认只有当前包，其他包中的自累也无法访问<br>所以不是必须写成public和private的，也可以不写，就是默认</p>
+<p>接口中的变量强制为public static final类型<br>每改动一个类都需要重新编译部署测试</p>
+<p>高内聚低耦合是最优的设计<br>类的单一职责是包含多个相关的功能的<br>里氏代换：正方形就不该继承长方形，计算面积公式不一样</p>
+<p>单一职责：用来设计类<br>开闭原则：总原则<br>里氏代换：知道继承的设计<br>接口隔离：指导接口的设计<br>依赖反转：指导如何抽象</p>
+<p>设计模式解决的是可复用的面向对象，大道，23种只是工具<br>对变化的概念封装</p>
+<p>找到变化，封装变化<br>基于接口编程<br>优先使用对象组合而不是继承</p>
+<p>设计原则指导类的定义<br>设计模式指导类的行为</p>
+<p>微博发布用观察者，而不是面向过程<br>打印文档也是一个个对象，不是过程</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/技术整理/设计模式/" data-id="cjajd03qp0012dwll53nmjbya" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/RecyclerView监听滑动隐藏Toolbar/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/ScrollView的fillViewport撑满布局/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

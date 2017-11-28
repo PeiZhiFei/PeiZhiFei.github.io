@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Android的apk文件越来越大了这已经是一个不争的事实。在Android 还是最初版本的时候，一个app的apk文件大小也还只有2 MB左右，到了现在，一个app的apk文件大小已经升级到10MB到20MB这个范围了。apk文件大小的爆炸式增长主要是因为用户对app质量的期待越来越高以及开发者的开发经验增长，具体体">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/2017/11/28/给APK瘦身/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Android的apk文件越来越大了这已经是一个不争的事实。在Android 还是最初版本的时候，一个app的apk文件大小也还只有2 MB左右，到了现在，一个app的apk文件大小已经升级到10MB到20MB这个范围了。apk文件大小的爆炸式增长主要是因为用户对app质量的期待越来越高以及开发者的开发经验增长，具体体现在以下几个方面：  Android设备dpi的多样化 ([l|m|tv|h|x">
+<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/202169-05f29896c54e2bde.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+<meta property="og:updated_time" content="2017-11-28T08:26:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo">
+<meta name="twitter:description" content="Android的apk文件越来越大了这已经是一个不争的事实。在Android 还是最初版本的时候，一个app的apk文件大小也还只有2 MB左右，到了现在，一个app的apk文件大小已经升级到10MB到20MB这个范围了。apk文件大小的爆炸式增长主要是因为用户对app质量的期待越来越高以及开发者的开发经验增长，具体体现在以下几个方面：  Android设备dpi的多样化 ([l|m|tv|h|x">
+<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/202169-05f29896c54e2bde.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-给APK瘦身" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/11/28/给APK瘦身/" class="article-date">
+  <time datetime="2017-11-28T08:26:16.000Z" itemprop="datePublished">2017-11-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Android的apk文件越来越大了这已经是一个不争的事实。在Android 还是最初版本的时候，一个app的apk文件大小也还只有2 MB左右，到了现在，一个app的apk文件大小已经升级到10MB到20MB这个范围了。apk文件大小的爆炸式增长主要是因为用户对app质量的期待越来越高以及开发者的开发经验增长，具体体现在以下几个方面：</p>
+<ul>
+<li>Android设备<em>dpi</em>的多样化 ([l|m|tv|h|x|xx|xxx]dpi)</li>
+<li>Android平台的进化，开发工具的改进以及开源类库生态系统的丰富</li>
+<li>用户对高质量UI的期待</li>
+<li>其他原因</li>
+</ul>
+<p>Android开发者在设计一个app的时候应该将最终发布一个轻量级app作为一个最佳实践来考虑。为什么？首先这就意味着你拥有了一个简洁，易维护代码基础。其次，官方应用商店对超过50MB的apk设置了拓展包文件下载选项，apk文件在50MB以下更容易让用户下载。最后，我们的应用程序环境是一个带宽有限，存储空间有限的环境，apk安装文件越小，下载就会越快，安装也会更快，良性循环，最后说不定用户因为这个给好评。<br>在大部分情况下，apk大小的增长是为了满足消费者的需要和期待。然而，我认为apk大小的增速已经超过了用户对app期待的增速。所以，很大程度上，官方应用商店里面的那些程序可以瘦身至它们现在大小的一半甚至更多。</p>
+<p>APK 文件格式<br>在说如何给apk瘦身之前，让我们先来看看apk文件内部的结构到底是怎么一回事。说简单点，一个apk文件就是包含一些文件的压缩包。作为开发者，我们通过使用unzip命令解压这个apk文件一探apk的内部结构。下面的文件结构就是我们使用unzip <your_apk_name>.apk</your_apk_name></p>
+<p>这个命令所获得的：</p>
+<blockquote>
+<p>/assets<br>/lib<br>/armeabi<br>/armeabi-v7a<br>/x86<br>/mips<br>/META-INF<br>MANIFEST.MF<br>CERT.RSA<br>CERT.SF<br>/res<br>AndroidManifest.xml<br>classes.dex<br>resources.arsc</p>
+</blockquote>
+<p>我们可能对上面大部分的文件和目录都很熟悉。它们和我们在实际开发app的时候所看到得项目结构一样，包含了：<br>/assets<br>/lib<br>/res<br>AndroidManifest.xml<br>还有一些文件可能是我们第一次看到。<br>一般说来，classes.dex, 它包含了我们所写的Java代码经过编译后class文件；<br>resources.arsc包含了预编译之后的资源文件（比如values文件，XML drawables 文件等)<br>由于apk文件只是一个简单地压缩文件，这就意味着它有两种大小：即压缩前的大小和压缩后的大小。这篇文章我将主要关注压缩后的大小。</p>
+<p>如何减少apk文件大小<br>减少apk文件大小可以从几个方面入手。由于每个app都是不同的，所以没有什么绝对规则来给apk文件瘦身。作为apk文件的三个重要组成部分，我们可以考虑从它们开始入手：<br>Java 源代码<br>资源文件（resources/assets）<br>native code</p>
+<p>所以接下来的招式都是由减少这些组件的大小出发，进而减少整个app的大小。</p>
+<h3 id="掌握良好的编码习惯"><a href="#掌握良好的编码习惯" class="headerlink" title="掌握良好的编码习惯"></a>掌握良好的编码习惯</h3><p>这是减少apk文件至关重要的第一步。你要对自己的代码了如子掌。你要移除掉所有无用处的dependency libraries，让你的代码一天比一天优秀，持续地优化你的代码。总而言之，保持一个简洁，最新的代码基础是减少apk文件至关重要的一环。<br>当然，从零开始一个项目并为这个项目保持一份简洁的代码基础很容易。项目越老，这个工作就越困难。事实上，拥有一大段历史背景的项目必须要去处理各种死代码和无用代码。还好有许多的开发工具可以帮我们来做这些事情……</p>
+<h3 id="使用Proguard"><a href="#使用Proguard" class="headerlink" title="使用Proguard"></a>使用Proguard</h3><p>Proguard 是一个很强悍的工具，它可以帮你在代码编译时对代码进行混淆，优化和压缩。它有一个专门用来减少apk文件大小的功能叫做 tree-shaking。Proguard 会遍历你的所有代码然后找出无用处的代码。所有这些不可达（或者不需要）的代码都会在生成最终的apk文件之前被清除掉。Proguard 也会重命名你的类属性，类和接口，然整个代码尽可能地保持轻量级水平。<br>也许现在你会认为 Proguard 是一个相当有效地工具。但是能力越大，责任也就越大。现在许多开发这认为Proguard有点让人不省心，因为它会重度依赖反射。哪些类或者属性需要被处理或者不能处理都要开发者对 Proguard 进行配置。</p>
+<h3 id="广泛使用-Lint"><a href="#广泛使用-Lint" class="headerlink" title="广泛使用 Lint"></a>广泛使用 Lint</h3><p>Proguard 只会对 Java 代码起作用，那么对哪些资源文件呢？比如一张图片my_image在res/drawable文件夹中，没有被使用，Proguard 只会移除掉R类中的引用，但是图片依然还在文件夹中。<br>Lint 一个静态的代码分析器，你只需通过调用./gradlew lint<br>这个简单地命令它就能帮你检查所有无用的资源文件。它在检测完之后会提供一份详细的资源文件清单，并将无用的资源列在“UnusedResources: Unused resources” 区域之下。只要你不通过反射来反问这些无用资源，你就可以放心地移除这些文件了。<br>Lint 会分析资源文件(比如/res文件夹下面的文件) ，但是会跳过 assets 文件 (/assets文件夹下面的文件)。事实上assets 文件是可以通过它们的文件名直接访问的，而不需要通过Java引用或者XML引用。因此，Lint 也不能判定某个 asset 文件在项目中是否有用。这全取决于开发者对这个文件夹的维护了。如果你没有使用某个asset 文件，那么你就可以直接清除这个文件。</p>
+<h3 id="对资源文件进行取舍"><a href="#对资源文件进行取舍" class="headerlink" title="对资源文件进行取舍"></a>对资源文件进行取舍</h3><p>Android 支持多种设备。Android的系统设计让它可以支持设备的多样性：屏幕密度，屏幕形状，屏幕大小等等。到了Android 4.4，它支持的屏幕密度包括： ldpi, mdpi, tvdpi, hdpi, xhdpi, xxhdpi and xxxhdpi。但是你要知道的一点是，Android 支持这么多的屏幕密度并不意味着你需要为每一个屏幕密度提供相应的资源文件。<br>如果你知道某些屏幕密度的设备只有很少部分用户在使用，那么你就可以直接不需要使用相应屏幕密度的资源文件。就我个人而言，我只会为我的应用提供 hdpi, xhdpi and xxhdpi这几个屏幕密度的支持。如果某些设备不是这几个屏幕密度的，不用担心，Android 系统会自动使用存在的资源为设备计算然后提供资源文件。<br>我这么做得原因很简单。首先，这些设备屏幕密度就能覆盖我 80% 的用户。其次，xxxhdpi 这个屏幕密度只是在为未来的设备做准备，但是未来还未到来。最后，我真的不怎么关心低屏幕密度（比如mdpi 和 ldpi），无论我为这几个屏幕密度努力，结果都是令人伤心地，还不如直接让Android系统对 hdpi 资源文件进行适当地缩放来匹配相应地低端机型。<br>同样地，在drawable-nodpi文件夹里面维持一个文件也能节省空间。当然前提是你觉得对这个文件进行相应地缩放之后呈现的效果你能接受或者这个文件出现的几率很少。</p>
+<h3 id="资源文件最少化配置"><a href="#资源文件最少化配置" class="headerlink" title="资源文件最少化配置"></a>资源文件最少化配置</h3><p>Android 开发经常会依赖各种外部开源代码库，比如Android Support Library, Google Play Services, Facebook SDK 等等。但是这些库里面并不是所有的资源文件你都会用到。比如，Google Play Services 里面会有一些为其他语种提供翻译，而你的app又不需要这个语种的翻译，而且这个库里面还包含了我的app中不支持的 mdpi 资源文件，还好从Android Gradle Plugin 0.7 开始，你可以配置你的app的build系统。这主要是通过配置resConfig和resConfigs以及默认的配置选项。下面的 DSL （Domain Specific Language）就会阻止 aapt（Android Asset Packaging Tool）打包app中不需要的资源文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">defaultConfig &#123;</span><br><span class="line">// ...</span><br><span class="line">resConfigs &quot;en&quot;, &quot;de&quot;, &quot;fr&quot;, &quot;it&quot;</span><br><span class="line">resConfigs &quot;nodpi&quot;, &quot;hdpi&quot;, &quot;xhdpi&quot;, &quot;xxhdpi&quot;, &quot;xxxhdpi&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="压缩图片"><a href="#压缩图片" class="headerlink" title="压缩图片"></a>压缩图片</h3><p>Aapt（Android Asset Packaging Tool）就内置了<a href="http://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap" target="_blank" rel="noopener">保真图像压缩算法</a>。例如，一个只需 256 色的真彩PNG图片会被aapt 通过一个颜色调色板转化成一个 8-bit PNG 文件。这可以帮助你减少图片文件的大小。当然你还可以通过Google查找相应的优化工具，比如 pngquant, ImageAlpha 和 ImageOptim 等。你可以从中选择一个适合你的工具。<br>还有一种只在Android平台上存在的图片文件也可以优化，它就是 9-patches。就我目前所知道，我还没发现有这个文件的优化工具。然而你只需要求你的设计师将它的可扩展区域和内容区域尽可能地减少即可。这不但可以减少资源文件的大小，还能使得以后资源文件的维护变得更加简单。</p>
+<h3 id="限制app支持的cpu-架构的数目"><a href="#限制app支持的cpu-架构的数目" class="headerlink" title="限制app支持的cpu 架构的数目"></a>限制app支持的cpu 架构的数目</h3><p>一般说来Android 使用Java 代码即可以满足大部分需求，不过还是有一小部分案例需要使用一些 native code。就像之前对资源文件那样opinionated，你可以这些 native code opinionated。 在当前的Android 生态系统中，让你的app支持 armabi 和 x86 架构就够了。这里有一篇相当不错的<a href="http://blog.algolia.com/android-ndk-how-to-reduce-libs-size/" target="_blank" rel="noopener">关于如何瘦身native 代码库</a>的文章，你可以参考参考。</p>
+<h3 id="尽可能地重用"><a href="#尽可能地重用" class="headerlink" title="尽可能地重用"></a>尽可能地重用</h3><p>重用资源可能是你在进行移动开发时需要了解的最重要的优化技巧之一。比如在一个ListView或者RecyclerView，重用可以帮助你在列表滚动时保持界面流畅。重用还可以帮你减少apk文件的大小。例如，Android 提供了几个工具为一个asset文件重新着色，在Android L中你可以以用android:tint和android:tintMode来达到效果，在老版本中则可以使用ColorFilter；<br>如果系统中有两种图片，一种图片是另一种图片翻转180°得到的，那么你就可以移除一种图片，通过代码实现。比如你现在有两种图片分别命名为ic_arrow_expand和ic_arrow_collapse；<br><a href="http://greenrobot.qiniudn.com/wp-content/uploads/2014/11/expand_collapse.png" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/202169-05f29896c54e2bde.png?imageMogr2/auto-orient/strip|imageView2/2/w/1240" alt="expand_collapse"></a></p>
+<p>你可以直接移除掉ic_arrow_collapse文件，然后在ic_arrow_expand的基础上创建一个RotateDrawable。这个方法也可以让你减少设计人员的工作：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span><br><span class="line">&lt;rotate xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</span><br><span class="line">android:drawable=&quot;@drawable/ic_arrow_expand&quot;</span><br><span class="line">android:fromDegrees=&quot;180&quot;</span><br><span class="line">android:pivotX=&quot;50%&quot;</span><br><span class="line">android:pivotY=&quot;50%&quot;</span><br><span class="line">android:toDegrees=&quot;180&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="在合适的时候使用代码渲染图像"><a href="#在合适的时候使用代码渲染图像" class="headerlink" title="在合适的时候使用代码渲染图像"></a>在合适的时候使用代码渲染图像</h3><p>在某些情况下，直接使用Java 代码渲染图像也能获得不错的效果。比如逐帧动画就是一个很好的例子。最近我都在尝试一些Android Wear 的开发，了解了一下<a href="https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary" target="_blank" rel="noopener">Android wearable support library</a>。就像其他的Android support library 一样，这个库里面也有一些工具来处理穿戴设备的。<br>不过让我吃惊的是，当我简单地构建了一个 “Hello World”示例，最后得到的apk文件竟然有1.5MB。于是我快速地研究了一下wearable-support.aar文件，发现这个库有两个逐帧动画，并分别支持了3种不同的屏幕密度：一个 “success” 动画 (31 frames) 和一个 “open on phone” 动画 (54 frames)。</p>
+<p>这样做得好处就是 (我当然在讽刺) 每帧显示33ms，这使得整个动画保持在30fps的频率。如果每帧16ms这将会导致整个库是之前的两倍大。如果你去看源码你会发现很有趣,在generic_confirmation_00175这一帧 (15 行) 将持续显333ms。generic_confirmation_00185紧跟着它。这个优化节省了9个类似的帧 (包含了从176 帧到 184 帧) 。不过最后神奇的是wearable-support.aar竟然神奇的包含了这个9个完全无用的帧，而且还以3中屏幕密度展示。在代码中来渲染这样的动画明显会很花时间。然而当你维持动画运行在60fps这样的频率可以大幅度的减少apk的大小。在写这篇博文的时候，Android还没提供工具来渲染这样的动画。但是我希望Google正在开发新一代的轻量级实时渲染系统来保证material design的细节呈现。当然“Adobe After Effect to VectorDrawable” 之类的设计工具也能提供很多方便。</p>
+<h3 id="如何更进一步"><a href="#如何更进一步" class="headerlink" title="如何更进一步?"></a>如何更进一步?</h3><p>上面所有的招式都集中在app或者library 开发者。也许我们还可以在app分发渠道方面为apk大小做出一些改变？我想可以在app 分发服务器端做一些改进，或者在官方应用商店。例如，我们可以期待官方应用商店在用户安装app的时候为设备绑定相应的native 库而摒弃那些无用的。<br>同样地，我们还可以想象只根据目标设备的配置来打包应用。不幸的是，这可能破坏Android 生态一个重要的功能特性：配置热置换。事实上，Android一开始就是位处理各种实时的配置更改（语言，屏幕转向）而设计的。如果我们移除掉与目标屏幕不兼容的资源文件，这可以极大的减少文件大小。不过Android需要处理实时的<a href="http://developer.android.com/reference/android/content/pm/ActivityInfo.html#CONFIG_DENSITY" target="_blank" rel="noopener">屏幕密度更改</a>。即便我们假设废除这种功能，我们仍然需要处理为不同的屏幕密度设计的图片以及其他配置（比如屏幕朝向，最小宽度等）。<br>服务器端的apk打包看起来很强大。但这样会冒很大得风险，因为最终传送给用户的apk会于开发者发给的服务器的完全不同。分发一些缺失资源文件的apk可能会导致app崩溃。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>设计就是在一个约束集里面找出最好的方案。显然apk文件的大小就是一个约束。不要害怕为了让多个方面变得更好而放松一个方面的约束。例如，当你要降低UI的渲染效果时，不要犹豫，因为这可以让apk的大小减小，同时使得app的运行也更加流畅。你99%的用户是感受不到UI质量变低的，但是他们会注意到apk文件变小了，运行也更加流畅了。总之，你需要将app各方面进行整体考虑，而不是仅仅几个方面的斟酌。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/11/28/给APK瘦身/" data-id="cjajd03pw000mdwll5j8pjfe1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/11/28/组合模式/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/11/28/软件思想/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">November 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/11/28/监听GPS和网络的广播/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/2月来学习总结/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Android从细节提升用户体验/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Html和Android简单对比/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/11/28/Mac配置ADB/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
