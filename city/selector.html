@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p>请选择城市</p>
+<form action="selector.php" method="post">
+    <select name="prov" id="prov"></select>
+    <select name="city" id="city"></select>
+    <button type="submit">提交</button>
+</form>
+<div id="info"></div>
+
+<script>
+    var prov=document.getElementById("prov");
+    var city=document.getElementById("city");
+
+    prov.options.add(new Option("==请选择直辖市==","="));
+    city.options.add(new Option("==请选择地区==","="));
+</script>
+</body>
+</html>

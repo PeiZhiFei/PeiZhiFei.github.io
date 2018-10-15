@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言簿</title>
+    <style>
+        /*居中方法*/
+        body {
+            margin: 0 auto;
+            width: 500px;
+        }
+
+        form {
+            align-content: center;
+            align-self: center;
+        }
+
+        textarea {
+            margin: 5px;
+            background: #5034ff85;
+        }
+
+        #user {
+            margin: 5px;
+            padding: 10px;
+        }
+
+        #submit, #submit2 {
+            margin: 5px;
+            padding: 10px;
+            background: #ff1a24;
+            border: 0px;
+            color: antiquewhite;
+            width: 40%;
+            margin: 15px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<h4>留言簿</h4>
+<form action="message.php" method="post">
+    <input type="text" name="user" id="user">用户名
+    <br/>
+    <textarea rows="10" cols="30" placeholder="留言" name="content"></textarea>
+    <br/>
+    <input type="submit" value="提交" id="submit">
+
+</form>
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+    <!--限制大小-->
+    <input type="hidden" name="MAX_FILE_SIZE" value="file">
+    <!--限制类型-->
+    <input type="file" name='myfile' id="file" accept="image/jpeg">
+    <br/>
+    <input type="submit" value="上传" id="submit2">
+
+</form>
+</body>
+</html>
